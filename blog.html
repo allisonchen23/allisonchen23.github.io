@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Allison Chen</title>
+		<link rel="stylesheet" type="text/css" href="blogStyle.css">
+    	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	</head>
+	<body>
+		<!--Navigation Bar-->
+		<div id="Navigation">
+			<ul>
+				<li><a href="index.html">Allison Chen</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#arts">Arts</a></li>
+				<li><a class="active" href="blog.html">Blog</a></li>
+			</ul>
+		</div>
+		<div id="notNavigation">
+			<div id="intro">
+				<h2 class="blogpost title">Welcome to my blog*!</h2>
+				<h3 class="blogdate title">*Creative Name Pending</h3>
+				<p>I started this blog in the summer of 2019 to basically document the work that I do in my projects and just to have a place to share my thoughts! You can think of this as a sort of brain dump convey my thoughts, but just a heads up, I'm a terrible writer-there's a reason I chose engineering. Enjoy!</p>
+			</div>
+			<hr>
+			<div>
+				<h2 class="blogpost">The Field Museum (The Sequel)</h2>
+				<h4 class="blogdate">Sunday June 23, 2019</h4>
+				<p class="blogbody">This past week I started my internship at the Field Museum in downtown Chicago. Two years ago, the summer after my junior year of high school, I did the Digital Learning Internship at the Field Museum where I collaborated with five other high school students to create a game, Seeds for Survival, in the museum's Plant Hall. This summer, I'll be working with Dr. Matt von Konrat and his team studying bryophytes in the Botany Department with some machine learning projects.</p>
+				<p>In this first week, I mostly helped reorganize the specimen collection. I've never seen so many different types of plants in one place ever, and honestly it's a bit overwhelming. Towards the end, I sat down with Matt and we talked about my project for the summer which is essentially broken down into three parts:</p>
+				<p><b>1. Data Analysis with Microplants</b></p>
+				<p>	An ongoing project right now uses a Zooniverse project on microplants (really <i>really</i> small plants measured in microns (10e-6 meters)). The project can be done on a computer or a kiosk, and it gives the user a picture of part of a microplant under a microscope and the user uses their mouse or finger to measure out the length and width of the leaves. Although the task doesn't seem mind blowing, the project's advocacy of citizen science expedites the data collection process for scientists, and the data is then used to help determine speciation of various microplants. My role here will be to work with another undergraduate student to devise a way to convert the pixel measurements Zooniverse takes into microns and to create a Python script to clean the data to be usable.</p>
+				<p><b>2. Plant Measurements with Morphosnake</b></p>
+				<p>The second part of the project utilizes Morphosnake, a software for plant image analysis, to write a script that skeletizes an image of a plant then takes measurements of various lengths. These measurements again will be used to distinguish various species that may be similar. Using this software will entail a little bit of machine learning to allow the computer to make the measurements on its own and export the data</p>
+				<p><b>3. Machine Learning to Automate the Species Determination</b></p>
+				<p>The last part of the project is what I'm most excited for! From talking with Matt, we decided that there <i>has</i> to be a way for a computer to take an image, skeletize it, take measurements, and determine its species in 1 step, instead of having someone having to bring the data from one step to the next. In this phase of the project, I'll be experimenting with tools from parts 1 and 2 to hopefully develop a script that can complete all three of these tasks!</p>
+				<p>I'm genuinely really excited for this summer! I love the idea of applying computer science into a field that hasn't really been exposed to it yet and seeing how much of an impact technology will be able to make. In addition to working at the Field Museum, I'll also be collaborating with CS professors and graduate students from North Eastern Illinois University (NEIU) for guidance! (which we all know I'll need a lot of)</p>
+				<p>Till next time!</p>
+				<p>-Al</p>
+				<hr>
+				<details>
+					<summary class="expand"><span class="standOut">Week 1:</span> Microplants Data Cleansing</summary>
+					<h4 class="blogdate">Monday June 24, 2019</h4>
+					<p class="blogbody">Today was the start of working on my project! Using the code from a fellow Field Museum employee, Victoria, that cleans some data to be usable, we will create a more thorough script that cleans data, converts measurements of pixels into microns, and pairs the raw data from kiosks with results of the age groups of the responders to make a connection between age and validity of data. (For example, if the measurements of the major and minor axes don't cross, go off screen, or intersect too far from perpendicular, the data is unusable.)</p>
+					<p class="blogbody">The issue that we have to firstly solve is that the measurements from the Microplants kiosk is just that: measurements with a time stamp in UTC along with serial IDs. The surveys of what age group made the measurements is on a different CSV and it's our task to match up the entries from the two sheets together. For clarity, I'll call the former <b class="standOut">measurement data</b> and the latter <b class="standOut">age data</b>. This doesn't sound too bad, but we found that the measurement data contains more entries than the age data; after looking at the first few entries in age data, we found corresponding entries in measurement data (by matching up the timestamps manually which was a whole other process) and our next step is to write a python script that will match up the rest of entries (about a thousand).</p>
+					<p class="blogbody">Briefly going back to the timestamp matching, the timestamp in the two sheets are presented in a format different from each other. For the current purposes, we manually edited them (using Excel's beautiful functions) so our script will be able to easily compare them and see if there are matches. In the future, we would like to have the script do this for us so a user would only need to press one button and <i>everything</i> would be done for them</p>
+					<p>Stay tuned for more updates!</p>
+					<p>-Al</p>
+					<hr>
+					<h4 class="blogdate">Tuesday June 25, 2019</h4>
+					<p class="blogbody">Today was spent adjusting the script from Victoria so that it would export a new sheet with the matches and with new columns that quantifies the data as useable or not and that specify the age demographic of that data reporter. This will allow us to see if there are any trends between certain age groups and the validity of the data they record.</p>
+					<p>A lot of the nitty gritty work was already implemented (such as syntax to create data frames using panda and reading CSV files), but we still ran into a few issues that may or may not be common; below I'll go through them.</p>
+					<p>First, our script wasn't recognizing the name of our first column when we imported the data frame as a CSV. When we printed out, the first row of the CSV, we would get some garbage characters in front of the first column (shown below).</p>
+					<img src="images/EncodingError.PNG" id="encodingError" class="images" alt="Image of encoding error">
+					<p>We tried renaming the first column using various functions from the pandas package, but nothing work. After some research, we found the error was most likely caused by an encoding issue. The CSV we were reading in was encoded as UTF-8, but we had to make that clear to the compiler (because as we all learned in any intro CS class, computers are stupid and will only do exactly what you tell it to :D ). In order to clarify to the compiler that the CSV's are UTF-8, we added a little segment to the line that opens the file. </p>
+						<pre><code class="codeSnippet">
+measurements_data = open(r'[path].csv', encoding='utf-8')
+						</code></pre>
+					<p>Our second main error dealt with the formatting of our age data in Excel. CSV's can be conveniently opened in Excel and edited, but in order to match our age data to entries of the measurement data, we wanted to timestamp to be of a certain format. However, Excel has a mind of its own and would rearrange our timestamps to the default when we would open the age data in Notepad then again in Excel. Lesson? Don't open in Excel! Or figure out a way to avoid the default date format first because this caused some issues that we didn't realize.</p>
+					<p>Additionally, from Victoria's code, we still had problems importing the python file that does the calculations, so for now, we copy pasted that code at the top of our current file and hardcoded the import of the age data. Once this is working, we want to make ALL of these variables so the user can simply upload the raw data for both the ages and measurements and the script will do the rest. Our current next steps will be exporting the data into a CSV and seeing how good (or unsuccessful) our script is!</p>
+					<p>Thanks for reading, see you next time!</p>
+					<p>-Al</p>
+					<p>P.S. The Field Museum just opened a temporary bug exhibit where staff got to see first today! Even if you don't like bugs (like me) it's definitely a very interesting and cool exhibit! I learned a lot and actually have an increased appreciation for the creepy crawlies on our Earth. Be sure to check it out!</p>
+					<hr>
+					<h4 class="blogdate">Wednesday June 26, 2019</h4>
+					<p class="blogbody">After I left yesterday, Jose continued working on our script and added a feature that exports our resultant data frame as a CSV file. From our first attempt, our output data can be found <a href="https://drive.google.com/file/d/16teWUY5v29x06UAZQ8bME6A7WJJQIhiD/view?usp=sharing">here</a>. After a quick glance, we can see this output has over 200 lines of data and most of the entries are labeled as bad, which reasonably doesn't sounds right. After looking into it more, I realized the root of this issue was due to Jose and I not understanding how the function cleaned the data, specifically this line down here:</p>
+					<img src="images/comboLine.PNG" id="comboLine" class="images" alt="Image of the 'combo' line">
+					<p>In short, <span class="codeSnippet">listed_vals</span> contains lists of the segments drawn. Then the code above creates any and all combinations of two segments from each data entry in the measurement data (which very well could contain more than 2 segments since there could be multiple lobes in one picture for the user to measure) to then perform the calculations on. Thus, our current code appends every combination of 2 segments from each picture onto our exported CSV, causing the CSV to be hundreds of lines long. To fix it, we moved the if statements around to only append data if the combination of 2 segments intersected.</p>
+					<p>Additionally, we found that while the age data had completely unique timestamps, the measurement data sometimes had two entries with the same timestamp (down to the minute). Although they varied by the second, since the age data's timestamps only included up to the nearest minute, we had to truncate the timestamps in measurement data. Thus sometimes we had one entry in age data potentially correspond with multiple entries in measurement data (based on the time stamps) as seen below:</p>
+					<img src="images/twoForOne.PNG" id="twoForOne" class="images" alt="Image showing two entries in measurement data corresponding with one enry in age data">
+					<p>We can assume that since the timestamps are very close together, that this data is probably from the same user and thus can use the age demographic entry for both the highlighted measurement entries. To reflect this in our code, we simply did not increment the row counter for the age data whenever we ran into two rows in measurement data that corresponded with the current row in age data.</p>
+					<p>We ended the day with a meeting at Northeastern Illinois University where I talked with Francisco, a professor in computer science, as well as Beth, a graduate student. Beth will be working with using machine learning to classify ferns (which is part of my third project of the summer) and I'll be shadowing her project to learn about machine learning, both theoretically and practically, as well as learn how to apply it for my own uses.</p>
+					<p>Happy hump day! We're over halfway through!</p>
+					<p>-Al</p>
+					<hr>
+					<h4 class="blogdate">Thursday June 27, 2019</h4>
+					<p class="blogbody">Today started off with debugging! (Yay... my favorite) When we last left off, the cleaning script worked with a snippet of data from the kiosk measurements, but when we used the CSV with measurement data that corresponded with the date range from the age data sheet, we kept getting a JSON error. I personally had no idea what a JSON error, but after reading through a few Github threads and analyzing the problem, everything pointed to it being an issue with our data file. But this file was over 1000 lines long...luckily, using Excel's CTRL + 'down key' we found a few blank rows. After removing them, the first issue of the day was solved and we were able to export the data for all of the measurements that matched with a timestamp on age data! Success!</p>
+					<p>But of course, we can't ride on our successes for long. Currently, if there is an entry in measurement data whose timestamp does <i>not</i> correspond with an entry from age data, it's ignored. But after talking with Matt we realized this was wrong. Here's why:</p>
+					<p>When people come up to use the kiosk, they're first asked what age group they are. That's where the time stamp for age data comes from. Then they're shown pictures of the microplants where they make the measurements. Maybe they just do measurements on one image, maybe they do it on ten. Recall that each time they change images, an entry in measurement data is made. Thus all these measurements are associated with that one age data time stamp. Then when the user is done, they hit 'Quit' which resets the kiosk, allowing the next person to repeat the entire process.</p>
+					<p>For now, we need to treat all the entries in measurement data that do <i>not</i> directly correspond to a timestamp in age data to correspond with the last occurring timestamp in age data. Although there will be cases where no one hit exit and an entry in measurement data will correspond with a timestamp that was perhaps a few hours ago, we need not worry about that yet. In the future, we will get to putting less weights on these entries, since they are less likely to actually be associated with the entry in age data. This change in the code is not difficult, but to do it most efficiently we decided not to change anything regarding the appending of the data frame, but changing how the algorithm loops through. <b class="standOut">A psuedocode of this is shown below</b></p>
+					<button onclick="collapse()" class="showLess">Show Less</button>
+				</div>
+				<script>
+					function collapse()
+					{
+						<details open!="open">
+					}
+				</script>
+			</details>
+
+			<hr>
+			<details>
+				<summary class="expand"><span class="standOut">Week 2:</span> Microplants Data Cleansing & Starting MorphoSnake</summary>
+				<h4 class="blogdate">Tuesday July 2, 2019</h4>
+				<p class="blogbody">I was gone Friday and Monday, and during that time, Jose worked on making the timestamps from both data sets into time objects that we can directly compare to one another and writing a script to take the CSV for age data that we obtain from Google Analytics and converting it into a usable format. When I came in today, I worked on integrating that script into our overall cleansing script. So now, our code takes the raw data from Google Analytics and spits out the correct measurement and age pairing, allowing us to use this script, eliminating the need for someone to manually reformat the sheet how we want. <b>Something to note, however</b> when I tried to download the file straight from an email, the formatting was different and didn't work with the script. However, if I opened the file first in Google Sheets then downloaded as CSV, it worked perfectly fine.</p>
+				<p>Once that was working, I ran the script on both complete files (which took a good minute or two to fully run, making me feel like a true computer scientist when my code <i>actually</i> takes a bit of time to run) I skimmed through the output data and noticed that after line 900 or so, all the measurement data was being listed as having occurred past our cutoff. This cutoff was set at less than two minutes ( inclusive), which we decided because based on an observational study, the average time spent for people of all ages was around 90 seconds. It's also important to note that since our age data timestamps did NOT come with seconds, our data is only accurate down to the minute. However, although all these entries were being labeled as 'Out', most of them should've been 'In', meaning there was a bug in the code</p>
+				<p>Upon further inspection, I found that our algorithm did not handle the case when the age data contained an "extra" timestamp that didn't align closely with any of the measurement data. (In real people talk, this meant someone filled in their age group, but decided not to take any measurements). I fixed it with the following algorithm <span class="standOut">psuedocoded below: [use the incrementing i and row num code</span></p>
+				<p>-Al</p>
+				<hr>
+				<h4 class="blogdate">Wednesday July 3, 2019</h4>
+				<p class="blogbody">Today we took a break from the Microplants project and moved onto MorphoSnake, so let me explain exactly what it is. MorphoSnake is a Python script that takes in a skeletonized image of a plant and outputs the measurements of individual branches and nodes (such as terminal nodes which are where the ends of the branches are and inner nodes which are where two branches come together) as well as means and standard deviations of the whole. This tool is extremely useful for measuring plants first because it's incredibly quick and second because it's incredibly precise, especially for plants on the scale of millimeters. To see for yourselves, check out the Github page <a href="https://github.com/fjansson/MorphoSnake">here</a>.</p>
+				<p>In the past, there was one intern who was able to get it running, but she wasn't able to leave any documentation, so once she left, Matt hasn't been able to get the software up and running. This morning, we Skyped with Catherine Reeb, one of the creators of MorphoSnake, and she was able to help us get it up and running! Since it's not a very intuitive way of running a software, I spent the rest of the day creating a quick tutorial on installing the necessary packages and using MorphoSnake. If you're interested, it can be found <a href="https://docs.google.com/document/d/1IaMcmivTItDb53VOr2OMsX3nanL03mJs8yVoJ0vu4XE/edit?usp=sharing">here</a>. As I mentioned before, MorphoSnake can't just take in any image of a plant, it has to be a binarized skeletal image. Catherine mentioned she had used a software called GIMP to skeletize the images, so our next steps will be to explore that software and create a script that can skeletize images and upload them to MorphoSnake. After all, the goal of the project is for botanists to be able to upload raw images of the specimen and be returned statistics on it, avoiding the in between steps of skeletizing images.</p>
+				<p>Happy fourth and see you all next time!</p>
+				<p>-Al</p>
+			</details>
+			<hr>
+			<details>
+			<summary class="expand"><span class="standOut">Week 3:</span> Statistical Analysis for Microplants, Image Editing, and Basic ML</summary>
+			<h4 class="blogdate">Monday July 8, 2019</h4>
+			<p class="blogbody">Hope everyone had a great July 4th weekend! Today, we were back on the grind, starting with analysis of the Microplants data that we previously cleaned. To jog your memory, recall that the purpose of us cleaning Microplants kiosk data and combining it with age data is to see if there is a difference in the accuracy of measurements (determined by the angle between the major and minor axis) between the different age groups. Today, I worked on learning how to use R and without even doing any statistical tests and just graphing the data, we can see that there in fact is a difference between groups, as shown below.</p>
+			<img src="images/age_accuracy.PNG" id="sideBySideAgeData" class="images" alt="Left is the counts of good and bad data by age group and right side has the percentage of good and bad data within the age group">
+			<p>The next task here is performing a linear regression model and chi square test to have a statistical measurement of how different the results are depending on age group and how much more likely one age group is to perform more accurate measurements than another age group.</p>
+			<p>Additionally, today I played around with GIMP, an image editing software that is used to binarize the images of specimen for MorphoSnake to read in. I was able to eliminate the background of an image, but I'm still working on getting only the desired parts of the specimen black. The tricky part here is that we don't want the lobules (leaf looking like parts) to overlap, since that could mess up the morphosnake measurements. The good news is that in most of the images you can see both dorsal and ventral lobules (where ventral lobules show the front and dorsal show the back) The ventral lobules tend to be more "skeletal" and if we can just keep those, that's sufficient. Currently, we're working on creating a script that will be able to recognize which pixels are part of the stem and ventral lobules and be able to discard the dorsal parts, but it's very much in the process.</p>
+			<p>Thanks for reading!</p>
+			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Tuesday July 9, 2019</h4>
+			<p class="blogbody">This morning was spent working on the statistical analysis of our Microplants data in R. We're performing a binomial test on the data (since our results have two options: good or bad) and initially I was facing issues with the data structures in R. Then I learned that matrices in R are homogenous, meaning they can only hold data of one type, while data frames are heterogeneous, so they can have both strings and integers. After implementing those changes, we were able to get the glm (general linear model) function working with our data and we found that the data <i>is</i> statistically significant, since the probability (p-values) were incredibly low. Additionally, we calculated the odds ratio which help us determine just how much more likely one group is to create a good measurement than another.</p>
+			<p>After working on the statistics side in the morning, we had a team meeting with the rest of botany, the paleobotany department, and the Digital Learning Internship students. We did another round of introductions, which is helping me learn everyone's names! Additionally, Jose and I explained our projects and did a quick demo of MorphoSnake to show them how the software worked. Our explanation was pretty quick, but I hope it made sense!</p>
+			<p>After lunch, I found this plug-in for GIMP (the image processing software) that allows you to write python scripts using GIMP, but I'm struggling to get it working on Ubuntu. First, there aren't as many resources out there regarding this area and a lot of the tutorials assume things that aren't there in our version of Ubuntu and GIMP, so a lot of it is trying new things and working from there. At the same time Jose is working on just using Python packages to do the image editing and hopefully between the two of us exploring different paths, we'll be able to get something going soon.</p>
+			<p>Today was tiring but pretty rewarding, get some rest!</p>
+			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Wednesday July 10, 2019</h4>
+			<p class="blogbody">Okay not gonna lie today was not super productive, but it's okay, we all have those days. In the morning, I went to the intern breakfast downstairs and got to meet some of the other interns at the museum! We also had a Q&A with the president of the museum and it was really cool to see this more personable side and actually kind of get to know him. After that, I was working more with GIMP and MorphoSnake, trying to get an image of a plant skeletonized. I was able to take the following image and kind of skeletonize it (Not sure if I could <i>actually</i> say I was successful) I ended up making it black and white, intensifying the contrast, using the smart scissors tool to select more of the stems, and eventually using the paint tool to draw out the stem. However, when I tried using it in MorphoSnake, it threw an exception. Still trying to figure out why it wasn't accepting this image, but in the mean time, I started working on other things.</p>
+			<div class="row">
+				<div class="column_2">
+					<img src="images/rostrata.jpg" id="rostrata" class="images" alt="unedited image of f. rostrata">
+				</div>
+				<div class="column_2">
+					<img src="images/rostrata_skel.png" id="rostrata_skel" class="images" alt="skeletonized image of f. rostrata">
+				</div>
+			</div>
+			<p class="caption">The right is an unedited image taken under a microscope and on the right is a skeletonized version.</p>
+			<p>After lunch, I started the TensorFlow Machine Learning package sent from Beth, a graduate student at Northeastern Illinois University. I basically followed a tutorial using keras and tensorflow to create an algorithm that matches pictures of articles of clothing to the correct name. It uses 60K training cases and 10K test cases. Although I don't fully understand what each statement is doing, I understand the general gist of the program, and I think it's a good place to start before I move onto more complex ML problems. Additionally, next week, Jose and I will be hosting a Python workshop, so I went through his notes and added some of my thoughts. I think learning computer science to teach others computer science is one of the most exciting parts of the field! It's something that everyone wants to learn about these days, and I hope the other interns/people attending our quick class are excited to learn! Lastly, I started documenting and commenting in the Microplants cleaning script. I want someone to be able to look at the code and understand what every line does. Tomorrow, that's something I'll continue working on.</p>
+			<p>Happy Hump Day!</p>
+			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Thursday July 11, 2019</h4>
+			<p class="blogbody">In the morning, I helped organize the herbarium, taking a break from all this computer stuff. Basically, the museum is in the process of digitizing the specimen collection, but there were a few fern specimen that have to be re-imaged or didn't get imaged in the first place. Teaming up with some interns from the Digital Learning Internship, we looked for those sheets and organized them to be sent to the imaging lab. Although it's not the most exciting work, it's definitely necessary and it was nice to get to know some of the high school interns better!</p>
+			<p> In the afternoon, I worked on MorphoSnake stuff again. Using the paint tool in GIMP, I took an image of a plant, traced what I thought would be the stems and threw that image into MorphoSnake. Something that I learned is somethimes, after editing the image, MorphoSnake can't always accept PNGs if they have alpha layers or transparencies. So to be safe, I started using JPGs. Below, you can see the different stages of this process. The only issue is that drawing them by hand is not necessarily something the machine can learn to do easily. Thus, we may need to look into a different method of skeletonizing the images.</p>
+			<div class="row">
+				<div class="column_3">
+					<img src="images/f_rostrata.png" id="f_rostrata" class="images" alt="unedited image of f. rostrata">
+				</div>
+				<div class="column_3">
+					<img src="images/f_rostrata_skel.png" id="f_rostrata_skel" class="images" alt="skeletonized image of f. rostrata">
+				</div>
+				<div class="column_3">
+					<img src="images/f_rostrata_MS.png" id="f_rostrata_MS" class="images" alt="skeletonized image of f. rostrata">
+				</div>
+			</div>
+			<p class="caption">Left: unedited image of frullania rostrata. Center: Skeletonized image of f. rostrata using paint tool on GIMP. Right: Skeletonized image used in MorphoSnake.</p>
+			<p>Since the technique above may not be reasonable to get a computer to do, I explored altering the image as a whole. For example, to obtain the sequence of images below, I took the following steps:</p>
+			<ol>
+				<li>Use the fuzzy select tool and set the threshold relatively high (around 80) to select entirely the main object)</li>
+				<li>Go to Select -> Invert</li>
+				<li>Choose the fill color to be white and use the bucket fill option to make the background all white.</li>
+				<li>Go to Color -> Threshold and adjust the slider values until a somewhat desired image is produced. The histogram shows how many pixels of the image are in that range. Pixels inside the range are converted to white and everything else is black.</li>
+			</ol>
+			<div class="row">
+				<div class="column_3">
+					<img src="images/f_rostrata.png" id="f_rostrata" class="images" alt="unedited image of f. rostrata">
+				</div>
+				<div class="column_3">
+					<img src="images/f_rostrata2_blob.png" id="f_rostrata2_blob" class="images" alt="skeletonized image of f. rostrata">
+				</div>
+				<div class="column_3">
+					<img src="images/f_rostrata2_MS.png" id="f_rostrata2_MS" class="images" alt="skeletonized image of f. rostrata">
+				</div>
+			</div>
+			<p class="caption">Left: unedited image of frullania rostrata. Center: Skeletonized image of f. rostrata using whole image editing on GIMP. Right: Skeletonized image used in MorphoSnake.</p>
+			<p>
+				I'm currently trying to look into other options for image editing. Victoria suggested looking into Google Vision API, but that seems to be more just for recognition of objects in the image. It may be a place to start, but I'm not sure if it can do the image editing for us. I'll have to check in with Jose tomorrow and touch base on ideas.
+			</p>
+			<p>At a bit of a block, but we'll get through it!</p>
+			<p>-Al</p>
+	</body>
+</html>

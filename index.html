@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- w3schools! -->
+
+<html>
+	<head>
+		<title>Allison Chen</title>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--Navigation Bar-->
+		<div id="Navigation">
+				<ul>
+					<div id="links">
+						<li><a class="active" href="./index.html">Allison Chen</a></li>
+						<li><a href="#education">Education</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#arts">Arts</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					</div>
+				</ul>
+			<a href="javascript:void(0)" class="hamburger_icon" onclick="expandContract()">
+				<img src="images/icon.PNG" class="icon">
+			</a>
+		</div>
+		<script>
+			function expandContract()
+			{
+				var x=document.getElementById("links");
+				if (x.style.display=="block")
+				{
+					x.style.display="none";
+				}
+				else
+				{
+					x.style.display="block";
+					x.style.width="100%";
+					x.style.height="100%";
+				}
+			}
+		</script>
+		<div id="notNavigation">
+			<div id="aboutMe">
+				<div class="row">
+					<div class="column">
+						<h2>Hey there!</h2>
+						<p>I'm Allison Chen, and I'm originally from Chicago, Illinois. Currently, I'm a first year undergraduate mechanical engineering student at University of California, Los Angeles. I'm still exploring my options on what I want to apply mechanical engineering to, but I'm also interested in computer science and environmental protection.
+						</p>
+					</div>
+					<div class="column">
+						<img src="images/ProfessionalProPic.JPG" id="profile-image"/>
+					</div>
+				</div>
+			</div>
+
+			<br> 
+
+			<!--<img id="pic" src="cutepic.JPG" alt="Portrait of myself"> -->
+			<button onclick="window.alert('You have mail!')">Open Mail 
+			</button>
+			<!--onclick=javascript stuff
+				when the button that says 'Open Mail' is clicked, a dialogue pops up that says You've got mail! -->
+		<hr>
+
+		<section id="intro">
+			<h2>Inspiration</h2>
+			<p>
+				I started robotics in 5th grade and continued all the way through high school. I immediately loved the hands-on work and that inspired me to pursue mechanical engineering.
+			</p>
+			<img id="images/robotics" src="https://cdn5.vectorstock.com/i/1000x1000/89/89/set-with-cute-fruits-vector-19608989.jpg" alt="haha psych">
+			<p>
+				My dad used to tell me that eating watermelon seeds would cause a watermelon to grow inside me... I went 3 years without eating watermelon
+			</p>
+		</section>
+		<section id="contactMe">
+			<footer>
+			<p>Contact me at allisonchen2@ucla.edu or (847)-826-3628</p>
+			</footer>
+		</section>
+		</div>
+
+
+	</body>
+
+</html>
