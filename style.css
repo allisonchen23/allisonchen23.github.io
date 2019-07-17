@@ -64,7 +64,6 @@ li a
 	color: #f1d1d6;
 	text-decoration: none; get rid of underline
 }
-
 .icon
 {
 	display: none;
@@ -113,6 +112,7 @@ li a
 		padding-left: 10px;
 		padding-bottom: 3px;
 	}
+	*/
 	li 
 	{
 		flex-direction: row;
