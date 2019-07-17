@@ -16,23 +16,24 @@ Color Scheme:
 	Navy:#24305e
 */
 
+/*
 p
 {
 	font-size: 16px;
 	margin: 16px;
 }
-
+*/
+/*
 body
 {
 	font-family: 'Merriweather', serif;
 	width:100%;
 	height:100%;
 	background-color:#a8d0e6;
-	/*background-color: #fae1df*/
-	/*b2dfee light blue*/
+	margin: 0px;
 
 }
-
+*/
 footer
 {
 	margin: 30px;
@@ -40,34 +41,31 @@ footer
 }
 
 /*Navigation bar*/
+/*
 ul
 {
 	list-style-type: none;
 	display: flex;
 	padding: 15px;
-	margin-right: 0px; 
-	position: fixed;
-	/*float: left; */
-	top: -15px;
+	margin:0px;
 	width: 100%;
-	background-color: #546a7b;
-
 }
 
-li a:hover, .active /*the comma is like an or*/
+li a:hover, .active the comma is like an or
 {
 	background-color: #cae4db;
 	color: #24305e;
 }
+
 li a
 {
 	flex-direction: row;
-	padding: 15px; /*spaces out the elements*/
+	padding: 15px; spaces out the elements
 	color: #f1d1d6;
-	text-decoration: none; /*get rid of underline*/
+	text-decoration: none; get rid of underline
 }
 
-a .icon
+.icon
 {
 	display: none;
 	position: absolute;
@@ -78,7 +76,9 @@ a .icon
 {
 	display: flex;
 }
-
+*/
+/*When you go back to bigger screen*/
+/*
 @media screen and (min-width: 551px)
 {
 	#links
@@ -95,45 +95,46 @@ a .icon
 		float: none;
 		display: block;
 		width: 100%;
-		padding: 15px;
-		padding-top:0px;
-		padding-left:0px;
-		height:35px;
+		padding:0px;
+		min-height:50px;
 	}
-
-	
 	#links
 	{
 		display: none;
 	}
-	a .icon
+	.icon
 	{
 		display: block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		color: #f1d1d6;
+		padding-right:10px;
+		padding-left: 10px;
+		padding-bottom: 3px;
 	}
 	li 
 	{
 		flex-direction: row;
-		padding: 15px; /*spaces out the elements*/
+		padding: 15px; /*spaces out the elements
 		color: #f1d1d6;
-		text-decoration: none; /*get rid of underline*/
+		text-decoration: none; /*get rid of underline
 		width: 100%;
 		background-color: #546a7b;
 	}
-
-	li:hover
+	li:hover li a
 	{
 		background-color: #cae4db;
 		color: #24305e;	
 	}
+	
 	li a:hover,.active
 	{
 		color: #24305e;	
-
 	}
-	
 
 } 
-
+*/
 /*Classes*/
 .column
 {
@@ -189,17 +190,19 @@ a .icon
 	background-color: #95ff93;
 }
 
+/*
 #Navigation
 {
-	margin-left:0;
-	width:100%;
-	height: 100%;
-}
 
+	overflow: hidden;
+	position: relative;
+	background-color: #546a7b;
+}
+*/
 
 #notNavigation
 {
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	align-content: center;
 	width: 80%;
 	max-width: 800px;
