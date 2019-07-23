@@ -3,6 +3,7 @@
 {
 	--light_blue:#a8d0e6;
 	--paynes_gray:#546a7b;
+	--pale_pink: #f1d1d6;
 }
 p
 {
@@ -27,7 +28,7 @@ body
 	position: relative;
 	background-color: var(--paynes_gray);
 }
-ul
+#Navigation_UL
 {
 	list-style-type: none;
 	display: flex;
@@ -43,7 +44,7 @@ li a
 {
 	flex-direction: row;
 	padding: 15px; /*spaces out the elements*/
-	color: #f1d1d6;
+	color: var(--pale_pink);
 	text-decoration: none; /*get rid of underline*/
 }
 li a:hover, .active /*the comma is like an or*/
@@ -72,7 +73,7 @@ li a:hover, .active /*the comma is like an or*/
  @media screen and (max-width: 550px)
 {
 	
-	ul
+	#Navigation_UL
 	{
 		float: none;
 		display: block;
@@ -90,7 +91,7 @@ li a:hover, .active /*the comma is like an or*/
 		position: absolute;
 		right: 0px;
 		top: 0px;
-		color: #f1d1d6;
+		color: var(--pale_pink);
 		padding-right:10px;
 		padding-left: 10px;
 		padding-bottom: 3px;
@@ -99,7 +100,7 @@ li a:hover, .active /*the comma is like an or*/
 	{
 		flex-direction: row;
 		padding: 15px; /*spaces out the elements*/
-		color: #f1d1d6;
+		color: var(--pale_pink);
 		text-decoration: none; /*get rid of underline*/
 		width: 100%;
 		background-color: #546a7b;

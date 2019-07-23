@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- w3schools! -->
+
+<html>
+	<head>
+		<title>Allison Chen</title>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<link rel="stylesheet" type="text/css" href="global.css">
+    	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    	<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
+	</head>
+
+	<body>
+		<!--Navigation Bar-->
+		<div id="Navigation">
+			<ul id="Navigation_UL">
+				<div id="links">
+					<li class="hover_parent"><a class="hover_child" href="./index.html">Allison Chen</a></li>
+					<li class="hover_parent"><a class="hover_child" href="#education">Education</a></li>
+					<li class="hover_parent"><a class="hover_child" href="#experience">Experience</a></li>
+					<li class="hover_parent active"><a class="hover_child active" href="./arts.html">Arts</a></li>
+					<li class="hover_parent"><a class="hover_child" href="blog.html">Blog</a></li>
+				</div>
+			</ul>
+			<a href="javascript:void(0)" class="icon" onclick="expandContract()">
+				<i class="fa fa-bars fa-3x"></i>
+			</a>
+		</div>
+		<script>
+			function expandContract()
+			{
+				var x=document.getElementById("links");
+				if (x.style.display=="block")
+				{
+					x.style.display="none";
+				}
+				else
+				{
+					x.style.display="block";
+					x.style.width="100%";
+					x.style.height="100%";
+				}
+			}
+		</script>
+		<div id="notNavigation">
+			<div id="intro">
+				<p>Art to my engineering is like my yin to my yang. It keeps me in balance and provides a creative outlet for myself to destress and have fun! Primarily, I'm a dancer trained in ballet, jazz, lyrical, contemporary, and a little bit of tap and hip hop, but my favorite style is contemporary and lyrical. Additionally, I enjoy painting and trying out different things such as bullet journaling and string art. Below is a brief gallery of my pieces I've done :) </p>
+			</div>
+		</div>
+	</body>
+</html>

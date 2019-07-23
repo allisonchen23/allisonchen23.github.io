@@ -257,7 +257,19 @@ pre
 	width:100%;
 }
 */
+#sela_orig
+{
+	margin-bottom:10px;
+}
 .full
 {
 	width: 100%;
+}
+.half
+{
+	width: 50%;
+}
+.third
+{
+	width: 33%;
 }

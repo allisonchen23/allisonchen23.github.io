@@ -64,6 +64,7 @@ li a
 	color: #f1d1d6;
 	text-decoration: none; get rid of underline
 }
+
 .icon
 {
 	display: none;
@@ -112,7 +113,6 @@ li a
 		padding-left: 10px;
 		padding-bottom: 3px;
 	}
-	*/
 	li 
 	{
 		flex-direction: row;
@@ -187,19 +187,21 @@ li a
 
 #contactMe
 {
-	background-color: #95ff93;
+	background-color: #f1d1d6;
+	padding: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
-/*
-#Navigation
+#contactMethod
 {
-
-	overflow: hidden;
-	position: relative;
-	background-color: #546a7b;
+	text-decoration: none;
 }
-*/
 
+#contactList
+{
+	display: block !important;
+}
 #notNavigation
 {
 	/*margin-top: 50px;*/
@@ -233,5 +235,4 @@ li a
 	object-fit: cover;	
 	margin: auto;
 	justify-content: center;
-	
 }

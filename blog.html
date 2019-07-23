@@ -10,12 +10,12 @@
 	<body>
 		<!--Navigation Bar-->
 		<div id="Navigation">
-			<ul>
+			<ul id="Navigation_UL">
 				<div id="links">
 					<li class="hover_parent"><a class="hover_child" href="index.html">Allison Chen</a></li>
 					<li class="hover_parent"><a class="hover_child" href="#education">Education</a></li>
 					<li class="hover_parent"><a class="hover_child" href="#experience">Experience</a></li>
-					<li class="hover_parent"><a class="hover_child" href="#arts">Arts</a></li>
+					<li class="hover_parent"><a class="hover_child" href="arts.html">Arts</a></li>
 					<li class="hover_parent active"><a class="hover_child active" href="blog.html">Blog</a></li>
 				</div>
 			</ul>
@@ -54,9 +54,9 @@
 				<p><b>1. Data Analysis with Microplants</b></p>
 				<p>	An ongoing project right now uses a Zooniverse project on microplants (really <i>really</i> small plants measured in microns (10e-6 meters)). The project can be done on a computer or a kiosk, and it gives the user a picture of part of a microplant under a microscope and the user uses their mouse or finger to measure out the length and width of the leaves. Although the task doesn't seem mind blowing, the project's advocacy of citizen science expedites the data collection process for scientists, and the data is then used to help determine speciation of various microplants. My role here will be to work with another undergraduate student to devise a way to convert the pixel measurements Zooniverse takes into microns and to create a Python script to clean the data to be usable.</p>
 				<p><b>2. Plant Measurements with Morphosnake</b></p>
-				<p>The second part of the project utilizes Morphosnake, a software for plant image analysis, to write a script that skeletizes an image of a plant then takes measurements of various lengths. These measurements again will be used to distinguish various species that may be similar. Using this software will entail a little bit of machine learning to allow the computer to make the measurements on its own and export the data</p>
+				<p>The second part of the project utilizes Morphosnake, a software for plant image analysis which takes in a skeletonized image of a plant then takes measurements of each branch, outputting the statistical summary. These measurements again will be used to distinguish various species that may be similar. The department has been struggling to get the software up and running, so that's step 1. After that, we want to look into having a script to automate to process of skeletonizing the images.</p>
 				<p><b>3. Machine Learning to Automate the Species Determination</b></p>
-				<p>The last part of the project is what I'm most excited for! From talking with Matt, we decided that there <i>has</i> to be a way for a computer to take an image, skeletize it, take measurements, and determine its species in 1 step, instead of having someone having to bring the data from one step to the next. In this phase of the project, I'll be experimenting with tools from parts 1 and 2 to hopefully develop a script that can complete all three of these tasks!</p>
+				<p>The last part of the project is what I'm most excited for! There was a paper published from the Smithsonian that used a convolutional neural network (CNN) to classify two families of of specimen that look very similar to each other. We want to be able to accomplish this with our specimen collection at the Field Musuem, so the first step is almost trying to replicate the steps they took and then being able to apply a similar model on different family/specimen/etc. This will be a really good way for me to get some experience in machine learning and hopefully understand what's happening as well, not just mimicking the steps.</p>
 				<p>I'm genuinely really excited for this summer! I love the idea of applying computer science into a field that hasn't really been exposed to it yet and seeing how much of an impact technology will be able to make. In addition to working at the Field Museum, I'll also be collaborating with CS professors and graduate students from North Eastern Illinois University (NEIU) for guidance! (which we all know I'll need a lot of)</p>
 				<p>Till next time!</p>
 				<p>-Al</p>
@@ -242,6 +242,52 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			<p>Which is another thing; if I have more time, I would like to look into improving the efficiency of the code; currently I feel it's quite slow, but I'm not confident about a method of improving it right now. I can research that tomorrow as well.</p>
 			<p>Thanks for reading and take it easy!</p>
 			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Thursday July 18, 2019</h4>
+			<p class="blogbody">Today was mainly spent dealing with image pre-processing for the fern machine learning part of the project. First, we can't directly batch download all the images from the database we're using, so I polished up a script that will take the links and download them. The only thing is that they don't all download with the same resolution  or size, but this is to be explored further. When writing ths script, I mainly used a column labeled 'identifier' that contained a link to the image. But then I found that some of the images didn't have an identifier link, but they did have a link under a column called 'goodQualityAccessURI'. For some reason, however, downloading from 'goodQualityAccessURI' takes longer than downloading from 'identifier', so we only download from there if we're unable to find a link in identifier. I would like to look into this ore because it could be one of the reasons we don't have uniform image sizes. The next step would be to resize all the images to the same resolution and size. My other issue I ran into with this is I don't know a good desireable size to use for these images. Doing some research, it looked like most ML algorithms use square images of at most around 128 px by 128 px, but currently our images are more like 1500 px by 2000 px, which is significantly larger. I'm afraid that compressing down to that size would possibly lose some of the details of the image, but we can explore this further. I guess the first step for tomorrow will be using Python or GIMP to just get them to the same size and resolution first.</p>
+			<p>At a bit of a block, but we'll get through it!</p>
+			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Friday July 19, 2019</h4>
+			<p class="blogbody">This Friday was really quiet at the museum. Most of our intern take the day off, so today, it was just 2 of us: Jessica and me. I was kinda struggling and a bit stressed with how I left things with the image proprocessing yesterday, but luckily, in the morning Matt came up pretty early and we talked a few things out. For example, for some reason, not all the images downloadedfrom the Pteridophyte Portal database were the same size or resolution and I was nervous that it would cause some issues in resizing them. Looking at <span class="standOut">the paper from the Smithsonian</span>, we decided to resize all the images to 256px by 256px and not to worry about image resolution at this point. We know for a fact that you can use Photoshop to batch resize these images, but I wanted to try to use Python to do so instead. I definitely know it's possible, I just wasn't sure how to do it. The plan was to resize them using Python and then resize a few manually with GIMP and see if there's a big difference.</p>
+			<p>Using my resources (aka the infamous Google), I found that Pillow is a relatively common Python package for image processing and initially, I used that. Just looking at the resulting images, they looked extremely distorted and any text was 300% impossible to read. I knew that by reducing the image size, we would lose a lot of clarity, but this seemed more distorted than expected. After resizing in GIMP, I could clearly see the GIMP software did a much better job of preserving clarity. I was about to just explore using GIMP to process all of the images, but then I remembered another image processing software,<span class="standOut"> OpenCV</span>, that I had heard about. I had to download packages for that (just Google 'OpenCV Python') and resized the image which produced a <i>much</i> clearer image. Check out the comparisons below:</p>
+			<img src="images/sela_5887.jpg" class="images third" id="sela_orig" alt="Example of original uncompressed image">
+			<div class="row">
+				<div class="column_3">
+					<img src="images/sela_5887_pillow.jpg" id="subject_ids" class="images full" alt="Resized image using Pillow">
+				</div>
+				<div class="column_3">
+					<img src="images/sela_5887_gimp.jpg" id="matching_ids" class="images full" alt="Resized image using GIMP">
+				</div>
+				<div class="column_3">
+					<img src="images/sela_5887_openCV.jpg" id="voucher" class="images full" alt="Resized image using OpenCV">
+				</div>
+			</div>
+			<p class="caption">The top center image is the original image. On the second row from left to right is the resized image using Pillow, GIMP, and OpenCV. Because the images are small on this site, the difference is not immediately apparent, but look in the upper and lower right corners at the label to see a difference.</p>
+			<p>After testing this function on an image, I added to my code so the program takes in a folder and will resize all the images in the folder. After testing that on a small subset with original images of all the same size, I used it with all the images that were exported with a width of aroudn 1500 pixels and a resolution of 72 ppi. Once that worked, just for funsies, I tested it on all the images, and to my knowledge, they all exported with the same size and resolution of 96 ppi (that's just what OpenCV gave me). So yay! Now we have scripts to not only download the images, but also to resize them appropriately :D</p>
+			<p>Looking into image classification models, I found it to be necessary to have a CSV with all the image names and labels (in our case, family of the specimen) to train the model. This is something I forgot initially, so I also added that to my script before calling it a day!</p>
+			<p>Whew! It's been an exciting week preparing for the machine learning model, but I hope everyone has a great weekend and stay cool in this hot and humid Chicago summer!</p>
+			<p>-Al</p>
 		</details>
+		<hr>
+		<details>
+			<summary class="expand"><span class="standOut">Week 5:</span> Machine Learning For REAL</summary>
+			<h4 class="blogdate">Monday July 22, 2019</h4>
+			<p class="blogbody">Hi everyone! I can't believe we're already nearing the end of July! Is it just me or is this summer seriously flying by?? Anyways, today was major progress on the third part of my project: classification using machine learning! So just a quick recap, there's an article by the Smithsonian explaining how they were able to use a ML algorithm to sort two plant families that are morphologically similar. Check it out <a href="https://bdj.pensoft.net/article/21139/element/5/3811021/">here</a>! They also used an algorithm to find stained specimen sheets, but for now, we're only focused on the family part. My current goal is to understand machine learning enough to essentially replicate what they did in the article. Then after that, we would like to apply a similar concepts to other species or categories. For example, with the staining example done in the article, there's a really practical purpose to conduct that. Essentially, in the past, specimen were treated with mercury to preserve them longer, but over time, we've learned that this is actually bad for the specimen and it causes staining on the specimen sheets. Eventually, we'd like to find the specimen that have been treated and are now stained so we can remount them, allowing them to last longer.</p>
+			<p>Last week, I created scripts to do a lot of the initial image processing so all the pictures are the same size (256 pixels by 256 pixels) and have the same resolution (96 ppi). Today, I started creating my own ML model using tensorflow and keras to train a model, following the tutorial <a href="https://towardsdatascience.com/all-the-steps-to-build-your-first-image-classifier-with-code-cf244b015799">here</a> (bless the people who make easy to follow tutorials like this one!) Before I started attempting to recreate the model from the Smithsonian paper, I just wanted to get something working with the model in the tutorial and I did! I only used 100 images from each family and 10 epochs (epoch = essentially a cycle) and the accuracy is pretty trash, as you can see below. 
+			</p>
+			<img src="images/initial_model_accuracy.png" class="images half" alt="Graph of accuracy of training model from tutorial. It's pretty trash">
+			<p>Now that I have that, I plan to follow these steps:</p>
+			<ol>
+				<li>Change the layers to recreate the model from the Smithsonian Paper</li>
+				<li>Increase my training size</li>
+				<li>Test the model on a test batch!</li>
+			</ol>
+			<p>Starting on step 1, I was almost able to finish replicating the paper's model in Python. Although the Smithsonian used Mathematica, with the help of Google (honestly, I don't know what I'd do on this project without Google) I think I'm able to figure out what the paper's layers are doing then finding the relative equivalent in Python. I've almost finished that and hope tomorrow I'll be able to get a small batch tested with hopefully higher accuracy than the random one I used today. Something I would like to investigate further is how do we know how many layers or filters to use? What filter size should we use for the convolution layer? How did they figure out what combination of layers worked best? It seems that creating a model is not that difficult, it's the <i>why</i> you choose certain characteristics of the model that I'd like to further explore.</p>
+			<p>Well today was a very satisfying day and tomorrow we have our Python workshop! Can't wait :D</p>
+			<p>-Al</p>
+			<hr>
+		</details>
+
 	</body>
 </html>
