@@ -299,6 +299,13 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			<p>Although the training accuracy increased over time, we see that by the second epoch, the validation accuracy plateaued, which is not a good sign. Additionally, when tested on the same test data as above, all the images were labeled as Selaginellaceae, leading me to believe overfitting is happening, but I can look into this more tomorrow.</p>
 			<p>Exciting things are happening and I'm definitely kept busy!</p>
 			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Wednesday July 24, 2019</h4>
+			<p class="blogbody">Today I took a bit of a break from the machine learning classification project. In the morning, a teacher from Northside College Prep came in and worked with us to create our own ozone detection strips! These strips can be used as indicators to see whether there are high levels of ozone in our area or not! They're actually really easy to make; it was essentially mixing some cornstarch and water, add some sodium iodide, and painting them onto strips. Then we have to let them sit overnight. The majority of the afternoon was spent helping out some scientists and the high school Digital Learning Interns, but I did get to work on the CNN model a little bit. To combat the issues I faced yesterday, I decreased the learning rate of the model from the standard for Adam (0.001) to 0.0001 and that improved our accuracy for training and validation (see below). </p>
+			<img src="images/decreased_lr.png" alt="Graph of accuracy over epochs with learning rate at 0.0001" class="images half">
+			<p>It looks nice, but I believe the model is still overfitting to the training data. This hypothesis was supported when I tested the model on some test data with 10 images from each family and all of them were labeled as Lycopodiaceae (the opposite from last time). Online says this may be due to imbalance of input data in training, but I don't think that's the case because we have 800 of each family. Maybe not enough data? I still believe overfitting is an issue here, so we need to see how we can reduce that. It may be time to consult some experts</p>
+			<p>Although they're tough, roadblocks are good! This means we're learning :)</p>
+			<p>-Al</p>
 		</details>
 
 	</body>
