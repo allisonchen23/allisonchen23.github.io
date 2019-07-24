@@ -103,12 +103,14 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 					<p>For now, we need to treat all the entries in measurement data that do <i>not</i> directly correspond to a timestamp in age data to correspond with the last occurring timestamp in age data. Although there will be cases where no one hit exit and an entry in measurement data will correspond with a timestamp that was perhaps a few hours ago, we need not worry about that yet. In the future, we will get to putting less weights on these entries, since they are less likely to actually be associated with the entry in age data. This change in the code is not difficult, but to do it most efficiently we decided not to change anything regarding the appending of the data frame, but changing how the algorithm loops through. <b class="standOut">A psuedocode of this is shown below</b></p>
 					<button onclick="collapse()" class="showLess">Show Less</button>
 				</div>
+				<!--
 				<script>
 					function collapse()
 					{
 						<details open!="open">
 					}
 				</script>
+				-->
 			</details>
 
 			<hr>

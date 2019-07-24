@@ -202,9 +202,10 @@ li a
 {
 	display: block !important;
 }
+/*
 #notNavigation
 {
-	/*margin-top: 50px;*/
+	margin-top: 50px;
 	align-content: center;
 	width: 80%;
 	max-width: 800px;
@@ -213,6 +214,7 @@ li a
 	padding: 10px;
 	background-color: #ffffff
 }
+*/
 
 #pic
 {

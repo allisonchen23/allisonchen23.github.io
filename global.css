@@ -119,15 +119,21 @@ li a:hover, .active /*the comma is like an or*/
 		padding-top:0px;
 		padding-bottom:0px;
 	}
-	/*
-	li:hover li a
-	{
-		color: #24305e;	
-
-	}
-	li a:hover,.active
-	{
-		color: #24305e;	
-	}
-	*/
+	
+	
 } 
+
+/*--------------Not Navigation--------------*/
+#notNavigation
+{
+	/*margin-top: 50px;*/
+	align-content: center;
+	width: 80%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:25px;
+	padding: 10px;
+	background-color: #ffffff
+
+}
