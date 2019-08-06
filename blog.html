@@ -333,6 +333,15 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			<p>I won't be in at all next week, but this has been a great place to stop for myself!</p>
 			<p>-Al</p>
 		</details>
-
+		<hr>
+		<details>
+			<summary class="expand"><span class="standOut">Week 6:</span> Continuing Machine Learning Project</summary>
+			<h4 class="blogdate">Monday August 5, 2019</h4>
+			<p class="blogbody">I took last week off for the Primers Program at PPG in Pittsburgh (wow that was a lot of P's) and I absolutely loved it! From Sunday to Thursday, we just learned about the details of the company, what they do (which is mostly make paint and coatings), and about the culture they create. Something I really liked was the emphasis on environmental impact as well as the well-being of its employees. No matter what your position, the company wants you to keep growing and learning and that's something I can stand by. </p>
+			<p>Alas, the vacation came to an end, and today I was back to work! Like I mentioned last week, we have a model working, but I want to continue making it more similar to the Smithsonian model and improve its accuracy. Today, I mainly worked on randomizing the training, validation, and test data (although I'm not sure how big of a difference it makes). Previously, I had 1600 images for training and validation, which between each other would get randomized, but the test data were always the same 200 images. This also required separate folders for the test data. Today, I pooled all the images I wanted to use into one folder and had the code split up the images. One thing I did run into at the end of the day, however, was when I went to use the model to predict the family, it threw an error. The format of the data is still a numpy array, but for some reason, the function isn't accepting it. I used the debugger to compare what I previously had to what I currently have, and the only difference was that the numpy array was an element in a Python list. For tomorrow, I'll try just putting the numpy array in a list and see if it works.</p>
+			<p>Additionally, I attended presentations from the Women in Science interns at the Field Museum today! There were 5 groups of 2 working in various departments and it was really cool to see the hands-on science that they were doing! Very inspiring to see my peers work on such cool projects :)</p>
+			<p>Just getting back into the swing of things!</p>
+			<p>-Al</p>
+		</details>
 	</body>
 </html>
