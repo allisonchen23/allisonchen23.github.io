@@ -351,6 +351,19 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			<p>Oh also, this afternoon, we went for some dim sum lunch at a place in Old Chinatown called Triple Crown and it was <span class="standOut">AMAZING</span>. 10/10 recommend! Then we had some time just to relax, walk around, and check out the Chinatown shops! What a realxing afternoon! :D</p>
 			<p>Have an amazing day!</p>
 			<p>-Al</p>
+			<hr>
+			<h4 class="blogdate">Wednesday August 7, 2019</h4>
+			<p class="blogbody">In the morning, I continued making changes to the model and seeing the result. Right before I left for my meeting at NEIU, I trained the model with more images (around 1600 training images) and tested. At first, with 180 test images, it had around a 97% success rate, but when I introduced 500 new images, it plummeted to around 50% success rate. I didn't have time to examine why this happened, but I will tomorrow! If I can't find a good reason why this is happening, I will go back to using less images and see if the model "reverts".</p>
+			<p>At my meeting with Beth, I mostly recapped what I had done and we talked about some steps moving forwards, which are listed below:</p>
+			<ul>
+				<li>Use the same images for training/validation because we want to see the performance of the model, we don't want the model to be affected by variables like randomization of the images used between training/validation and testing.</li>
+				<li>Test that the models I'm saving still work. I copied the .model files into a different folder, but I didn't take the h5 files. I figured since the testing files only called upon CNN.model, it should be fine, but I would like to test this</li>
+				<li>Keep trying to improve model! Once we get something satisfactory, we can test on larger sets of images and change images used</li>
+				<li>Look into using metadata to help with the classification (Ask Matt if this is something worth doing). Maybe knowing something like location of collection could help the model predict the specimen. However, this will take a bit more research!</li>
+			</ul>
+			<p>Lots to work on, so I'll definitely be busy!</p>
+			<p>-Al</p>
+
 		</details>
 	</body>
 </html>
