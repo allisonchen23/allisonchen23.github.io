@@ -40,7 +40,7 @@ body
 {
 	display: flex;
 }
-li a
+.hover_child /*li a*/
 {
 	flex-direction: row;
 	padding: 15px; /*spaces out the elements*/

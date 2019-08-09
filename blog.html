@@ -363,7 +363,13 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			</ul>
 			<p>Lots to work on, so I'll definitely be busy!</p>
 			<p>-Al</p>
-
+			<hr>
+			<h4 class="blogdate">Thursday August 8, 2019</h4>
+			<p class="blogbody">Okay not going to lie, this week has been a lot of fun! Yesterday was one of the interns, Amelia's, birthday but she wasn't here, so today, we went to Jewel Osco to get her a cake and celebrated! But for my project, when I used the model we trained for new images, it was the same probability as a coin toss. My hypothesis is as follows:</p>
+			<p>When selecting the training images, I took the first say 1000 images from each folder. Then I tested the model on the next maybe 100 images after that. These images were probably kind of similar since they were just taken in order from the online collection which means they may be grouped by time they were collected or even location and collector. This could mean that the images at the beginning of each folder may be drastically different than the images from the end of the folder. So, when I went to go test the model on new images, it would result in accuracy of around 50%. Which is <span class="standOut">very bad</span>. So my next step here is to work on a helper function that will take <i>all</i> the specimen we have and choose images periodically to spread out the sample.</p>
+			<p>After implementing this technique of choosing training images, I tested it on images that were chosen with a similar technique. It seems results are more consistent which is good, but of course our accuracy took a hit. Now I want to work on building it back up to what we had with the misleading accuracy. I also want to consider testing on randomly selected test images (that of course, were not seen during training). I honestly don't think most of this is too hard, but the sheer amount of images that I'm dealing with is a little intimidating and keeping eveerything straight (which files are correct, separating old batches from new) is getting a little overwhelming. I might take a bit tomorrow to organize better. Also! Tomorrow is the high school interns' last day :( They'll be presenting their projects and I'm excited to hear about them!</p>
+			<p>Let's end this week strong!</p>
+			<p>Al</p>
 		</details>
 	</body>
 </html>
