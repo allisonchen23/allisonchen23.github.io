@@ -370,6 +370,11 @@ measurements_data = open(r'[path].csv', encoding='utf-8')
 			<p>After implementing this technique of choosing training images, I tested it on images that were chosen with a similar technique. It seems results are more consistent which is good, but of course our accuracy took a hit. Now I want to work on building it back up to what we had with the misleading accuracy. I also want to consider testing on randomly selected test images (that of course, were not seen during training). I honestly don't think most of this is too hard, but the sheer amount of images that I'm dealing with is a little intimidating and keeping eveerything straight (which files are correct, separating old batches from new) is getting a little overwhelming. I might take a bit tomorrow to organize better. Also! Tomorrow is the high school interns' last day :( They'll be presenting their projects and I'm excited to hear about them!</p>
 			<p>Let's end this week strong!</p>
 			<p>Al</p>
+			<hr>
+			<h4 class="blogdate">Friday August 9, 2019</h4>
+			<p class="blogbody">In the morning, I really cracked down, working on my machine learning project. Right now, I'm trying to combat the issue of sometimes when I used the model on test data, it would only have 50% ish accuracy despite validation accuracy being really high. This is because the model is overfitting, so I'm trying to implement different methods to fight this. First, I implemented some early stopping. This will stop the model if the validation loss starts to increase again, although it's not ideal. I need to first change some things about my model to fight the overfitting before just stopping training. Currently, validation accuracy will remain at about 50% while training accuracy increases then suddenly validation accuracy will increase and fluctuate a bit. My next steps will be to implement more dropouts in my model, but less percent of the model at a time. If that doesn't really work, I may look into some image augmentation, which seems to be a popular suggestion online. (Sorry for the short entry today!)</p>
+			<p>Enjoy the weekend!</p>
+			<p>-Al</p>
 		</details>
 	</body>
 </html>
