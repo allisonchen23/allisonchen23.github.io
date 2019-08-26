@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- w3schools! -->
+
+<html>
+	<head>
+		<title>Allison Chen</title>
+    	<link rel="stylesheet" type="text/css" href="experience_style.css">
+    	<link rel="stylesheet" type="text/css" href="global.css">
+    	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    	<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
+
+    	<!--For Footer-->
+    	<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+	</head>
+
+	<body>
+		<!--Navigation Bar-->
+		<div id="Navigation">
+			<ul id="Navigation_UL">
+				<div id="links">
+					<li class="hover_parent"><a class="hover_child" href="index.html">Allison Chen</a></li>
+					<li class="hover_parent"><a class="hover_child" href="#education">Education</a></li>
+					<li class="hover_parent active"><a class="hover_child active_child" href="experience.html">Experience</a></li>
+					<li class="hover_parent"><a class="hover_child" href="arts.html">Arts</a></li>
+					<li class="hover_parent"><a class="hover_child" href="blog.html">Blog</a></li>
+				</div>
+			</ul>
+			<a href="javascript:void(0)" class="icon" onclick="expandContract()">
+				<i class="fa fa-bars fa-3x"></i>
+			</a>
+		</div>
+		<script>
+			function expandContract()
+			{
+				var x=document.getElementById("links");
+				if (x.style.display=="block")
+				{
+					x.style.display="none";
+				}
+				else
+				{
+					x.style.display="block";
+					x.style.width="100%";
+					x.style.height="100%";
+				}
+			}
+		</script>
+
+		<div id="notNavigation">
+			<h2>Experience</h2>
+			<p>Since I recently switched from mechanical engineering to computer science, quite a few of my projects are more mechanical engineering, but I'm starting to build up my portfolio of computer science and coding projects as well!</p>
+			<div class="projects_list">
+				<div class="project">
+				</div>
+				<div class="project">
+				</div>
+				<div class="project">
+				</div>
+			</div>
+		</div> <!--Not Navigation-->
+
+		<section id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="icon_list_div">
+						<ul class="social">
+							<li class="list-inline-item"><a href="https://www.linkedin.com/in/allison-chen-576136147"><i class="fa fa-linkedin-square"></i></a></li>
+							<li class="list-inline-item"><a href="https://github.com/allisonchen23"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							<li class="list-inline-item"><a href="mailto:allisonchen23@gmail.com" target="_self"><i class="fa fa-envelope"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/allison_chen7"><i class="fa fa-instagram"></i></a></li>
+							<!--
+							<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+							
+						-->
+						</ul>
+					</div>
+					</hr>
+				</div>	
+				<div class="row">
+					<p class="closing"> Thanks for checking out my website! Feel free to contact me or take a look at my work.</p>
+					</hr>
+				</div>	
+			</div> <!--container-->
+		</section> <!--footer-->
+	</body>
+</html>
