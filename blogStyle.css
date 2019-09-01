@@ -139,6 +139,7 @@ pre
 	border: 2px;
 	*/
 }
+/*
 .images
 {
 	display:flex;
@@ -146,11 +147,13 @@ pre
 	margin-right: auto;
 	height: auto;
 }
+
 .caption
 {
 	text-align: center;
 	font-weight: bold;
 }
+*/
 .standOut
 {
 	color: #f88379;
@@ -261,6 +264,7 @@ pre
 {
 	margin-bottom:10px;
 }
+/*
 .full
 {
 	width: 100%;
@@ -273,3 +277,4 @@ pre
 {
 	width: 33%;
 }
+*/
