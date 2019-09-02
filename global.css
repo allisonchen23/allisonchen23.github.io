@@ -18,6 +18,7 @@ body
 	height:100%;
 	background-image: linear-gradient(var(--light_blue), var(--pale_pink));
 	margin: 0px;
+	min-height: 100vh; /*100% of viewport height*/
 }
 
 /*-----For Navigation Bar------*/
