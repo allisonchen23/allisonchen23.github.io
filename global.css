@@ -154,7 +154,8 @@ body
 	margin-bottom:25px;
 	margin-top: 70px;
 	padding: 10px;
-	background-color: #ffffff
+	background-color: #ffffff;
+	min-height: 95vh;
 
 }
 
@@ -183,6 +184,13 @@ body
 {
 	width: 33%;
 }
+.standOut
+{
+	color: #f88379;
+	font-weight:bold;
+	/*color: #dcae1d;*/
+}
+
 
 /*Footer*/
 /* Footer 
@@ -277,6 +285,20 @@ section .section-title
 {
 	display:flex;
 }
+.column_2
+{
+	flex:50%;
+	padding:10px;
+	max-width: 400px;
+}
+.column_3
+{
+	flex:33%;
+	padding:10px;
+	max-width: 267px;
+	width: 33%;
+}
+
 /*
 @media (max-width:767px)
 {

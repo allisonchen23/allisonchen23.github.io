@@ -4,8 +4,8 @@
 <html>
 	<head>
 		<title>Allison Chen</title>
-    	<link rel="stylesheet" type="text/css" href="experience_style.css">
-    	<link rel="stylesheet" type="text/css" href="global.css">
+    	<link rel="stylesheet" type="text/css" href="experience_entry.css">
+    	<link rel="stylesheet" type="text/css" href="../global.css">
     	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     	<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
@@ -21,11 +21,11 @@
 		<div id="Navigation">
 			<ul id="Navigation_UL">
 				<div id="links">
-					<li class="hover_parent"><a class="hover_child" href="index.html">Allison Chen</a></li>
+					<li class="hover_parent"><a class="hover_child" href="../index.html">Allison Chen</a></li>
 					<li class="hover_parent"><a class="hover_child" href="#education">Education</a></li>
-					<li class="hover_parent active"><a class="hover_child active_child" href="experience.html">Experience</a></li>
-					<li class="hover_parent"><a class="hover_child" href="arts.html">Arts</a></li>
-					<li class="hover_parent"><a class="hover_child" href="blog.html">Blog</a></li>
+					<li class="hover_parent active"><a class="hover_child active_child" href="../experience.html">Experience</a></li>
+					<li class="hover_parent"><a class="hover_child" href="../arts.html">Arts</a></li>
+					<li class="hover_parent"><a class="hover_child" href="../blog.html">Blog</a></li>
 				</div>
 			</ul>
 			<a href="javascript:void(0)" class="icon" onclick="expandContract()">
@@ -50,37 +50,39 @@
 		</script>
 
 		<div id="notNavigation">
-			<h2>Experience</h2>
-			<p>Since I recently switched from mechanical engineering to computer science, quite a few of my projects are more mechanical engineering, but I'm starting to build up my portfolio of computer science and coding projects as well!</p>
-			<i class="fas fa-map-marker-alt"></i>
+			<button onclick="goBack()">Back</button>
+			<script>
+			    function goBack()
+			    {
+			        window.history.back();
+			    }
+			</script>
 
-			<div id="projects_list">
-				<a href="experiences/fm_entry.html">
-					<div class="project">
-						<img src="images/experience/fm_cover.jpg" class="images full proj_img">
-						<div class="fade_in_text">
-							<div class="proj_title_div">
-								<p class="proj_title_text">Machine Learning at the Field Museum</p>
-							</div>
-							<div class="proj_details">
-								<div class="proj_row_div row">
-									<div class="col_icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-									<div class="col_text"><p class="location">Chicago, Illinois</p></div>
-								</div>
-								<div class="proj_row_div row">
-									<div class="col_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-									<div class="col_text"><p class="location">June 2019-Aug 2019</p></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</a>
-				<div class="project">
+			<h2>[Project Title]</h2>
+			<h4>[Dates]</h4>
+			<h4>[Location]</h4>
+			<hr>
+
+			<h3>Summary</h3>
+			<p>[Summary]</p>
+			<hr>
+
+			<h3>Additional Links:</h3>
+			<ul>
+				<li><a href="">[Link 1]</a></li>
+			</ul>
+			<hr>
+
+			<h3>Photo Gallery</h3>
+			<div id="photo_gal">
+				<div class="pic_and_cap">
 				</div>
-				<div class="project">
+				<div class="pic_and_cap">
+				</div>
+				<div class="pic_and_cap">
 				</div>
 			</div>
-		</div> <!--Not Navigation-->
+		</div>
 
 		<section id="footer">
 			<div class="container">
