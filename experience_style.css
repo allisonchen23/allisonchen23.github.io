@@ -1,4 +1,4 @@
-.projects_list
+#projects_list
 {
 	display: flex;
 	flex-flow: row wrap;
@@ -7,10 +7,60 @@
 
 .project
 {
+	position: relative;
 	width: 250px;
 	height: 250px;
 	margin: 5px;
+	padding: 15px;
 	border-style:solid;
 	border-width: 2px;
 	border-color: black;
+}
+
+.proj_img
+{
+	border-radius: 10px;
+	opacity: 1;
+}
+
+.project:hover .proj_img
+{
+	webkit-filter: blur(1px); 
+    filter: blur(1px);
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.proj_title_div
+{
+	position: absolute;
+	top: 33%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+  	text-align: center;
+  	width: 90%;
+}
+
+.proj_title_text
+{
+	font-size: 20px;
+}
+
+.proj_details
+{
+	position: absolute;
+	top: 66%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+}
+.proj_loc_div i
+{
+	position: absolute;
+	top: 25%;
+	font-size:35px;
+	color: #000000;
+	padding: 0px 5px;
+
 }

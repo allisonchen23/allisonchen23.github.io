@@ -30,6 +30,7 @@ body
 	top: 0px;
 	background-color: var(--paynes_gray);
 	width: 100%;
+	z-index: 10000;
 }
 #Navigation_UL
 {
@@ -151,7 +152,7 @@ body
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom:25px;
-	margin-top: 50px;
+	margin-top: 70px;
 	padding: 10px;
 	background-color: #ffffff
 
