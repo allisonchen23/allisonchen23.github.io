@@ -144,6 +144,20 @@ body
 } 
 
 /*--------------Not Navigation--------------*/
+
+.back_button
+{
+	text-decoration: none;
+	border: none;
+	background-color: var(--pale_pink);
+	padding: 7px 10px;
+	font-family: inherit;
+	font-size: inherit;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-left: 10px;
+	cursor:pointer;
+}
 #notNavigation
 {
 	align-content: center;
@@ -153,7 +167,7 @@ body
 	margin-right: auto;
 	margin-bottom:25px;
 	margin-top: 70px;
-	padding: 10px;
+	padding: 15px;
 	background-color: #ffffff;
 	min-height: 95vh;
 
