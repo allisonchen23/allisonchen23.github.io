@@ -1,0 +1,15 @@
+.seal_div
+{
+	height: 100px;
+	width: 100px;
+	margin: auto;
+}
+.indent
+{
+	margin-left: 25px;
+}
+.indent p
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
