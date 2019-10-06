@@ -312,7 +312,11 @@ section .section-title
 	max-width: 267px;
 	width: 33%;
 }
-
+.flex_row
+{
+	display:flex;
+	justify-content: center;
+}
 /*
 @media (max-width:767px)
 {
