@@ -1,2 +1,2 @@
 # Website
-Code and image files for my personal website and blog. 
+Code and image files for my personal website.
