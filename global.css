@@ -4,6 +4,7 @@
 	--light_blue:#a8d0e6;
 	--paynes_gray:#546a7b;
 	--pale_pink: #f1d1d6;
+	--header_font: 'Merriweather', serif;
 }
 p
 {
@@ -13,12 +14,17 @@ p
 
 body
 {
-	font-family: 'Merriweather', serif;
+	/* font-family: 'Merriweather', serif; */
+	font-family: 'Montserrat', sans-serif;
 	width:100%;
 	height:100%;
 	background-image: linear-gradient(var(--light_blue), var(--pale_pink));
 	margin: 0px;
 	min-height: 100vh; /*100% of viewport height*/
+}
+h2, h3, h4
+{
+	font-family: var(--header_font);
 }
 
 /*-----For Navigation Bar------*/
@@ -31,6 +37,7 @@ body
 	background-color: var(--paynes_gray);
 	width: 100%;
 	z-index: 10000;
+	font-family: var(--header_font);
 }
 #Navigation_UL
 {
