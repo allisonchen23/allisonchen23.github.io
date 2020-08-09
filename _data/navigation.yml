@@ -1,0 +1,18 @@
+- title: Allison Chen
+  url: /
+  nav_category: home
+
+- title: Education
+  url: /education
+  nav_category: education
+- title: Experience
+  url: /experience
+  nav_category: experience
+
+- title: Arts
+  url: /arts
+  nav_category: arts
+
+- title: Blog
+  url: /blog
+  nav_category: blog

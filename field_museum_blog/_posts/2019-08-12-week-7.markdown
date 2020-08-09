@@ -1,0 +1,70 @@
+---
+title:  "Week 7: Improving CNN Training"
+date:   2019-08-12 08:25:40 -0500
+categories: field_museum_blog
+permalink: "/FM-week-7/"
+layout: fm_post_layout
+---
+### Monday August 12, 2019
+Today was essentially spent just making changes to the architecture/regularizers of my model and training it to hopefully get better results. The main issues I'm facing now is that validation accuracy fluctuates a lot. It'll grow steadily for a little then drop down to almost 50% and grow a little more (such as in the image below).
+![Accuracy Graph]({{site.baseurl}}/assets/images/blog/fm/8.13.19_13.47.png){:class="images half"}
+
+Although it took all day because training the model currently takes around an hour, the main things I experimented with were changing the epsilon value (which prevents dividing by 0) and the regularizers. Regularizers essentially penalize larger weights, forcing the parameters to be small. I used L2 Regularization which adds a penalty term to the loss function that's composed of the sum of the squares of the parameters. 
+
+The validation accuracy is still fluctuating a lot but I just called it a day after working on this for a long time.
+
+See you tomorrow!
+
+-Al
+
+***
+### Tuesday August 13, 2019
+Continuing the work of yesterday, I was a little frustrated with why the validation accuracy was so awful. Doing some more comparisons between my model architecture and the Smithsonian, I did notice a discrepancy. In the Smithsonian paper (which as a reminder used Mathematica, not Python) had layers called 'linear layers' which simply output weights*inputs+bias. I assumed a Dense layer in Keras did the same, but after doing some research, I found that I was wrong. I added the linear activation function to these layers and the results seemed to be at least a little more consistent in terms of validation accuracy/loss. 
+
+Although it's still far from perfect, the validation losses and accuracy seem to be following the training loss and accuracy a little more closely. I believe the fluctuations mean that the model is still overfitting to training data and is unable to be consistent with the validation cases. The next step I want to try is incorporating more drop out or possibly increasing regularizers. I do need to be careful with regularizers though; I don't want to have too much and prevent the model from continuing to learn. 
+
+In addition to using a model to learn between Selaginellaceae and Lycopodiaceae, we want to see if we can apply the same model architecture to two possibly different species of a plant under Frullania. This would be a completely new application and really cool! But still in the process of obtaining images right now. One thing that will be kind of difficult with that is we only have around 100 images of each while with the families I'm working with now, there are thousands and I'm still struggling to get a good model.
+
+Wish me luck, I'll need it.
+
+-Al
+
+***
+
+### Wednesday August 14, 2019
+
+This morning was a bit slow because training the model currently takes a very long time, but I added another dropout layer which seems to help with overfitting! Validation accuracy is fluctuating just a little bit less :) Additionally, I found that for some reason, when I end training and resume it again at the same epoch, it produces different results than if I don't stop. This leads me to believe there is something that I haven't been able to control in regards to the randomness of the model and it may be causing misleading results. This is something I'd like to look more into.
+
+Additionally, I received images today of two different species that Dr. Matt von Konrat (aka my boss) has been doing research on. They're called frullania coastal and frullania rostrata (you may recall what they look like from previous posts about Morphosnake). Right now, we're trying to build up the amount of evidence to show that these in fact are different species. However, we only have about 90-100 of each species, so I'm currently looking into using image augmentation with Keras to give ourselves more images and prevent overfitting. As a reference for myself, I'm using [this website](https://www.pyimagesearch.com/2018/12/24/how-to-use-keras-fit-and-fit_generator-a-hands-on-tutorial/){:class="standOut"} as a reference. I can also look into changing my model to help against overfitting. For example, in the other project, my batch size was 32, but since I only have about 130 images total to train with right now, decreasing my batch size to 8 already improved validation accuracy without sacrificing too much time.
+
+This is something new and exciting to me! Hopefully we can get some results by early next week :)
+
+-Al
+
+---
+
+### Thursday July 15, 2019
+
+In the morning, I worked on a data summary script to finalize a project that the high school interns worked on. As a reminder, their project was a community science activity on Zooniverse that allowed people to examine fern specimen. We wanted to see in general how close the community user responses were to an expert response (done by our very own Dr. Matt von Konrat). I worked on a script that took the exported data from Zooniverse and parsed through it. Although it wasn't difficult, it took a while because Jessica (another intern!) and I kept chatting (oops!)
+
+After that, I started working back on the machine learning project. Last night, I called with Dr. Francisco Iacobelli, a computer science professor at Northeastern Illinois University. We talked about implementing k-fold Cross Validation methods to test the robustness of a model. The idea is that you take all your images and split it into 10 groups randomly. Choose one group to be the validation data and the successive group to be the testing data. The remaining data acts as training data. Train the model and save it, then repeat so all groups get a chance to be the testing data. In the end you have 10 trained models that really make up **the model**. This makes a lot more sense to me after listening to Dr. Iacobelli talk about it; I had seen it online but for some reason it didn't really stick until now. 
+
+By the end of the day, I think I almost finished implementing the cross validation! I'm currently in the process of writing the loop that partitions the training, testing, and validation data, and after that, I just have to run and save the model for each group.
+
+I won't be at the museum tomorrow, but I'll try to get some work done on my own, mostly just documentation so I don't have to do that later.
+
+Happy Thursday everyone!
+
+-Al
+
+---
+
+### Friday August 16, 2019
+
+Today I didn't go to the museum, I had a meeting at Northeastern Illinois University with our grad student Beth, Dr. Campbell (a biology professor who's been working with some of our summer interns), and Jose. We basically just updated everyone else where we are on the project and Beth and I communicated a bit more on how we can work together. She's been pretty busy with other projects at the same time, so this was a good opportunity for us to touch base.
+
+After the meeting, it wasn't worth it for me to go back to the Field Museum, so I went home and worked on doing some documentation. I updated the ReadMe file in [my Github for this machine learning project](https://github.com/allisonchen23/ml_classifications){:target="_blank" class="standOut"}. Documentation is something I'll really have to be on top of things about especially because not many people in this department are familiar with using python and machine learning. 
+
+Although not terribly busy, today was a good day to prep me for the work I need to do next week!
+
+-Al

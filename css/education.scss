@@ -1,0 +1,44 @@
+---
+---
+:root
+{
+	--light_blue:#a8d0e6;
+	--paynes_gray:#546a7b;
+	--pale_pink: #f1d1d6;
+}
+.seal_div
+{
+	/*height: 100px;*/
+	width: 100px;
+	padding: 10px;
+	/*margin: auto;*/
+}
+.seal_div:hover .selection
+{
+	opacity: 0.5;
+}
+.seal_div:hover img
+{
+	transform: scale(1.1);
+}
+.seal_div img
+{
+	transition: transform 0.3s ease;
+}
+.indent
+{
+	margin-left: 25px;
+}
+.indent p
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.active_ed
+{
+	border-bottom: 10px solid var(--pale_pink);
+}
+#shs_ed
+{
+	display: none;
+}

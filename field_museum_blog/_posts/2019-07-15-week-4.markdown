@@ -1,0 +1,101 @@
+---
+title:  "Week 4: Microplants Never Ends, Prep for ML Classification"
+date:   2019-07-15 08:25:40 -0500
+categories: field_museum_blog
+permalink: "/FM-week-4/"
+layout: fm_post_layout
+---
+### Monday July 15, 2019
+
+Happy Monday! Right now in Microplants, we are working on matching the species to each measurement data entry that's exported. And if you wanna know about the mess it is, stay tuned because I'm about to explain it. Basically, from our raw data that we've been cleaning all this time, there's a column called 'subject_ids' that will end up being very important to us. See image (1) below. Then there's another sheet that we call 'MatchingIDs' that has columns of subject_ids along with the name of the image used (see image (2)). So each time someone used the kiosk, maybe they got the same image as someone else, but a new subject_id was created. Then there's <i>another</i> CSV, which we call the voucher, that contains a whoooleee bunch of data, but the important stuff is two things (see image (3)):
+1. The species
+2. Usually a substring of an image name (hopefully)
+
+<div class="row">
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/subject_ids.png" class="images full" alt="Showing subject_ids column in raw measurement data">
+    </div>
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/matching_ids.png" class="images full" alt="Showing MatchingIDs CSV with subjec_id and image name">
+    </div>
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/voucher.png" id="voucher" class="images full" alt="Showing the voucher CSV">
+    </div>
+</div>
+
+It's not a very organized system but we make do with what we can. So last week and today, Jose worked on a script that used the voucher and the MatchingIDs CSVs (images (2) and (3)) to export a new sheet that matched the subject_id with a species using the image name and the substring of the image name. Then, we're turning that exported CSV into a hash table (aka dictionary in Python) and using that along with the subject_ids of our original measurement data to have our final exported CSV contain a column for the species as well. We're using a hash table because we want quick look up and we don't need to worry about putting any of the elements in order.
+
+I'm currently working on integrating his script into our main code and exporting the final document. Wish me luck that I don't accidentally ruin everything :)
+
+Stay tuned for more details!
+
+-Al
+
+---
+
+### Tuesday July 16, 2019
+
+Happy Tuesday! This morning was spent working on some Excel "algorithms" and learning to use custom functions. Basically, the museum is trying to compile a list and summary of all the education outreach programs that they do and compiling the data entried to be presented in a useful manner. I don't think it was too difficult for me to figure out how to do, but I did have to implement a custom script and it took me a little bit of time to look up the functions and integrate them into my code. I also learned that when you use custom functions to refer to cells outside the current sheet, when those values change, the function doesn't get automatically updated. Instead, I had to copy the formula, delete it, and paste it in again. Tomorrow, I'll work on creating a button or feature that will automatically refresh those specific values. On another note, the Python workshop I'm co-hosting with Jose will officially be held next Tuesday at 1pm! I'm excited to teach Python to the other interns and staff and hopefully get them excited about coding!
+
+Going back to my projects, for Microplants, currently we had a few different functions that outputted CSV files that our main code then took in, so I spent some time eliminating the need for that extra output and directly having our main function use these helper functions. There are actually quite a few steps to this, but I compared the final output with the output we had before and they're the same as expected, so we know that I integrated these files correctly! We also realized that we need to jump onto the machine learning with fern classifications a little bit more, and our first step is to write a script to download images of the ferns from the online database for classifications. There isn't an option to download the images directly from the database, but you can download a CSV with the specimen IDs and the image URL. Using the handy-dandy Google again, I created a script that can take this CSV, download the images into a folder, and name them based on their ID. I didn't try it on the actual images we want because there was a pretty large amount, but I tried it on some test cases and it seems to work! Also, I didn't want to take up storage on my computer with all those fern images.
+
+During this extremely hot part of the summer, stay cool!
+
+-Al
+
+---
+
+### Wednesday July 17, 2019
+
+Today, a lot of the interns went to Lincoln Park Conservatory for a field trip, so it's been a pretty quiet day. In the morning, I worked on my image download file to allow people to run it in the terminal while allowing for arguments. Currently, I'm allowing them to input the CSV file they want images downloaded from as well as the location of the image downloads. I looked into this earlier, but since I kept forgetting the "syntax" of calling the function with arguments, I'm including a picture below.
+
+![terminal syntax to call function with argparse parameters]({{site.baseurl}}/assets/images/blog/fm/calling_w_argparse.png){:class="images full"}
+
+Regarding the machine learning part of the project, I mentioned yesterday that I created a script to download the specimen images from an online database. Today, I worked on setting up Python and my script on the desktop computers at the museum because I was not about to download around 7000 images onto my personal computer. It took a while mostly because we needed admin permission, so I didn't get to test yet, but tomorrow will be my day! The CSV file where I'm pulling hte imge URLs from has a column called 'coreid' that I was going to use to identify each picture with, but them I found that the coreid is a little bit arbitrary. Instead, each image also has a barcode that's part of the museum's specimen database that I would like to use instead. The only challenge is that it's on yet another CSV that I can download and just need to link into my script. This additional CSV has both the coreid and the barcode number which I can create into a hash table (aka dictionary in Python) to so it won't kill the programs efficiency.
+
+Which is another thing; if I have more time, I would like to look into improving the efficiency of the code; currently I feel it's quite slow, but I'm not confident about a method of improving it right now. I can research that tomorrow as well.
+
+Thanks for reading and take it easy!
+
+-Al
+
+---
+
+### Thursday July 18, 2019
+
+Today was mainly spent dealing with image pre-processing for the fern machine learning part of the project. First, we can't directly batch download all the images from the database we're using, so I polished up a script that will take the links and download them. The only thing is that they don't all download with the same resolution  or size, but this is to be explored further. When writing ths script, I mainly used a column labeled 'identifier' that contained a link to the image. But then I found that some of the images didn't have an identifier link, but they did have a link under a column called 'goodQualityAccessURI'. For some reason, however, downloading from 'goodQualityAccessURI' takes longer than downloading from 'identifier', so we only download from there if we're unable to find a link in identifier. I would like to look into this ore because it could be one of the reasons we don't have uniform image sizes. The next step would be to resize all the images to the same resolution and size. My other issue I ran into with this is I don't know a good desireable size to use for these images. Doing some research, it looked like most ML algorithms use square images of at most around 128 px by 128 px, but currently our images are more like 1500 px by 2000 px, which is significantly larger. I'm afraid that compressing down to that size would possibly lose some of the details of the image, but we can explore this further. I guess the first step for tomorrow will be using Python or GIMP to just get them to the same size and resolution first.
+
+At a bit of a block, but we'll get through it!
+
+-Al
+
+---
+
+### Friday July 19, 2019
+
+This Friday was really quiet at the museum. Most of our intern take the day off, so today, it was just 2 of us: Jessica and me. I was kinda struggling and a bit stressed with how I left things with the image proprocessing yesterday, but luckily, in the morning Matt came up pretty early and we talked a few things out. For example, for some reason, not all the images downloadedfrom the Pteridophyte Portal database were the same size or resolution and I was nervous that it would cause some issues in resizing them. Looking at <span class="standOut">the paper from the Smithsonian</span>, we decided to resize all the images to 256px by 256px and not to worry about image resolution at this point. We know for a fact that you can use Photoshop to batch resize these images, but I wanted to try to use Python to do so instead. I definitely know it's possible, I just wasn't sure how to do it. The plan was to resize them using Python and then resize a few manually with GIMP and see if there's a big difference.
+
+Using my resources (aka the infamous Google), I found that Pillow is a relatively common Python package for image processing and initially, I used that. Just looking at the resulting images, they looked extremely distorted and any text was 300% impossible to read. I knew that by reducing the image size, we would lose a lot of clarity, but this seemed more distorted than expected. After resizing in GIMP, I could clearly see the GIMP software did a much better job of preserving clarity. I was about to just explore using GIMP to process all of the images, but then I remembered another image processing software,<span class="standOut"> OpenCV</span>, that I had heard about. I had to download packages for that (just Google 'OpenCV Python') and resized the image which produced a <i>much</i> clearer image. Check out the comparisons below:
+
+<img src="{{site.baseurl}}/assets/images/blog/fm/sela_5887.jpg" class="images third" alt="Example of original uncompressed image">
+<div class="row">
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/sela_5887_pillow.jpg" class="images full" alt="Resized image using Pillow">
+    </div>
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/sela_5887_gimp.jpg" class="images full" alt="Resized image using GIMP">
+    </div>
+    <div class="column_3">
+        <img src="{{site.baseurl}}/assets/images/blog/fm/sela_5887_openCV.jpg" class="images full" alt="Resized image using OpenCV">
+    </div>
+</div>
+
+<p class="caption">The top center image is the original image. On the second row from left to right is the resized image using Pillow, GIMP, and OpenCV. Because the images are small on this site, the difference is not immediately apparent, but look in the upper and lower right corners at the label to see a difference.</p>
+
+After testing this function on an image, I added to my code so the program takes in a folder and will resize all the images in the folder. After testing that on a small subset with original images of all the same size, I used it with all the images that were exported with a width of aroudn 1500 pixels and a resolution of 72 ppi. Once that worked, just for funsies, I tested it on all the images, and to my knowledge, they all exported with the same size and resolution of 96 ppi (that's just what OpenCV gave me). So yay! Now we have scripts to not only download the images, but also to resize them appropriately :D
+
+Looking into image classification models, I found it to be necessary to have a CSV with all the image names and labels (in our case, family of the specimen) to train the model. This is something I forgot initially, so I also added that to my script before calling it a day!
+
+Whew! It's been an exciting week preparing for the machine learning model, but I hope everyone has a great weekend and stay cool in this hot and humid Chicago summer!
+
+-Al

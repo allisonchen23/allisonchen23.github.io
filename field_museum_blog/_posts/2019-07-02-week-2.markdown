@@ -1,0 +1,32 @@
+---
+title:  "Week 2: Microplants Data Cleansing & Starting MorphoSnake"
+date:   2019-07-02 08:25:40 -0500
+categories: field_museum_blog
+permalink: "/FM-week-2/"
+layout: fm_post_layout
+---
+### Tuesday July 2, 2019
+
+I was gone Friday and Monday for a family trip, and during that time, Jose worked on making the timestamps from both data sets into time objects that we can directly compare to one another and writing a script to take the CSV for age data that we obtain from Google Analytics and converting it into a usable format. When I came in today, I worked on integrating that script into our overall cleansing script. So now, our code takes the raw data from Google Analytics and spits out the correct measurement and age pairing, allowing us to use this script, eliminating the need for someone to manually reformat the sheet how we want. **Something to note, however** when I tried to download the file straight from an email, the formatting was different and didn't work with the script. However, if I opened the file first in Google Sheets then downloaded as CSV, it worked perfectly fine.
+
+Once that was working, I ran the script on both complete files (which took a good minute or two to fully run, making me feel like a true computer scientist when my code <i>actually</i> takes a bit of time to run) I skimmed through the output data and noticed that after line 900 or so, all the measurement data was being listed as having occurred past our cutoff. This cutoff was set at less than two minutes ( inclusive), which we decided because based on an observational study, the average time spent for people of all ages was around 90 seconds. It's also important to note that since our age data timestamps did NOT come with seconds, our data is only accurate down to the minute. However, although all these entries were being labeled as 'Out', most of them should've been 'In', meaning there was a bug in the code.
+
+Upon further inspection, I found that our algorithm did not handle the case when the age data contained an "extra" timestamp that didn't align closely with any of the measurement data. (In real people talk, this meant someone filled in their age group, but decided not to take any measurements). I fixed it with the following code where <span class="standOut">i</span> is the row number in the age file and <span class="standOut"> row_num </span>is the row number of the raw measurement data from Zooniverse:
+
+![Code to increment rows appropriately]({{site.baseurl}}/assets/images/blog/fm/incrementing_rows.png){:class="images full"}
+
+Thanks for reading!
+
+-Al
+
+---
+
+### Wednesday July 3, 2019
+
+Today we took a break from the Microplants project and moved onto MorphoSnake, so let me explain exactly what it is. MorphoSnake is a Python script that takes in a skeletonized image of a plant and outputs the measurements of individual branches and nodes (such as terminal nodes which are where the ends of the branches are and inner nodes which are where two branches come together) as well as means and standard deviations of the whole. This tool is extremely useful for measuring plants first because it's incredibly quick and second because it's incredibly precise, especially for plants on the scale of millimeters. To see for yourselves, check out this [Github page](https://github.com/fjansson/MorphoSnake){:target="_blank" class="standOut"}.
+
+In the past, there was one intern who was able to get it running, but she wasn't able to leave any documentation, so once she left, Matt hasn't been able to get the software up and running. This morning, we Skyped with Catherine Reeb, one of the creators of MorphoSnake, and she was able to help us get it up and running! Since it's not a very intuitive way of running a software, I spent the rest of the day creating a quick tutorial on installing the necessary packages and using MorphoSnake. If you're interested, it can be found [here](https://docs.google.com/document/d/1IaMcmivTItDb53VOr2OMsX3nanL03mJs8yVoJ0vu4XE/edit?usp=sharing){:target="_blank" class="standOut"}. As I mentioned before, MorphoSnake can't just take in any image of a plant, it has to be a binarized skeletal image. Catherine mentioned she had used a software called GIMP to skeletize the images, so our next steps will be to explore that software and create a script that can skeletize images and upload them to MorphoSnake. After all, the goal of the project is for botanists to be able to upload raw images of the specimen and be returned statistics on it, avoiding the in between steps of skeletizing images.
+
+Happy fourth!
+
+-Al

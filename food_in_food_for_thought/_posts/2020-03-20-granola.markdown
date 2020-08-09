@@ -1,0 +1,58 @@
+---
+title:  "Granola"
+date:   2020-03-20 20:28:40 -0500
+categories: "recipe"
+permalink: "/granola/"
+layout: post_layout
+---
+
+Prep Time: 5 minutes
+
+Cook Time: 20 minutes
+
+Serves: about 2 cups of granola (which lasts in my house around 3 days!)
+
+{% include difficulty.html difficulty_level=2 %}
+
+![Granola]({{site.baseurl}}/assets/images/blog/food/recipes/granola/header_photo.jpg){:class="images half main_img"}
+
+---
+
+### Ingredients
+
+**Remember, these are all relative ish! Adapt as you wish!**
+
+* 3/4 cup of add ins (such as mixed nuts, dried fruit, shredded coconut, seeds)
+* 1 1/2 cups oats
+* 1/6 cup honey and 1/6 cup nut butter 
+
+**For looser granola, decrease the amount of honey and nut butter you use**
+
+### Instructions
+
+1. Preheat the oven to 325 degrees Fahrenheit
+1. Put the add-ins in a mixing bowl, pour the oats on top, and gently mix.
+2. Combine the honey and nut butter in a small bowl and microwave for around 20-30 seconds
+3. Stir the honey/nut butter mixture well and pour half into the mixing bowl. Use a rubber spatula to try to fold in and mix well while breaking up any large chunks. 
+4. Pour in the rest of the honey/nut butter mixture and continue stirring/folding. Ideally, you want all the oats to be covered at least a little and if you press firmly with the rubber spatula, the oats should stick together a little. 
+5. Pour the mixture onto a baking sheet (covered with parchment paper) and spread it out to be a little less than a centimeter thick. Gently press it flat.
+6. Let the granola bake for around 8 minutes. When it jus starts to get light brown, stir the granola around and firmly pack the granola into a flat sheet again.
+7. **Now be careful! Granola burns very easily!** Leave the granola in the oven for another 3-5 minutes or until the top is light and golden. The edges should be a few shades darker of brown.
+8. Take out the granola and let it cool. You will be *so* tempted to eat it right now but restrain yourself!
+9. Once the granola has completely cooled, take a spatula and break it up into large chunks and place everything in an airtight container. The larger chunks are perfect for snacking and the small pieces that break off are ideal for those morning yogurt parfaits :)
+
+---
+
+#### Images
+
+{% include image_gallery.html folder="/assets/images/blog/food/recipes/granola/" %}
+
+---
+
+#### Why do I love granola?
+
+As you can probably tell from my recipes, I'm a huge fan of oats! They're unprocessed whole wheats, which in general mean that they take longer for your body to break down and provide your body with energy in a more stable manner, meaning less spikes in glucose levels. Plus granola is an amazing add-on for yogurt bowls in the morning and the light afternoon pick-me-up snack. And by making your own granola at home, you can control how much sugar/sweetener goes into it as well as the ratio of everything. Honestly though, this granola always gets demolished by my parents, if I'm not looking, it'll all be gone within a few days!
+
+Enjoy!
+
+-Al

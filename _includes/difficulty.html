@@ -1,0 +1,7 @@
+
+<div id="difficulty">
+    <p class="difficulty_item">Difficulty (out of 5):</p>
+    {% for i in (1..{{include.difficulty_level}}) %}  
+        <img src="{{site.baseurl}}/assets/images/avocado.png" alt="avocado icon" class="difficulty_item">
+    {% endfor%}
+</div>

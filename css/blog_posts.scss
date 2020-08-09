@@ -1,0 +1,51 @@
+---
+---
+.standOut
+{
+	color: #f88379;
+	font-weight:bold;
+	/*color: #dcae1d;*/
+}
+
+#difficulty
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+//formatting to include my avocado icons
+p.difficulty_item
+{
+	margin: 0px 8px 0px 16px;
+}
+
+img.difficulty_item
+{
+	margin: 0px 2px;
+	height: 22px;
+	width: 22px
+}
+
+// table styling
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+	border:2px solid #000000;
+	text-align: center;
+}
+
+th{
+	border:2px solid #000000;
+	padding: 5px;
+}
+
+td{
+	border:1px solid #000000;
+	padding: 3px 5px;
+}
+
+.table_wrapper {
+	text-align: center;
+}
