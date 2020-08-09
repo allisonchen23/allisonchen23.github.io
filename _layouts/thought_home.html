@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Allison Chen</title>
+        <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
+        <link rel="stylesheet" type="text/css" href="{{ '/css/blog_homes.css' | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    	<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
+	</head>
+
+	<body>
+        {% include navigation.html %}
+        <div id="notNavigation">
+            <!--{% include back_button.html %}-->
+            <div id="intro">
+				<h2 class="blogpost title standOut">{{ page.title }}</h2>
+			</div>
+            {{ content }}
+            <h3>Posts</h3>
+            <ul class="list_posts">
+                {% for post in site.posts %}
+                    {% if post.categories contains 'thoughts' %}
+                        <li class="list_box">
+                            <a href = "{{ post.url | relative_url}}" id="post_link">
+                                    <div class="list_item_food">
+                                        <div class="title_text">{{post.title}}</div>
+                                    </div>
+                                    <!-- <div class="list_item_date"> -->
+                                        <!-- <div class="date_text">{{post.date}}</div> -->
+                                    <!-- </div> -->
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {%include footer.html %}
+    </body>
+</html>

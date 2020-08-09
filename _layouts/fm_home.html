@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Allison Chen</title>
+		<link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
+		<link rel="stylesheet" type="text/css" href="{{ '/css/blog_homes.css' | relative_url }}">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    	<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
+	</head>
+
+	<body>
+		{% include navigation.html %}
+        <div id="notNavigation">
+            <div id="intro">
+				<h2 class="blogpost title standOut">{{ page.title }}</h2>
+			</div>
+			{{ content }}
+			<ul class="list_posts">
+			<hr>
+				{% for post in site.posts %}
+					{% if post.categories contains 'field_museum_blog' %}
+						<li class="list_item">
+							<a href = "{{ post.url | relative_url}}" id="post_link">{{post.title}}</a>
+						</li>
+						<hr>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		{%include footer.html %}
+	</body>
+</html>

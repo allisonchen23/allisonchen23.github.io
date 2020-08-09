@@ -1,0 +1,44 @@
+---
+title: "Sure about sugar?"
+category: "nutrition"
+layout: "post_layout"
+---
+
+##### All sugar is bad right?
+
+Okay that's a tough question. Sugar by itself is not necessarily bad; it's a good source of quick energy for our bodies. *HOWEVER*, too much sugar, especially in its most processed form can be pretty detrimental to our bodies and lead to weight gain as well as medical issues.
+
+##### How does our body digest sugar?
+
+Basically, sugar will be broken down to glucose, which is the form of energy our cells require, and the glucose gets sent to one of three places:
+
+1. Our cells, to give them energy
+2. Our liver, to store glucose for later in the form of glycogen (which you don't need to worry about)
+3. Our adipose tissue as fat.
+
+Our cells prefer to have sugar because they can quickly be broken down into glucose, but our cells can only take so much glucose at a time. Same with our liver. The first two have a capacity of how much glucose gets sent there, but adipose tissue <span class="standOut"> can take as much glucose as it wants</span>. That's where the dangerous part is. 
+
+If our body breaks down too much sugar at once and has too much glucose for our cells and liver, it will send all the excess glucose to turn into fat, which will lead to weight gain.
+
+##### So we should avoid all sugar?
+
+Not necessarily! The main difference in sugar that is, for example, added in candy and sodas, and sugars in whole fruit is the magical thing called <span class="standOut"> fiber</span>. The sugars in fruit are all encased by a lot of fiber, which if you recall, slows down the digestion of food. This means that the sugar in fruit gets slowly broken down and transported to the appropriate location over a longer period of time. If you ate a candy bar, on the other hand, basically all that sugar gets broken down to glucose and taken to the appropriate destination all at once. Sugars in fruit are able to provide your *cells* with a more constant form of energy, which also helps you feel fuller and maintain energy.
+
+In fact, fiber is actually the main difference between white sugar and brown sugar. Although brown sugar is not the same as the sugar we get in whole fruits, it has more fiber compared to white sugar, and thus is marketed as healthier.
+
+##### How do we know what has added sugar?
+
+Ah yes this can be the tricky one. The first place I would check is the nutrition label. Under 'sugar', some labels have a row for 'added sugar' which is not very desirable. However, for a more thorough check, you must go to the ingredient list. <span class="standOut">But sugar is tricky.</span> After people realized sugar was leading to weight gain and other health complications, many companies became sly about hiding sugar into their products by using different names for sugar but in reality, it just means 'Added Sugar'. Some common ones to look out for are:
+
+* The mono and disaccharides (dextrose, fructose, galactose, glucose, lactose, maltose, and sucrose)
+* Cane sugar, evaporated cane juice
+* High Fructose Corn Syrup
+* Corn syrup solids
+* Dextrin
+* Glucose syrup solids
+* Maltodextrin
+* Agave Nectar/Syrup (very similar to honey)
+
+##### I'm never eating sweets again, right?
+
+I'd say enjoy in moderation! It's very difficult to cut out something entirely from your diet because you'll probably start to crave it even more, causing a binge eating session. It's okay to enjoy that sweetness of a candy bar or ice cream once in a while, but be mindful of what's happening inside your body after you eat it.

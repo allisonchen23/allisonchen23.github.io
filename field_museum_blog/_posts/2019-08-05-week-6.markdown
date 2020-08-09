@@ -1,0 +1,78 @@
+---
+title: "Week 6: Continuing Machine Learning Project"
+date: 2019-08-05 08:25:40 -0500
+categories: field_museum_blog
+permalink: "/FM-week-6/"
+layout: fm_post_layout
+---
+
+### Monday August 5, 2019
+
+I took last week off for the Primers Program at PPG in Pittsburgh (wow that was a lot of P's) and I absolutely loved it! From Sunday to Thursday, we just learned about the details of the company, what they do (which is mostly make paint and coatings), and about the culture they create. Something I really liked was the emphasis on environmental impact as well as the well-being of its employees. No matter what your position, the company wants you to keep growing and learning and that's something I can stand by.
+
+Alas, the vacation came to an end, and today I was back to work! Like I mentioned last week, we have a model working, but I want to continue making it more similar to the Smithsonian model and improve its accuracy. Today, I mainly worked on randomizing the training, validation, and test data (although I'm not sure how big of a difference it makes). Previously, I had 1600 images for training and validation, which between each other would get randomized, but the test data were always the same 200 images. This also required separate folders for the test data. Today, I pooled all the images I wanted to use into one folder and had the code split up the images. One thing I did run into at the end of the day, however, was when I went to use the model to predict the family, it threw an error. The format of the data is still a numpy array, but for some reason, the function isn't accepting it. I used the debugger to compare what I previously had to what I currently have, and the only difference was that the numpy array was an element in a Python list. For tomorrow, I'll try just putting the numpy array in a list and see if it works.
+
+Additionally, I attended presentations from the Women in Science interns at the Field Museum today! There were 5 groups of 2 working in various departments and it was really cool to see the hands-on science that they were doing! Very inspiring to see my peers work on such cool projects :)
+
+Just getting back into the swing of things!
+
+-Al
+
+---
+
+### Tuesday August 6, 2019
+
+This morning I came in and fixed my testing-the-model function. The numpy array I wanted to use had the dimensions 256 x 256 x 3, but the older version (which was working) uses an array with the dimensions 1 x 256 x 256 x 3. To fix it, I simply reshaped the numpy array to the desired dimensions. It's crazy how such a simple fix like this could take so long to figure out! Afterwards, I worked on preventing overfitting with my model. One thing that I implemented today was L2 Regularization which essentially uses the squares of the coefficients as penalties in the loss function, emphasizing the impact of large coefficients in the model. So if the model consists of many large coefficients, they will quickly negatively impact the loss function. This prevents the loss function from decreasing too quickly and helps with overfitting of the model.
+
+In the Smithsonian model, they used L2, but it was applied to the entire model in one step. However, with Tensorflow, we only apply regularizers layer by layer. After looking at some examples online, it seems that most people apply them to the Dense layers, so I did as well, starting with an alpha value of 0.01. (Larger alpha values result in a larger loss). Usually the alpha value is between 0 and 1, but the Smithsonian model uses 5 which struck me as odd. That's definitely something I would like to ask our NEIU grad student, Beth, with whom I'm meeting tomorrow.
+
+To recap, my model currently takes in all the pictures (for training, validation, and testing) in 2 folders (one for Lycopodiaceae and one for Selaginellaceae) and divides them accordingly. This way, we aren't always testing on the same images and it gets randomized each time we re-train the model. However, sometimes we also want to test on images that aren't originally input; in those cases, I have two scripts that can test the model: one takes from 2 folders on the computer and the other uses the images originally put in with the training and validation images.
+
+I feel like the model currently is pretty good, but my next steps, I would like to increase the number of epochs and maybe the number of images used to train the data in order to increase accuracy in validation and testing data. Honestly, I'm not really sure when you're "done" training a model. On a last note, this Friday marks the end of the high school Digital Learning Internship that we've been helping out with and I'm going to do a quick presentation on this project! I'm excited to share the work I've done, even though it's not super ground breaking or anything in the field of CS, and see the presentations from other interns as well!
+
+Oh also, this afternoon, we went for some dim sum lunch at a place in Old Chinatown called Triple Crown and it was <span class="standOut">AMAZING</span>. 10/10 recommend! Then we had some time just to relax, walk around, and check out the Chinatown shops! What a realxing afternoon! :D
+
+Have a great day!
+
+-Al
+
+---
+
+### Wednesday August 7, 2019
+
+In the morning, I continued making changes to the model and seeing the result. Right before I left for my meeting at NEIU, I trained the model with more images (around 1600 training images) and tested. At first, with 180 test images, it had around a 97% success rate, but when I introduced 500 new images, it plummeted to around 50% success rate. I didn't have time to examine why this happened, but I will tomorrow! If I can't find a good reason why this is happening, I will go back to using less images and see if the model "reverts".
+
+At my meeting with Beth, I mostly recapped what I had done and we talked about some steps moving forwards, which are listed below:
+
+- Use the same images for training/validation because we want to see the performance of the model, we don't want the model to be affected by variables like randomization of the images used between training/validation and testing.
+- Test that the models I'm saving still work. I copied the .model files into a different folder, but I didn't take the h5 files. I figured since the testing files only called upon CNN.model, it should be fine, but I would like to test this.
+- Keep trying to improve model! Once we get something satisfactory, we can test on larger sets of images and change images used.
+- Look into using metadata to help with the classification (Ask Matt if this is something worth doing). Maybe knowing something like location of collection could help the model predict the specimen. However, this will take a bit more research!
+
+Lots to work on, so I'll definitely be busy!
+
+-Al
+
+---
+
+### Thursday August 8, 2019
+
+Okay not going to lie, this week has been a lot of fun! Yesterday was one of the interns, Amelia's, birthday but she wasn't here, so today, we went to Jewel Osco to get her a cake and celebrated! But for my project, when I used the model we trained for new images, it was the same probability as a coin toss. My hypothesis is as follows:
+
+When selecting the training images, I took the first say 1000 images from each folder. Then I tested the model on the next maybe 100 images after that. These images were probably kind of similar since they were just taken in order from the online collection which means they may be grouped by time they were collected or even location and collector. This could mean that the images at the beginning of each folder may be drastically different than the images from the end of the folder. So, when I went to go test the model on new images, it would result in accuracy of around 50%. Which is <span class="standOut">very bad</span>. So my next step here is to work on a helper function that will take <i>all</i> the specimen we have and choose images periodically to spread out the sample.
+
+After implementing this technique of choosing training images, I tested it on images that were chosen with a similar technique. It seems results are more consistent which is good, but of course our accuracy took a hit. Now I want to work on building it back up to what we had with the misleading accuracy. I also want to consider testing on randomly selected test images (that of course, were not seen during training). I honestly don't think most of this is too hard, but the sheer amount of images that I'm dealing with is a little intimidating and keeping eveerything straight (which files are correct, separating old batches from new) is getting a little overwhelming. I might take a bit tomorrow to organize better. Also! Tomorrow is the high school interns' last day :( They'll be presenting their projects and I'm excited to hear about them!
+
+Let's end this week strong!
+
+-Al
+
+---
+
+### Friday August 9, 2019
+
+In the morning, I really cracked down, working on my machine learning project. Right now, I'm trying to combat the issue of sometimes when I used the model on test data, it would only have 50% ish accuracy despite validation accuracy being really high. This is because the model is overfitting, so I'm trying to implement different methods to fight this. First, I implemented some early stopping. This will stop the model if the validation loss starts to increase again, although it's not ideal. I need to first change some things about my model to fight the overfitting before just stopping training. Currently, validation accuracy will remain at about 50% while training accuracy increases then suddenly validation accuracy will increase and fluctuate a bit. My next steps will be to implement more dropouts in my model, but less percent of the model at a time. If that doesn't really work, I may look into some image augmentation, which seems to be a popular suggestion online. (Sorry for the short entry today!)
+
+Enjoy the weekend!
+
+-Al
