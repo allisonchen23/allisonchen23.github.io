@@ -15,7 +15,6 @@ Serves: 3-4
 Includes instructions for:
 * Almonds
 * Pecans
-* Walnuts
 * Butternut squash
 * Zucchini & summer squash
 * Broccoli & cauliflower
@@ -29,7 +28,7 @@ Includes instructions for:
 ### Ingredients
 * Whatever you're roasting (the base)
 * Olive oil
-* Optional spices (salt & pepper, for example)
+* Optional spices (salt & pepper, rosemary and salt, chili powder and cinnamon)
 
 ### Instructions 
 1. Toss your base with the olive oil and spices in a bowl until the base is just covered.
@@ -46,7 +45,6 @@ I always do approximately 2 cups of nuts with 1 TBSP of olive oil, no spices.
 | :----:    | :----:            | :----:                    | :----:                    | 
 | Almonds   | 350               | 8                         | 4                         |
 | Pecans    | 325               | 5-6                         | 3                         |
-| Walnuts   | 350               | 6                         | 4                         |
 
 #### Vegetables
 

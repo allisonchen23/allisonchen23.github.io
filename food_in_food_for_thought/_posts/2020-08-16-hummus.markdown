@@ -1,0 +1,74 @@
+---
+title:  "Hummus"
+date:   2020-06-15 20:28:40 -0500
+categories: "recipe"
+permalink: "/hummus/"
+layout: post_layout
+---
+
+Prep Time: 15 minutes (+ at least 4 hours if using dried chickpeas)
+
+Cook Time: 0!
+
+Serves: 3-4
+
+{% include difficulty.html difficulty_level=2 %}
+
+![Hummus]({{site.baseurl}}/assets/images/blog/food/recipes/hummus/header_photo.jpg){:class="images half main_img"}
+
+---
+
+### Ingredients
+* 1/2 cup dried chickpeas *OR* 1 can chickpease, rinsed and drained 
+    * If using canned chickpeas, skip steps 1-2 below
+* 1/3 cup tahini
+* 3 tbsp water
+* 2 tbsp olive oil
+* 3/4 tsp cumin
+* 3/4 tsp sea salt
+* 3 medium cloves of garlic
+* juice of 1 lemon
+
+### Instructions 
+1. Pour chickpeas in a large bowl and generously cover with 2 cups of water. Let them soak for between 4 hours to a whole day. Note, they will get *huge* so make sure there is always enough water
+2. Pour the water and chickpeas (plus an extra cup of water if you feel it's necessary) in an Instant Pot or pressure cooker and cook on high pressure for around 15 minutes. The less time you soak, the longer you'll need to cook them for. I don't think this length of time is terribly important, but the chickpeas should break if you squeeze one between your fingers.
+    1. If you don't have an Instant Pot, you can also boil your chickpeas! It might take longer and I'm going to refer you to [this website](https://www.inspiredtaste.net/26952/how-to-cook-dried-chickpeas/) for instructions on cooking chickpeas.
+3. Combine all ingredients except the chickpeas in a food processor until smooth. Start on slow speed and work your way up, making sure to stop and scrape down the sides of the food processor.
+4. With your food processor on low-medium speed, slowly pour in the chickpeas
+5. Once all the chickpeas are added, process on high speed until the hummus is smooth. If it is too thick, you can add some water to thin it a bit.
+    1. I recommend making it a little thinner if you are NOT planning on serving it right away! It tends to thicken in the refrigerator
+6. You can serve as is or garnish with some of the following:
+    * Cilantro
+    * Parsley
+    * Paprika and olive oil
+    * Everything bagel seasoning
+    * Pitted olives
+    * Roasted peppers
+
+
+<!-- #### Images -->
+
+{% include image_gallery.html folder="/assets/images/blog/food/recipes/hummus/" %}
+
+---
+
+### Nutrition Discussion
+
+I wish I knew when my love for hummus started, but it's only grown in the last few years. I find hummus to be a perfect addition to literally almost anything: chips/crackers, vegetables, salads, sandwiches, eggs, rice bowls, and the list goes on and on. *And* since chickpeas themselves aren't salty, you can even make some dessert hummus to have with fruits! I haven't tried it yet, but it's on my hummus bucket list.
+
+Okay so what's so great about hummus? Besides the immense joy it gives you as the Mediterranean flavors burst in your mouth. The main ingredients of this recipe are chickpeas and tahini. Let's break them down a bit.
+
+#### Chickpeas
+Chickpeas (aka garbanzo beans) are part of the legume family, originally from the Middle East. In terms of macros, they're mainly carbs, but they also have pretty high amounts of protein and fiber. The protein content is similar to that of lentils and black beans, making chickpeas a good source of plant protein. Chickpeas are almost a complete protein, but they lack 1: methionine (an amino acid that sustains our liver health as well as wound healing). 
+
+Also, the fiber in chickpeas is mainly soluble fiber (meaning it dissolves in water and forms a gel-like substance in your intestines) which helps your body pass along food more easily! Aka it helps you poop.
+
+#### Tahini
+Tahini is a paste made from ground toasted sesame seeds. Tahini is a good source of copper (which helps iron absorption and blood clotting) as well as selenium (which helps with immune health and decreasing inflammation). Although tahini may seem high in fats, since most of it are unsaturated, these fats are actually beneficial to our hearts. 
+
+Since tahini is from sesame seeds, it also provides benefits of sesamin and sesamolin, both of which are lignans (a specific plant compound) that can help balance hormone levels and boost the immune system!
+
+#### Canned vs Dried Chickpeas?
+To be honest, I don't think there is too big of a difference in terms of nutrition and hummus consistency. The only thing I'd look out for is if the canned chickpeas have added sodium that I would try to avoid. Although soaking and cooking dried chickpeas takes more time, there is a certain satisfaction to doing it all yourself :) However, if you're short on time, canned chickpeas seem like the way to go!
+
+-Al
