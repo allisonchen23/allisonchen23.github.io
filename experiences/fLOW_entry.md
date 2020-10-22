@@ -16,7 +16,7 @@ org: Creative Labs at UCLA
 <ul>
 	<li><a href="https://allisonchen.co/fLOW_frontend">Our website!</a></li>
 	<li><a href="https://github.com/allisonchen23/fLOW_frontend">Github Repository for the website</a></li>
-	<li><a href="https://github.com/jsbanchs/fLOW_Backend">Github Repository for Arduino Code</a></li>
+	<li><a href="https://github.com/juanbanchs/fLOW_Hardware">Github Repository for Arduino Code</a></li>
 	
 </ul>
 <hr>
