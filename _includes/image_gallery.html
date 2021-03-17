@@ -14,7 +14,7 @@
             {% assign caption = filename | replace: '_',' ' | split: "-" | last %}
     
             <div class="pic_and_cap">
-                <img src="{{site.baseurl}}/{{file.path}}" alt="{{ filename }}" class="pic"/>
+                <img src="{{file.path}}" alt="{{ filename }}" class="pic"/>
                 <div class="cap">
                     <p class="caption">{{ caption }}</p>
                 </div>

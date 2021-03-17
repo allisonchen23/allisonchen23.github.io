@@ -45,7 +45,14 @@ Serves: 3-4
     * Pitted olives
     * Roasted peppers
 
+### Variations
 
+The classic hummus is also good, but if you want to spice things up, try some of these variations!
+
+#### Roasted Red Pepper Hummus
+1. Preaheat oven to 425 degrees Fahrenheit
+2. Slice 6-7 mini peppers in half and remove seeds OR slice 1 pepper into 1-inch wide strips and remove seeds
+3. Place on
 <!-- #### Images -->
 
 {% include image_gallery.html folder="/assets/images/blog/food/recipes/hummus/" %}

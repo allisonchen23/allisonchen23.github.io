@@ -45,7 +45,7 @@ Serves: about 2 cups of granola (which lasts in my house around 3 days!)
 
 #### Images
 
-{% include image_gallery.html folder="/assets/images/blog/food/recipes/granola/" %}
+{% include image_gallery.html folder="assets/images/blog/food/recipes/granola/" %}
 
 ---
 
