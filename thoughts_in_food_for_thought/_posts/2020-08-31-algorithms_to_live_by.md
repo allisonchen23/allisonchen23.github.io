@@ -1,5 +1,5 @@
 ---
-title: "Book Reflection: Algorithms to Live By"
+title: "TEST"
 date: 2020-08-31 06:00:40 -0500
 categories: "thoughts"
 permalink: "/algorithms_to_live_by/"

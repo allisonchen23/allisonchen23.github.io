@@ -1,6 +1,6 @@
 ---
-title:  "Garlic Lemon Roasted Asparagus"
-date:   2021-03-17 20:28:40 -0500
+title: "Garlic Lemon Roasted Asparagus"
+date: 2020-08-31 06:00:40 -0500
 categories: "recipe"
 permalink: "/roasted_asparagus/"
 layout: post_layout
@@ -12,9 +12,9 @@ Cook Time: 25 minutes
 
 Serves: 3-4
 
-{% include difficulty.html difficulty_level=3 %}
+{% include difficulty.html difficulty_level=2 %}
 
-![Asparagus]({{site.baseurl}}/assets/images/blog/food/recipes/hummus/header_photo.jpg){:class="images half main_img"}
+<!-- ![Asparagus]({{site.baseurl}}/assets/images/blog/food/recipes/hummus/header_photo.jpg){:class="images half main_img"} -->
 
 ---
 
@@ -35,7 +35,7 @@ Serves: 3-4
 7. Squeeze the lemon juice and spread out the minced garlic on top
 8. Bake for 8 minutes
 9. Increase heat to 450 degrees Fahrenheit and bake for another two minutes. This is to get the asparagus to be crispier on the outside while still juicy on the inside
-10. Serve and enjoy
+10. Serve and enjoy!
 
 
 <!-- #### Images -->
