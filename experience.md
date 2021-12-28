@@ -1,6 +1,7 @@
 ---
 title: Experience
 layout: site_default
+nav_category: experience
 ---
 
 <p>Check out the projects I've been working on since my freshman year at UCLA! Click on an image to learn more.</p>

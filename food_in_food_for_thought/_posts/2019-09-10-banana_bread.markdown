@@ -10,7 +10,7 @@ Prep Time: 15 minutes
 
 Cook Time: 40 minutes - 55 minutes
 
-Serves: 1 loaf 
+Serves: 1 loaf
 
 {% include difficulty.html difficulty_level=1 %}
 
@@ -39,17 +39,17 @@ As a general rule of thumb, oat flour can substitute regular flour! Just be care
 
 1. Pour your oats in a blender or food processor (I personally prefer a blender!)
 2. Start on a low speed and gradually bring your blender to high speed
-3. Blend/Process oats until it is a fine flour (approximately 30 seconds) 
+3. Blend/Process oats until it is a fine flour (approximately 30 seconds)
 4. Shake it around a bit to make sure there are no large chunks of oats that got left behind
 
 #### Rest of Instructions
 
 1. Preheat the oven to 350F and lightly grease a loaf pan with olive oil
-2. In a large mixing bowl, mash banans with a fork
+2. In a large mixing bowl, mash bananas with a fork
 3. Whisk in the greek yogurt, honey, and vanilla
 4. Beat in the eggs
 5. In a separate bowl, combine the flour, baking soda, baking powder, cinnamon, and salt
-6. Gradually pour and mix the dry ingredients into the banana mixture
+6. Gradually pour and mix the dry ingredients into the banana mixture (Note: you can sift the flour here for a bit of a fluffier texture!)
 7. Pour the batter into the loaf pan and bake for approximately 40-55 minutes (until a toothpick stuck in the middle comes out clean)
 8. Enjoy! :D
 

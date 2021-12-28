@@ -35,7 +35,7 @@ nav_category: education
 	<p style="margin-top:0px; margin-bottom:0px">Los Angeles, California</p>
 	<p style="margin-top:0px">2018-2022</p>
 
-	<p><b>Degree:</b> Bachelor's of Science in Computer Science</p>
+	<p><b>Degree:</b> Bachelor's of Science in Computer Science with a minor in Cognitive Science</p>
 	<p><b>Academic Achievements:</b></p>
 		<ul>
 			<li>SWE LA Scholarship Recipient (2020)</li>
@@ -45,10 +45,11 @@ nav_category: education
 		</ul>
 	<p><b>On campus involvements:</b></p>
 		<ul>
-			<li>SuperMileage Vehicle in Bruin Racing (2018-Present)</li>
+			<li>Undergraduate researcher in the UCLA Vision Lab (2020-Present)</li>
 			<li>Society of Women Engineers (2018-Present)</li>
-			<li>Creative Labs (2019-Present)</li>
-			<li>Building Engineers and Mentors (2018-Present)</li>
+			<li>SuperMileage Vehicle in Bruin Racing (2018-2020)</li>
+			<li>Creative Labs (2019-2020)</li>
+			<li>Building Engineers and Mentors (2018-2019)</li>
 			<li>Intramurals (frisbee and volleyball)</li>
 		</ul>
 	<p><b>Favorite thing about UCLA:</b> The school's concern for students' physical and mental health in addition to academic excellence! And B-Plate!</p>
@@ -72,4 +73,4 @@ nav_category: education
 			<li>Concert Dance Company (2015-2018)</li>
 		</ul>
 	<p><b>Favorite thing about Stevenson:</b> I really loved forming close connections with my teachers! They care about their students and I felt comfortable talking about my personal struggles with many of them.</p>
-</div>			
+</div>
