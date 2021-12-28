@@ -2,10 +2,7 @@
   url: /
   nav_category: home
 
-- title: Education
-  url: /education
-  nav_category: education
-- title: Experience
+- title: Projects
   url: /experience
   nav_category: experience
 

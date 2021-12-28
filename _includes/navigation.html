@@ -2,13 +2,6 @@
 <div id="Navigation">
     <ul id="Navigation_UL">
         <div id="links">
-            <!-- <li class="hover_parent"><a class="hover_child" href="https://allisonchen23.github.io">Allison Chen</a></li>
-            <li class="hover_parent"><a class="hover_child" href="{{'index.html' | relative_url }}">Allison Chen</a></li>
-            <li class="hover_parent"><a class="hover_child" href="https://allisonchen23.github.io/education.html">Education</a></li>
-            <li class="hover_parent"><a class="hover_child" href="https://allisonchen23.github.io/experience.html">Experience</a></li>
-            <li class="hover_parent"><a class="hover_child" href="{{'experience.html' | relative_url }}">Experience</a></li>
-            <li class="hover_parent"><a class="hover_child" href="https://allisonchen23.github.io/arts.html">Arts</a></li>
-            <li class="hover_parent active"><a class="hover_child active_child" href="{{'blog.html' | relative_url }}">Blog</a></li> -->
             {% for nav in site.data.navigation %}
                 {% if nav.nav_category == page.nav_category %}
                     <li class="hover_parent active"><a class="hover_child active_child" href="{{ nav.url | relative_url }}">{{ nav.title }}</a></li>

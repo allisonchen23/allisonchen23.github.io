@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Allison Chen</title>
     	<link href= "{{ '/css/main.css' | relative_url }}" rel="stylesheet" type="text/css">
+		<link href="{{ '/css/education.css' | relative_url }}" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		{% if page.url == '/experience.html' %}
@@ -24,7 +25,6 @@
         <div id="notNavigation">
             <div id="intro">
 				<h2 class="blogpost title standOut">{{ page.title }}</h2>
-				<!-- <p>{{page.url}}</p> -->
 			</div>
 			{{ content }}
 		</div>
