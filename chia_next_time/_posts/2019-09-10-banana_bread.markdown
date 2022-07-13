@@ -15,7 +15,6 @@ Serves: 1 loaf
 {% include difficulty.html difficulty_level=1 %}
 
 
-
 ### Ingredients
 
 * 3 ripe bananas

@@ -10,9 +10,8 @@
   url: /experience
   nav_category: experience
 
-- title: Arts
-  url: /arts
-  nav_category: arts
+- title: Chia Next Time
+  url: /chia_next_time/index
 
 - title: Blog
   url: /blog
