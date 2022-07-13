@@ -2,6 +2,10 @@
   url: /
   nav_category: home
 
+- title: CV
+  url: /assets/Chen_Allison_CV.pdf
+  nav_category: cv
+
 - title: Projects
   url: /experience
   nav_category: experience
