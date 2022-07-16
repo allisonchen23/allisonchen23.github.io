@@ -1,10 +1,16 @@
 ---
-title: Experience
+title: Publications & Projects 
 layout: site_default
-nav_category: experience
+nav_category: publications
 ---
 
-<p>Check out the projects I've been working on since my freshman year at UCLA! Click on an image to learn more.</p>
+#### Selected Publications
+
+Tian Yu Liu\*, Parth Agrawal\*, <span style="color:#5F7161">*Allison Chen\**</span>, Byung-Woo Hong, Alex Wong. “Monitored Distillation for Positive Congruent Depth Completion”. *ECCV 2022*. \[[paper](https://arxiv.org/pdf/2203.16034.pdf)\]
+
+Alex Wong\*, <span style="color:#5F7161">*Allison Chen\**</span>*, Yangchao Wu, Safa Cicek, Alexandre Tiard, Byung-Woo Hong, and Stefano Soatto. “Small Lesion Segmentation in MRI with Subpixel Embedding”.  *MICCAI Brain Lesion Workshop 2021*. Oral Presentation. * = equal contribution \[[code](https://github.com/alexklwong/subpixel-embedding-segmentation)\] \[[paper](https://arxiv.org/pdf/2109.08791.pdf)\]
+
+#### Earlier projects (2019-2020)
 
 <div id="projects_list">
     <a href="experiences/fLOW_entry.html">
@@ -21,7 +27,7 @@ nav_category: experience
                     </div>
                     <div class="proj_row_div row">
                         <div class="col_icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-                        <div class="col_text"><p class="location">Jan 2019 - Present</p></div>
+                        <div class="col_text"><p class="location">Jan 2020 - Sep 2020</p></div>
                     </div>
                 </div>
             </div>

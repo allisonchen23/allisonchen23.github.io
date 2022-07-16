@@ -2,6 +2,7 @@
 title: "Becoming Keen on Quinoa"
 category: "nutrition"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 ##### Sooo what is quinoa? 

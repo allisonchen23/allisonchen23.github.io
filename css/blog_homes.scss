@@ -14,13 +14,13 @@
 #post_link
 {
 	/*color:var(--coral);*/
-	color: var(--paynes_gray);
+	color: #000000;
 	text-decoration: none;
 }
 .list_posts
 {
 	list-style-type: none;
-	padding: 10px;
+	padding: 15px;
 	margin-top: 0px
 }
 .border_2px
@@ -29,38 +29,46 @@
 	border-color: var(--coral);
 	border-style: solid;
 }
-// .list_box //take up whole width for thought blog posts
-// {
-// 	background: var(--light_light_blue);
-// 	margin-bottom: 2px;
-// 	padding: 12px 5px;
-// }
+.list_box //take up whole width for thought blog posts
+{
+	background-color: rgba(255,255,255,0.45);
+	margin: 2px;
+	border-color: var(--secondary_accent);
+	border-style: solid;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding: 12px 5px;
+	box-shadow: 5px 5px 15px var(--secondary_accent);
+}
 .list_item
 {
-	padding: 5px;
+	padding: 10px;
+
 }
-.list_item_food
+.list_item_title
 {
-	// background: var(--light_light_blue);
-	// margin-bottom: 2px;
-	// padding: 12px 5px;
-	max-width: 400px
+	font-size: 20px;
+	transition: transform 0.3s;
 }
 .list_item_date
 {
-	align-self: right;
+	align-self: left;
+
 }
-.date_text
+.list_meta
 {
-	text-align: right;
+	text-align: left;
+	font-size: 16px;
+	margin-left: 30px;
+	margin-right: 10px
 }
 .title_text
 {
-	transition: transform 0.3s;
+	
 	margin-left: 20px;
 	margin-right: 10px
 }
-.list_item_food:hover .title_text
+.list_box:hover .list_item_title 
 {
 	transform: scale(1.1);
 }

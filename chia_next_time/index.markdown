@@ -1,7 +1,7 @@
 ---
 title: "Chia Next Time"
 layout: "food_home"
-nav_category: "blog"
+nav_category: "chia_next_time"
 ---
 
 Welcome to Chia Next Time! Nutrition and healthy eating is a huge passion of mine, but I always struggle to find time to make food. In this blog, I'll be posting about various nutrition tips and ways to stay healthy as well as some of my favorite recipes. Feel free to also check out my instagram [@chia_next_time](https://www.instagram.com/chia_next_time/).

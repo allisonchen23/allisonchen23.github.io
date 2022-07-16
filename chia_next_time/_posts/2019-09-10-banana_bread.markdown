@@ -4,6 +4,7 @@ date:   2019-09-10 08:25:40 -0500
 categories: "recipe"
 permalink: "/banana_bread/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Prep Time: 15 minutes
@@ -15,11 +16,10 @@ Serves: 1 loaf
 {% include difficulty.html difficulty_level=1 %}
 
 
-
 ### Ingredients
 
-* 3 ripe bananas
-* 1/2 cup plain greek yogurt
+-  3 ripe bananas
+-  1/2 cup plain greek yogurt
 * 1/2 cup honey (I usually do a little less)
 * 1 tsp vanilla extract
 * 2 eggs

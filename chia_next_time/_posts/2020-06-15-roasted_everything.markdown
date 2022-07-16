@@ -4,6 +4,7 @@ date:   2020-06-15 20:28:40 -0500
 categories: "recipe"
 permalink: "/roasted_everything/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Prep Time: 5 minutes

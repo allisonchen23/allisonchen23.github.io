@@ -4,6 +4,7 @@ date:   2019-09-05 08:25:40 -0500
 categories: "nutrition"
 permalink: "/eat-to-beat-disease/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 The other day I was at the library, looking for a quick read before I head off to school in a week, and I spotted a thick book with color foods on the front titled *Eat to Beat Disease*. 'This sounds interesting!' I thought to myself, and as I was in a hurry to leave, I quickly checked it out. That night, I started reading after dinner and literally could not stop. This book is everything I've been looking for! And I'm not exaggerating.

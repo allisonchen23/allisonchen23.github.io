@@ -4,6 +4,7 @@ date: 2019-09-12 06:00:40 -0500
 categories: "thoughts"
 permalink: "/understanding_people/"
 layout: post_layout
+nav_category: brain_dump
 ---
 
 This topic has been something that really interested me this summer. I talked to my mom a lot about it and from her, realized that working effectively with people is probably one of the hardest things we have to learn to do. It's not something you can only read from a textbook and understand immediately; it takes many experiences and practice to learn how to work with people without offending or hurting anyone.

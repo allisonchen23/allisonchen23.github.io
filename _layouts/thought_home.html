@@ -24,12 +24,18 @@
                     {% if post.categories contains 'thoughts' %}
                         <li class="list_box">
                             <a href = "{{ post.url | relative_url}}" id="post_link">
-                                    <div class="list_item_food">
-                                        <div class="title_text">{{post.title}}</div>
-                                    </div>
-                                    <!-- <div class="list_item_date"> -->
-                                        <!-- <div class="date_text">{{post.date}}</div> -->
-                                    <!-- </div> -->
+                                <div class="list_item_title">
+                                    <div class="title_text">{{post.title}}</div>
+                                    <div class="list_meta">{{post.date | date: "%B %-d %Y"}}</div>
+                                </div>
+                                <br>
+                                <div class="list_meta">
+                                    <!-- {{post.excerpt}} -->
+                                    {{ post.content | markdownify | strip_html | truncatewords: 50 }}
+                                </div>
+                                
+                                
+                                    
                             </a>
                         </li>
                     {% endif %}

@@ -2,14 +2,18 @@
   url: /
   nav_category: home
 
-- title: Projects
-  url: /experience
-  nav_category: experience
+- title: CV
+  url: /assets/Chen_Allison_CV.pdf
+  nav_category: cv
 
-- title: Arts
-  url: /arts
-  nav_category: arts
+- title: Publications
+  url: /publications
+  nav_category: publications
 
-- title: Blog
-  url: /blog
-  nav_category: blog
+- title: Chia Next Time
+  url: /chia_next_time/index
+  nav_category: chia_next_time
+
+- title: Brain Dump
+  url: /brain_dump/index
+  nav_category: brain_dump

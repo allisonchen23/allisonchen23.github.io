@@ -11,21 +11,21 @@ This is more of a brain dump than a blog, but regardless, welcome! Food for Thou
 <ul class="list_posts">
     <li class="list_box">
         <a href = "food_in_food_for_thought/index.html" id="post_link">
-                <div class="list_item_food">
+                <div class="list_item_title">
                     <div class="title_text">Chia Next Time</div>
                 </div>
         </a>
     </li>
     <li class="list_box">
         <a href = "thoughts_in_food_for_thought/index.html" id="post_link">
-                <div class="list_item_food">
+                <div class="list_item_title">
                     <div class="title_text">'Thoughts' in Food for Thought</div>
                 </div>
         </a>
     </li>
     <!-- <li class="list_box">
         <a href = "field_museum_blog/index.html" id="post_link">
-                <div class="list_item_food">
+                <div class="list_item_title">
                     <div class="title_text">Field Museum Blog</div>
                 </div>
         </a>
