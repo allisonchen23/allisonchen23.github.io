@@ -4,6 +4,7 @@ date:   2020-04-26 20:28:40 -0500
 categories: "recipe"
 permalink: "/breakfast_wrap/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Prep Time: 5 minutes

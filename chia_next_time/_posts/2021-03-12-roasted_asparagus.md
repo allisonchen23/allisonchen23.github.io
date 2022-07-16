@@ -4,6 +4,7 @@ date: 2020-08-31 06:00:40 -0500
 categories: "recipe"
 permalink: "/roasted_asparagus/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Prep Time: 10 minutes

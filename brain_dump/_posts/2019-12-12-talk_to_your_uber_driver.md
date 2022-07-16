@@ -4,6 +4,7 @@ date: 2019-12-12 10:01:00 -0500
 categories: "thoughts"
 permalink: "/talk-to-your-uber-driver/"
 layout: post_layout
+nav_category: brain_dump
 ---
 
 Okay hello! It's been a *really* long time since I've updated this, so I think we can safely say it's been a busy quarter. I finished my finals yesterday (woo! freedom!) and today as I was on my way to LAX to fly back to Chicago, I was inspired to write a blog post about this after having a wonderful conversation with my Lyft driver. I know the title of this post is 'Talk to Your Uber Driver', but 'Talk to Your Ride Share Driver' just didn't have the same ring.

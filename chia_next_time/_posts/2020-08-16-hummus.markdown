@@ -4,6 +4,7 @@ date:   2020-06-15 20:28:40 -0500
 categories: "recipe"
 permalink: "/hummus/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Prep Time: 15 minutes (+ at least 4 hours if using dried chickpeas)

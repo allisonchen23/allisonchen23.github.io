@@ -1,7 +1,7 @@
 ---
 title: Publications & Projects 
 layout: site_default
-nav_category: experience
+nav_category: publications
 ---
 
 #### Selected Publications

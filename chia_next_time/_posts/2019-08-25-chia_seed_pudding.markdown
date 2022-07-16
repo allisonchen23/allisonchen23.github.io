@@ -4,6 +4,7 @@ date:   2019-06-24 08:25:40 -0500
 categories: "recipe"
 permalink: "/chia_seed_pudding/"
 layout: post_layout
+nav_category: chia_next_time
 ---
 
 Time: <5 minutes

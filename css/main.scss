@@ -328,7 +328,7 @@ ul.social li
 }
 ul.social li a i
 {
-    margin-right: 5px;
+  margin-right: 5px;
 	font-size:25px;
 	-webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
@@ -348,7 +348,7 @@ ul.social li a:hover
 {
 	color: var(--secondary_accent);
 }
-li
+ul.social li
 {
 	list-style-type: none;
 }
