@@ -12,12 +12,14 @@
 	--background_complement: #D0C9C0;
 	--primary_accent: #5F7161;
 	--secondary_accent: #6D8B74;
+	--contrast_color: #90563b;
 	--light_light_blue: #e8f4f8;
 	--header_font: 'Merriweather', serif;
+	--body_font: 'Montserrat', sans-serif;
 }
 body
 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--body_font);
 	width:100%;
 	height:100%;
 	min-height: 100vh; /*100% of viewport height at least*/
@@ -183,7 +185,8 @@ p{
 }
 .standOut
 {
-	color: var(--primary_accent);
+	color: var(--contrast_color); 
+	font-family: var(--header_font);
 	font-weight: bold;
 }
 .centered_text

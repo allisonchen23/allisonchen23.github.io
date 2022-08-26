@@ -37,7 +37,7 @@
 	border-style: solid;
 	border-radius: 5px;
 	margin-bottom: 10px;
-	padding: 12px 5px;
+	padding: 12px 12px;
 	box-shadow: 5px 5px 15px var(--secondary_accent);
 }
 .list_item
@@ -70,5 +70,5 @@
 }
 .list_box:hover .list_item_title 
 {
-	transform: scale(1.1);
+	transform: scale(1.08);
 }
