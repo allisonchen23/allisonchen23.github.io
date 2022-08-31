@@ -24,3 +24,11 @@ nav_category: home
 		<p>I'm a huge travel nerd and I love to learn about different cultures especially through food. I love to cook, paint, read, go on hikes and rock climbing, and play Spikeball!</p>
 	</div>
 </div>
+
+#### News
+* August 30, 2022: Started my PhD program at Princeton University!
+* July 8, 2022: Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was accepted into ECCV 2022!
+* May 12, 2022: I'm very grateful to be a 2022 Intel Graduate Diversity scholar through the Society of Women Engineers.
+* March 2, 2022: Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was rejected from CVPR 2022 :)
+* September 27, 2021: Alex Wong presented our work [Small Lesion Segmentation in Brain MRIs with
+Subpixel Embedding](https://arxiv.org/pdf/2109.08791.pdf) at MICCAI's Brain Lesion workshop.

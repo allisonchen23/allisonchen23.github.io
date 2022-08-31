@@ -22,7 +22,6 @@ body
 	height:100%;
 	min-height: 100vh; /*100% of viewport height at least*/
 	background-color: var(--background_color);
-	// background-image: linear-gradient(var(--light_blue), var(--pale_pink));
 	margin: 0px;
 }
 p
@@ -69,13 +68,6 @@ h2, h3, h4
 	position: relative;
 	display: inline-block;
 }
-// .hover_child:hover, .active_child /*the comma is like an or*/
-// {
-// 	// background-color: #cae4db;
-// 	// color: #24305e;
-// 	background-color: var(--background_color);
-// 	color: var(--primary_accent);
-// }
 .hover_child:hover:after, .active_child:after
 {
 	position: absolute;
@@ -175,7 +167,7 @@ h2, h3, h4
 	margin-right: auto;
 	margin-bottom:25px;
 	margin-top: 70px;
-	padding: 10px;
+	padding: 25px;
 	background-color: rgba(255,255,255,0.45);
 }
 p{
@@ -214,7 +206,6 @@ p{
 .column_2
 {
 	flex:50%;
-	padding:10px;
 	max-width: 400px;
 }
 .column_3
@@ -282,7 +273,6 @@ p{
 #profile-image
 {
 	display:block;
-	// border-color: #f88379;
 	border-width: 3px;
 	max-width: 95%;
 	height: auto;
@@ -310,7 +300,6 @@ p{
 a
 {
     color: var(--primary_accent);
-    // text-decoration: none !important;
 		font-weight: 900;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
