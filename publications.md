@@ -5,10 +5,11 @@ nav_category: publications
 ---
 
 #### Selected Publications
+<span style="color:#5F7161">*Allison Chen*</span>, Ilia Sucholutsky, Olga Russakovsky, Thomas L. Griffiths. "Analyzing the Roles of Language and Vision in Learning from Limited Data". *CogSci 2024*. \[[paper](https://arxiv.org/pdf/2403.19669)\]
 
-Tian Yu Liu\*, Parth Agrawal\*, <span style="color:#5F7161">*Allison Chen\**</span>, Byung-Woo Hong, Alex Wong. “Monitored Distillation for Positive Congruent Depth Completion”. *ECCV 2022*. \[[paper](https://arxiv.org/pdf/2203.16034.pdf)\]
+Tian Yu Liu\*, Parth Agrawal\*, <span style="color:#5F7161">*Allison Chen\**</span>, Byung-Woo Hong, Alex Wong. “Monitored Distillation for Positive Congruent Depth Completion”. *ECCV 2022*. \[[code](https://github.com/alexklwong/mondi-python)] \[[paper](https://arxiv.org/pdf/2203.16034.pdf)\]
 
-Alex Wong\*, <span style="color:#5F7161">*Allison Chen\**</span>*, Yangchao Wu, Safa Cicek, Alexandre Tiard, Byung-Woo Hong, and Stefano Soatto. “Small Lesion Segmentation in MRI with Subpixel Embedding”.  *MICCAI Brain Lesion Workshop 2021*. Oral Presentation. * = equal contribution \[[code](https://github.com/alexklwong/subpixel-embedding-segmentation)\] \[[paper](https://arxiv.org/pdf/2109.08791.pdf)\]
+Alex Wong\*, <span style="color:#5F7161">*Allison Chen\**</span>, Yangchao Wu, Safa Cicek, Alexandre Tiard, Byung-Woo Hong, and Stefano Soatto. “Small Lesion Segmentation in MRI with Subpixel Embedding”.  *MICCAI Brain Lesion Workshop 2021*. Oral Presentation. * = equal contribution \[[code](https://github.com/alexklwong/subpixel-embedding-segmentation)\] \[[paper](https://arxiv.org/pdf/2109.08791.pdf)\]
 
 #### Earlier projects (2019-2020)
 

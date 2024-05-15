@@ -18,14 +18,17 @@ nav_category: home
 		</div>
 	</div>
 	<div>
-		<p>I'm a first year PhD student at Princeton University studying computer science. I'm still fumbling around to find a research direction, but I'm interested in exploring fairness/interpretability in computer vision and the intersection of computer vision and cognitive science. </p>
+		<p>I'm a second year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
+		<p>My research interests lie in the intersection of computer science and cognitive science. For example, I'm interested in how we can apply cognitivie science techniques on Large Language Models, or other machine learning based models, to better understand their capabilities. </p>
 		<p>I completed my B.S. in computer science with a minor in cognitive science from UCLA in 2022. At UCLA, I was an undergraduate researcher in the <a href="http://vision.ucla.edu/">UCLA Vision Lab</a> where I worked under Dr. Stefano Soatto and with <a href="http://web.cs.ucla.edu/~alexw/">Dr. Alex Wong</a>. I was also involved with the Society of Women Engineers @ UCLA where I led the <a href="https://samueli.ucla.edu/engineering-for-humanity-research-symposium/">Engineering For Humanity Research Symposium</a> to make academic research more accessible to undergraduates.</p>
 		<p>I'm passionate about making academia more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
-		<p>I'm a huge travel nerd and I love to learn about different cultures especially through food. I love to cook, paint, read, go on hikes and rock climbing, and play Spikeball!</p>
+		<p>I love to cook, paint, read, travel, go on hikes, rock climbing, and play Spikeball!</p>
 	</div>
 </div>
 
 #### News
+* May 2024: I passed my generals exam! For a (messy) reflection on my experience, see <a href="https://docs.google.com/document/d/13z1pGsYsNQvXE8NF5bIhwbxDxz3BSDtAzbN5JB8IrXc/edit?usp=sharing">here</a>!
+* April 2024: Our paper [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) was accepted into CogSci 2024! (Netherlands, here we come!)
 * August 2022: Started my PhD program at Princeton University!
 * July 2022: Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was accepted into ECCV 2022!
 * May 2022: I'm very grateful to be a 2022 Intel Graduate Diversity scholar through the Society of Women Engineers.
