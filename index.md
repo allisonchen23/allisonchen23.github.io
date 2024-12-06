@@ -18,9 +18,11 @@ nav_category: home
 		</div>
 	</div>
 	<div>
+		<h4>Currently</h4>
 		<p>I'm a third year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
-		<p>My research interests lie in the intersection of computer science and cognitive science. For example, how can we use cognitive science approaches as means of explainability for machine learning models? </p>
+		<p>My research lies in the intersection of computer science and cognitive science. I'm currently interested in understanding the beliefs lay individuals hold about artificial intelligence (LLMs) as well as better understanding how AI and humans are similar or differ.</p>
 		<p>I'm also passionate about non-conventional means of technology education to the general public, such as through museums, and striving towards better shaping public perception of AI technology.</p>
+		<h4>Previously</h4>
 		<p>I completed my B.S. in computer science with a minor in cognitive science from UCLA in 2022. At UCLA, I was an undergraduate researcher in the <a href="http://vision.ucla.edu/">UCLA Vision Lab</a> where I worked under Dr. Stefano Soatto and with <a href="http://web.cs.ucla.edu/~alexw/">Dr. Alex Wong</a>. </p>
 		<p>I was also involved with the Society of Women Engineers @ UCLA where I led the <a href="https://samueli.ucla.edu/engineering-for-humanity-research-symposium/">Engineering For Humanity Research Symposium</a> to make academic research more accessible to undergraduates.</p>
 		<p>I'm passionate about making academia more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
@@ -29,12 +31,20 @@ nav_category: home
 </div>
 
 #### News
-* July 2024: Presented my [poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view) on [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) at CogSci 2024! Such a blast to meet other researchers and learn about interesting projects!
-* May 2024: I passed my generals exam! For a (messy) reflection on my experience, see <a href="https://docs.google.com/document/d/13z1pGsYsNQvXE8NF5bIhwbxDxz3BSDtAzbN5JB8IrXc/edit?usp=sharing">here</a>!
-* April 2024: Our paper [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) was accepted into CogSci 2024! (Netherlands, here we come!)
-* August 2022: Started my PhD program at Princeton University!
-* July 2022: Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was accepted into ECCV 2022!
-* May 2022: I'm very grateful to be a 2022 Intel Graduate Diversity scholar through the Society of Women Engineers.
-* March 2022: Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was <span class="standOut">rejected</span> from CVPR 2022 :)
-* September 2021: Alex Wong presented our work [Small Lesion Segmentation in Brain MRIs with
-Subpixel Embedding](https://arxiv.org/pdf/2109.08791.pdf) at MICCAI's Brain Lesion workshop.
+* July 2024: 
+	* Presented my [poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view) on [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) at CogSci 2024! Such a blast to meet other researchers and learn about interesting projects!
+* May 2024: 
+	* I passed my generals exam! For a (messy) reflection on my experience, see <a href="https://docs.google.com/document/d/13z1pGsYsNQvXE8NF5bIhwbxDxz3BSDtAzbN5JB8IrXc/edit?usp=sharing">here</a>!
+* April 2024: 
+	* I found out I was awarded the NSF GRFP -- completely unexpected and if you are applying and would like guidance, feel free to reach out!
+	* Our paper [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) was accepted into CogSci 2024! (Netherlands, here we come!)
+* August 2022: 
+	* Started my PhD program at Princeton University!
+* July 2022: 
+	* Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was accepted into ECCV 2022!
+* May 2022: 
+	* I'm very grateful to be a 2022 Intel Graduate Diversity scholar through the Society of Women Engineers.
+* March 2022: 
+	* Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was <span class="standOut">rejected</span> from CVPR 2022 :)
+* September 2021: 
+	* Alex Wong presented our work [Small Lesion Segmentation in Brain MRIs with Subpixel Embedding](https://arxiv.org/pdf/2109.08791.pdf) at MICCAI's Brain Lesion workshop.
