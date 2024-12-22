@@ -7,7 +7,7 @@ layout: post_layout
 nav_category: chia_next_time
 ---
 
-Prep Time: 45 minutes + chilling time
+Prep Time: 45 minutes + cooling time
 
 Cook Time: 35-35 minutes
 
