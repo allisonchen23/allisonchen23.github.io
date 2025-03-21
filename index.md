@@ -22,15 +22,19 @@ nav_category: home
 		<p>I'm a third year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
 		<p>My research lies in the intersection of computer science and cognitive science. I'm currently interested in understanding the beliefs lay individuals hold about artificial intelligence (LLMs) as well as better understanding how AI and humans are similar or differ.</p>
 		<p>I'm also passionate about non-conventional means of technology education to the general public, such as through museums, and striving towards better shaping public perception of AI technology.</p>
+		<p>I want to help higher education be more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
+		<p>I love to cook, paint, read, travel, go on hikes, rock climbing, and play Spikeball!</p>
+
 		<h4>Previously</h4>
 		<p>I completed my B.S. in computer science with a minor in cognitive science from UCLA in 2022. At UCLA, I was an undergraduate researcher in the <a href="http://vision.ucla.edu/">UCLA Vision Lab</a> where I worked under Dr. Stefano Soatto and with <a href="http://web.cs.ucla.edu/~alexw/">Dr. Alex Wong</a>. </p>
 		<p>I was also involved with the Society of Women Engineers @ UCLA where I led the <a href="https://samueli.ucla.edu/engineering-for-humanity-research-symposium/">Engineering For Humanity Research Symposium</a> to make academic research more accessible to undergraduates.</p>
-		<p>I'm passionate about making academia more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
-		<p>I love to cook, paint, read, travel, go on hikes, rock climbing, and play Spikeball!</p>
+		
 	</div>
 </div>
 
 #### News
+* February 2025:
+	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](assets/portrayals_CHI.pdf) was accepted to CHI's Extended Abstracts (semi-archival) track!
 * July 2024: 
 	* Presented my [poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view) on [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) at CogSci 2024! Such a blast to meet other researchers and learn about interesting projects!
 * May 2024: 

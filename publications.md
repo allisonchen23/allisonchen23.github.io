@@ -5,6 +5,9 @@ nav_category: publications
 ---
 
 #### Selected Publications
+
+<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Amaya Dharmasiri, Olga Russakovsky, Judith E. Fan. "Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them". *To Appear in CHI Extended Abstracts 2025*. \[[paper](assets/portrayals_CHI.pdf)\] 
+
 <span style="color:#5F7161">*Allison Chen*</span>, Ilia Sucholutsky, Olga Russakovsky, Thomas L. Griffiths. "Analyzing the Roles of Language and Vision in Learning from Limited Data". *CogSci 2024*. \[[paper](https://arxiv.org/pdf/2403.19669)\] \[[poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view)\]
 
 Tian Yu Liu\*, Parth Agrawal\*, <span style="color:#5F7161">*Allison Chen\**</span>, Byung-Woo Hong, Alex Wong. “Monitored Distillation for Positive Congruent Depth Completion”. *ECCV 2022*. \[[code](https://github.com/alexklwong/mondi-python)] \[[paper](https://arxiv.org/pdf/2203.16034.pdf)\]
