@@ -33,6 +33,8 @@ nav_category: home
 </div>
 
 #### News
+* April 2025:
+	* I've been invited to attend the [Grad Cohort Workshop](https://cra.org/cra-wp/events/2025-cra-wp-grad-cohort-workshops/) on April 3-5, 2025 hosted by the Computing Research Association! Denver here we come!
 * February 2025:
 	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](assets/portrayals_CHI.pdf) was accepted to CHI's Extended Abstracts (semi-archival) track!
 * July 2024: 
