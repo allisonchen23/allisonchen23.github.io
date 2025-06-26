@@ -1,12 +1,12 @@
 ---
-title: Publications & Projects 
+title: Publications & Projects
 layout: site_default
 nav_category: publications
 ---
 
 #### Selected Publications
 
-<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Amaya Dharmasiri, Olga Russakovsky, Judith E. Fan. "Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them". *To Appear in CHI Extended Abstracts 2025*. \[[paper](assets/portrayals_CHI.pdf)\] 
+<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Amaya Dharmasiri, Olga Russakovsky, Judith E. Fan. "Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them". *CHI Extended Abstracts 2025; CogSci 2025*. \[[CHI paper](https://dl.acm.org/doi/abs/10.1145/3706599.3719710)\] \[[CHI poster](https://drive.google.com/file/d/1-bGAWJsTHs5mY8qrw5jB85meeoj68T88/view?usp=sharing)] \[[CogSci paper](assets/portraying_cogsci.pdf)]
 
 <span style="color:#5F7161">*Allison Chen*</span>, Ilia Sucholutsky, Olga Russakovsky, Thomas L. Griffiths. "Analyzing the Roles of Language and Vision in Learning from Limited Data". *CogSci 2024*. \[[paper](https://arxiv.org/pdf/2403.19669)\] \[[poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view)\]
 

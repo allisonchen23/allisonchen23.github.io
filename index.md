@@ -28,29 +28,34 @@ nav_category: home
 		<h4>Previously</h4>
 		<p>I completed my B.S. in computer science with a minor in cognitive science from UCLA in 2022. At UCLA, I was an undergraduate researcher in the <a href="http://vision.ucla.edu/">UCLA Vision Lab</a> where I worked under Dr. Stefano Soatto and with <a href="http://web.cs.ucla.edu/~alexw/">Dr. Alex Wong</a>. </p>
 		<p>I was also involved with the Society of Women Engineers @ UCLA where I led the <a href="https://samueli.ucla.edu/engineering-for-humanity-research-symposium/">Engineering For Humanity Research Symposium</a> to make academic research more accessible to undergraduates.</p>
-		
+
 	</div>
 </div>
 
 #### News
+* June 2025:
+	* Started serving as a graduate research mentor for undergraduates! Stay tuned!
 * April 2025:
 	* I've been invited to attend the [Grad Cohort Workshop](https://cra.org/cra-wp/events/2025-cra-wp-grad-cohort-workshops/) on April 3-5, 2025 hosted by the Computing Research Association! Denver here we come!
+	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](assets/portraying_cogsci.pdf) was also accepted into the CogSci Conference (a non-archival venue)! It was an experience to write this paper for both human-computer interaction and cognitive science audiences.
 * February 2025:
-	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](assets/portrayals_CHI.pdf) was accepted to CHI's Extended Abstracts (semi-archival) track!
-* July 2024: 
+	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](https://dl.acm.org/doi/abs/10.1145/3706599.3719710) was accepted to CHI's Extended Abstracts (semi-archival) track!
+* January 2025:
+	* I started as a Graduate Fellow for the [Natural and Artifical Minds Initiative](https://nam.ai.princeton.edu/) as part of the AI Lab at Princeton!
+* July 2024:
 	* Presented my [poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view) on [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) at CogSci 2024! Such a blast to meet other researchers and learn about interesting projects!
-* May 2024: 
+* May 2024:
 	* I passed my generals exam! For a (messy) reflection on my experience, see <a href="https://docs.google.com/document/d/13z1pGsYsNQvXE8NF5bIhwbxDxz3BSDtAzbN5JB8IrXc/edit?usp=sharing">here</a>!
-* April 2024: 
+* April 2024:
 	* I found out I was awarded the NSF GRFP -- completely unexpected and if you are applying and would like guidance, feel free to reach out!
 	* Our paper [Analyzing the Roles of Language and Vision in Learning from Limited Data](https://arxiv.org/pdf/2403.19669) was accepted into CogSci 2024! (Netherlands, here we come!)
-* August 2022: 
+* August 2022:
 	* Started my PhD program at Princeton University!
-* July 2022: 
+* July 2022:
 	* Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was accepted into ECCV 2022!
-* May 2022: 
+* May 2022:
 	* I'm very grateful to be a 2022 Intel Graduate Diversity scholar through the Society of Women Engineers.
-* March 2022: 
+* March 2022:
 	* Our paper, [Monitored Distillation for Positive Congruent Depth Completion](https://arxiv.org/abs/2203.16034) was <span class="standOut">rejected</span> from CVPR 2022 :)
-* September 2021: 
+* September 2021:
 	* Alex Wong presented our work [Small Lesion Segmentation in Brain MRIs with Subpixel Embedding](https://arxiv.org/pdf/2109.08791.pdf) at MICCAI's Brain Lesion workshop.
