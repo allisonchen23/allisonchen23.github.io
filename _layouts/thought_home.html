@@ -21,7 +21,7 @@
             <h3>Posts</h3>
             <ul class="list_posts">
                 {% for post in site.posts %}
-                    {% if post.categories contains 'thoughts' %}
+                    {% if post.categories contains page.category %}
                         <li class="list_box">
                             <a href = "{{ post.url | relative_url}}" id="post_link">
                                 <div class="list_item_title">
@@ -33,9 +33,6 @@
                                     <!-- {{post.excerpt}} -->
                                     {{ post.content | markdownify | strip_html | truncatewords: 50 }}
                                 </div>
-                                
-                                
-                                    
                             </a>
                         </li>
                     {% endif %}

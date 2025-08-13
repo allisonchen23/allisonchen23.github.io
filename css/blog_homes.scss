@@ -10,6 +10,12 @@
 	--coral: #f88379;
 	--light_light_blue: #e8f4f8;
 }
+img {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+
 /* listing posts*/
 #post_link
 {
@@ -64,11 +70,11 @@
 }
 .title_text
 {
-	
+
 	margin-left: 20px;
 	margin-right: 10px
 }
-.list_box:hover .list_item_title 
+.list_box:hover .list_item_title
 {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
