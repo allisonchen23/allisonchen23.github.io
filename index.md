@@ -19,8 +19,8 @@ nav_category: home
 	</div>
 	<div>
 		<h4>Currently</h4>
-		<p>I'm a third year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
-		<p>My research lies in the intersection of computer science and cognitive science. I'm currently interested in understanding the beliefs lay individuals hold about artificial intelligence (LLMs) as well as better understanding how AI and humans are similar or differ.</p>
+		<p>I'm a fourth year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
+		<p>My research lies in the intersection of computer science and cognitive science. I'm currently interested in understanding understanding vision-language models (VLMs), such as how visual information is represented and used VLMs. Prior projects have explored the beliefs lay individuals hold about artificial intelligence (LLMs) as well as better understanding the role of language in visual tasks in language models.</p>
 		<p>I'm also passionate about non-conventional means of technology education to the general public, such as through museums, and striving towards better shaping public perception of AI technology.</p>
 		<p>I want to help higher education be more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
 		<p>I love to cook, paint, read, travel, go on hikes, rock climbing, and play Spikeball!</p>

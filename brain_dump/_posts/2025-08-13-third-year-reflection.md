@@ -1,6 +1,6 @@
 ---
 title: "Third Year Reflection"
-date: 2024-05-15 06:00:40 -0500
+date: 2025-08-13 06:00:40 -0500
 categories: "thoughts"
 permalink: "/third_year_reflection/"
 layout: post_layout
