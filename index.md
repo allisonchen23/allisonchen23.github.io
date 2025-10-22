@@ -19,7 +19,7 @@ nav_category: home
 	</div>
 	<div>
 		<h4>Currently</h4>
-		<p>I'm a fourth year PhD student at Princeton University studying computer science. I am advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a> and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
+		<p>I'm a fourth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
 		<p>My research lies in the intersection of computer science and cognitive science. I'm currently interested in understanding understanding vision-language models (VLMs), such as how visual information is represented and used VLMs. Prior projects have explored the beliefs lay individuals hold about artificial intelligence (LLMs) as well as better understanding the role of language in visual tasks in language models.</p>
 		<p>I'm also passionate about non-conventional means of technology education to the general public, such as through museums, and striving towards better shaping public perception of AI technology.</p>
 		<p>I want to help higher education be more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
@@ -34,7 +34,7 @@ nav_category: home
 
 #### News
 * June 2025:
-	* Started serving as a graduate research mentor for undergraduates! Stay tuned!
+	* Started serving as a graduate research mentor through NSF REU!
 * April 2025:
 	* I've been invited to attend the [Grad Cohort Workshop](https://cra.org/cra-wp/events/2025-cra-wp-grad-cohort-workshops/) on April 3-5, 2025 hosted by the Computing Research Association! Denver here we come!
 	* Our paper [Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them](assets/portraying_cogsci.pdf) was also accepted into the CogSci Conference (a non-archival venue)! It was an experience to write this paper for both human-computer interaction and cognitive science audiences.

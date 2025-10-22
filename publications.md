@@ -6,7 +6,9 @@ nav_category: publications
 
 #### Selected Publications
 
-<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Amaya Dharmasiri, Olga Russakovsky, Judith E. Fan. "Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them". *CHI Extended Abstracts 2025; CogSci 2025*. \[[CHI paper](https://dl.acm.org/doi/abs/10.1145/3706599.3719710)\] \[[CHI poster](https://drive.google.com/file/d/1-bGAWJsTHs5mY8qrw5jB85meeoj68T88/view?usp=sharing)] \[[CogSci paper](assets/portraying_cogsci.pdf)]
+<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Angel Franyutti, Amaya Dharmasiri, Kushin Mukherjee, Olga Russakovsky, Judith E. Fan. "Presenting Large Language Models as Companions Affects What Mental Capacities People Attribute to Them". Under review at *CHI 2026*. \[[arxiv](http://arxiv.org/abs/2510.18039)\]
+
+<span style="color:#5F7161">*Allison Chen*</span>, Sunnie S. Y. Kim, Amaya Dharmasiri, Olga Russakovsky, Judith E. Fan. "Portraying Large Language Models as Machines, Tools, or Companions Affects What Mental Capacities Humans Attribute to Them". *CHI Extended Abstracts 2025* (semi-archival); *CogSci 2025* (non-archival). \[[CHI EA paper](https://dl.acm.org/doi/abs/10.1145/3706599.3719710)\] \[[CHI EA poster](https://drive.google.com/file/d/1-bGAWJsTHs5mY8qrw5jB85meeoj68T88/view?usp=sharing)] \[[CogSci paper](assets/portraying_cogsci.pdf)]
 
 <span style="color:#5F7161">*Allison Chen*</span>, Ilia Sucholutsky, Olga Russakovsky, Thomas L. Griffiths. "Analyzing the Roles of Language and Vision in Learning from Limited Data". *CogSci 2024*. \[[paper](https://arxiv.org/pdf/2403.19669)\] \[[poster](https://drive.google.com/file/d/1KdObWScGRxHEpTNkZtz2VDlODc0iicXr/view)\]
 
