@@ -33,6 +33,8 @@ nav_category: home
 </div>
 
 #### News
+* January 2026:
+	* I co-taught a workshop called *De-mystifying AI: Beyond the Hype* with [Jon Hanke](https://jonhanke.github.io/about/) to introduce concepts in AI to a general audience. This was through Princeton's Institute for Computational Science & Engineering (PICSciE) who hosted a 2 week Wintersession!
 * June 2025:
 	* Started serving as a graduate research mentor through NSF REU!
 * April 2025:
