@@ -27,6 +27,9 @@
 						<h2 class="blogpost title standOut">{{ page.title }}</h2>
 					</div>
 					{{ content }}
+					{% if page.nav_category == 'home' %}
+						{% include news_show_more_toggle.html %}
+					{% endif %}
 				</div>
 		{%include footer.html %}
 	</body>

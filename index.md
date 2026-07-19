@@ -37,6 +37,7 @@ nav_category: home
 	* On a completely personal note, I got married! My husband and I will be in Cambridge, MA for at least the next two years!
 * April 2026:
 	* I presented our work [Portraying Large Language Models as Companions Affects What Mental Capacities People Attribute to Them](https://arxiv.org/abs/2510.18039) at CHI 2026 in Barcelona!
+	* I also presented [Using Games to Learn How Large Language Models Work](https://arxiv.org/pdf/2603.28374) at the Data Literacy workshop at CHI 2026
 * January 2026:
 	* I co-taught a workshop called *De-mystifying AI: Beyond the Hype* with [Jon Hanke](https://jonhanke.github.io/about/) to introduce concepts in AI to a general audience. This was through Princeton's Institute for Computational Science & Engineering (PICSciE) who hosted a 2 week Wintersession!
 * June 2025:
