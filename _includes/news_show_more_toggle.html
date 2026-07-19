@@ -1,0 +1,49 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const newsHeading = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).find(
+    (heading) => heading.textContent.trim() === 'News'
+  );
+
+  if (!newsHeading) {
+    return;
+  }
+
+  let newsList = newsHeading.nextElementSibling;
+  while (newsList && newsList.tagName !== 'UL') {
+    newsList = newsList.nextElementSibling;
+  }
+
+  if (!newsList) {
+    return;
+  }
+
+  const topLevelItems = Array.from(newsList.children).filter((item) => item.tagName === 'LI');
+  if (topLevelItems.length <= 3) {
+    return;
+  }
+
+  let isExpanded = false;
+  topLevelItems.slice(3).forEach((item) => {
+    item.style.display = 'none';
+  });
+
+  const toggleButton = document.createElement('button');
+  toggleButton.type = 'button';
+  toggleButton.className = 'news-toggle-button';
+  toggleButton.textContent = 'Show more';
+  toggleButton.setAttribute('aria-expanded', 'false');
+
+  toggleButton.addEventListener('click', function () {
+    isExpanded = !isExpanded;
+
+    topLevelItems.slice(3).forEach((item) => {
+      item.style.display = isExpanded ? '' : 'none';
+    });
+
+    toggleButton.textContent = isExpanded ? 'Show less' : 'Show more';
+    toggleButton.setAttribute('aria-expanded', String(isExpanded));
+  });
+
+  newsList.insertAdjacentElement('afterend', toggleButton);
+});
+</script>

@@ -14,13 +14,13 @@ nav_category: home
 			{% include contact_me.html %}
 		</div>
 		<div class="column_2">
-				<img src="assets/images/index/Pro_pic2.jpg" id="profile-image" alt="LinkedIn Headshot" width="80%" >
+				<img src="assets/images/index/headshot.jpeg" id="profile-image" alt="LinkedIn Headshot" width="80%" >
 		</div>
 	</div>
 	<div>
 		<h4>Currently</h4>
-		<p>I'm a fourth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
-		<p>My research lies in the intersection of computer science and cognitive science. I'm currently pursuing a project regarding to interpretability and object hallucinations in vision-language models. I'm also supporting a project about deference to AI in moral situations and another in grounding our understanding of representations in machine learning in philosophy.</p>
+		<p>I'm a fifth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
+		<p>My research interests lie in the intersection of computer science, psychology, and human-computer interaction. I enjoy working on projects towards developing more responsible human-AI interactions, where people are aware of the capabilities and limitations of the systems and encouraged to use them appropriately. Some of this work includes analyzing technical tools and systems while others require understanding people and how they think about and use technlogy. </p>
 		<p>I'm also passionate about creative means of technology education to the general public, such as through museums exhibits or interactive workshops about AI.</p>
 		<p>I want to help higher education be more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
 		<p>I love to cook, paint, read, travel, go on hikes, rock climbing, and play Spikeball!</p>
@@ -33,6 +33,10 @@ nav_category: home
 </div>
 
 #### News
+* May 2026:
+	* On a completely personal note, I got married! My husband and I will be in Cambridge, MA for at least the next two years!
+* April 2026:
+	* I presented our work [Portraying Large Language Models as Companions Affects What Mental Capacities People Attribute to Them](https://arxiv.org/abs/2510.18039) at CHI 2026 in Barcelona!
 * January 2026:
 	* I co-taught a workshop called *De-mystifying AI: Beyond the Hype* with [Jon Hanke](https://jonhanke.github.io/about/) to introduce concepts in AI to a general audience. This was through Princeton's Institute for Computational Science & Engineering (PICSciE) who hosted a 2 week Wintersession!
 * June 2025:
