@@ -18,8 +18,9 @@ nav_category: home
 		</div>
 	</div>
 	<div>
+		<p>I'm on the industry and postdoc job market looking for roles regarding 1) researching societal impacts of AI, especially on cognition and in the workforce, and/or 2) better understanding the black box of AI systems. I would also be interested in opportunities to teach and mentor!</p>
 		<h4>Currently</h4>
-		<p>I'm a fifth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. </p>
+		<p>I'm a fifth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. This year I am visiting with MIT HCI working with Dr. Mitchell Gordon and Dr. Zana Buçinca. </p>
 		<p>My research interests lie in the intersection of computer science, psychology, and human-computer interaction. I enjoy working on projects towards developing more responsible human-AI interactions, where people are aware of the capabilities and limitations of the systems and encouraged to use them appropriately. Some of this work includes analyzing technical tools and systems while others require understanding people and how they think about and use technlogy. </p>
 		<p>I'm also passionate about creative means of technology education to the general public, such as through museums exhibits or interactive workshops about AI.</p>
 		<p>I want to help higher education be more accessible to all students, regardless of background. If you have questions about research, navigating college, or thinking about grad school, <b>please shoot me an email</b>, I'd be more than happy to chat :) </p>
@@ -33,6 +34,8 @@ nav_category: home
 </div>
 
 #### News
+* September 2026:
+	* Our paper "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models" was accepted to NeurIPS 2026 in the Evaluations and Datasets track!
 * May 2026:
 	* On a completely personal note, I got married! My husband and I will be in Cambridge, MA for at least the next two years!
 * April 2026:
