@@ -30,20 +30,26 @@ img.difficulty_item
 
 // table styling
 table{
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
-	border:2px solid #000000;
+	border: 1px solid var(--hairline);
+	border-radius: 14px;
+	overflow: hidden;
 	text-align: center;
+	margin: 0 auto 1.2em;
+	font-size: 15px;
 }
 
 th{
-	border:2px solid #000000;
-	padding: 5px;
+	background-color: var(--sage_light);
+	color: var(--ink);
+	font-weight: 600;
+	padding: 8px 12px;
 }
 
 td{
-	border:1px solid #000000;
-	padding: 3px 5px;
+	border-top: 1px solid var(--hairline);
+	padding: 6px 12px;
 }
 
 .table_wrapper {

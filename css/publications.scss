@@ -114,3 +114,43 @@
   	transform: translateY(-50%);
 	margin: 0px;
 }
+
+/*-----------Garden theme: publications page---------*/
+/* each publication paragraph becomes a soft card */
+body:has(#projects_list) #notNavigation > p
+{
+	background-color: var(--background_color);
+	border-radius: 16px;
+	padding: 18px 22px;
+	margin-bottom: 14px;
+	font-size: 15.5px;
+	line-height: 1.65;
+	color: var(--muted);
+}
+body:has(#projects_list) #notNavigation > p > em
+{
+	color: var(--ink);
+}
+body:has(#projects_list) #notNavigation > p a
+{
+	font-size: 14px;
+}
+.project
+{
+	color: var(--ink);
+}
+.proj_img
+{
+	border-radius: 20px;
+	box-shadow: 0 6px 18px rgba(95,113,97,0.15);
+}
+.proj_title_text
+{
+	font-family: var(--header_font);
+	font-weight: 600;
+	color: var(--ink);
+}
+.proj_row_div i
+{
+	color: var(--primary_accent);
+}
