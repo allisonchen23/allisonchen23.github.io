@@ -12,8 +12,7 @@
 	--primary_accent: #5f7161;     /* sage */
 	--secondary_accent: #6d8b74;
 	--sage_light: #dfe6dc;
-	--rose: #efd6d1;
-	--rose_dark: #b0524a;
+	--rose: #f9ebe8;
 	--ink: #2b2f2a;
 	--muted: #6c7268;
 	--hairline: #ddd6c6;
@@ -410,7 +409,7 @@ a:hover
 {
 	margin: 6px 0 0 0;
 }
-/* organic, blob-shaped portrait with an offset sage shadow */
+/* circular portrait */
 #profile-image
 {
 	display: block;
@@ -419,7 +418,7 @@ a:hover
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	margin: 10px auto 18px;
-	border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%;
+	border-radius: 50%;
 }
 /* bio section */
 #aboutMe > div:not(.row) h4
@@ -434,23 +433,12 @@ a:hover
 	display: block;
 	background-color: var(--rose);
 	border-radius: 18px;
-	padding: 14px 20px 14px 42px;
+	padding: 14px 20px;
 	margin: 22px 0 0;
 	font-size: 15px;
 	font-weight: 500;
 	line-height: 1.6;
 	color: var(--ink);
-}
-#aboutMe > .row p.job-market::before
-{
-	content: "";
-	position: absolute;
-	left: 20px;
-	top: 23px;
-	width: 9px;
-	height: 9px;
-	border-radius: 50%;
-	background-color: var(--rose_dark);
 }
 @media screen and (max-width: 700px)
 {
