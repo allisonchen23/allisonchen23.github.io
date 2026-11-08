@@ -6,6 +6,10 @@
   var REPO = { owner: 'allisonchen23', name: 'allisonchen23.github.io', dir: 'chia_next_time/_posts' };
   var SITE = 'https://allisonchen.us';
   var AVOCADO = '/assets/images/avocado.png';
+  // Your own import helper on Vercel (code in _tools/recipe-import). Tried first;
+  // leave empty to skip it. Example: 'https://recipe-import-xyz.vercel.app/api/fetch?url={url}'
+  var IMPORT_SERVICE = '';
+  // Free public fallbacks, used if your own helper is missing or fails.
   var PROXIES = [
     function (u) { return 'https://corsproxy.io/?url=' + encodeURIComponent(u); },
     function (u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); }
@@ -539,7 +543,9 @@
     var custom = settings().proxy;
     var attempts = custom
       ? [function () { return fetchText(custom.indexOf('{url}') >= 0 ? custom.replace('{url}', encodeURIComponent(url)) : custom + encodeURIComponent(url)); }]
-      : [function () { return fetchText(url); }].concat(PROXIES.map(function (p) { return function () { return fetchText(p(url)); }; }));
+      : (IMPORT_SERVICE ? [function () { return fetchText(IMPORT_SERVICE.replace('{url}', encodeURIComponent(url))); }] : [])
+          .concat([function () { return fetchText(url); }])
+          .concat(PROXIES.map(function (p) { return function () { return fetchText(p(url)); }; }));
     var i = 0;
     function next(lastErr) {
       if (i >= attempts.length) return Promise.reject(lastErr || new Error('could not load the page'));
