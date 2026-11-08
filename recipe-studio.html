@@ -1,0 +1,236 @@
+---
+layout: null
+permalink: /recipe-studio/
+sitemap: false
+---
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Recipe Studio</title>
+	<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+	<link rel="stylesheet" href="{{ '/css/blog_posts.css' | relative_url }}">
+	<link rel="stylesheet" href="{{ '/css/recipe-studio.css' | relative_url }}">
+</head>
+<body class="rs">
+	<header class="rs-top">
+		<div class="rs-top-inner">
+			<button type="button" class="rs-brand" data-go="library">Recipe Studio <span>Chia Next Time</span></button>
+			<nav class="rs-top-actions">
+				<button type="button" class="rs-btn rs-btn-ghost" data-go="library">My recipes</button>
+				<button type="button" class="rs-btn rs-btn-primary" data-go="new">+ New recipe</button>
+				<button type="button" class="rs-btn rs-btn-ghost rs-settings-btn" id="rs-open-settings" aria-label="Settings">
+					<span class="rs-dot" id="rs-conn-dot"></span>Settings
+				</button>
+			</nav>
+		</div>
+	</header>
+
+	<main class="rs-main">
+		<!-- ===== Library ===== -->
+		<section class="rs-view" id="view-library" hidden>
+			<div class="rs-view-head">
+				<div>
+					<h1>My recipes</h1>
+					<p class="rs-sub" id="rs-lib-sub">Recipes published on Chia Next Time.</p>
+				</div>
+				<button type="button" class="rs-btn rs-btn-ghost" id="rs-refresh">Refresh</button>
+			</div>
+			<div class="rs-banner" id="rs-draft-banner" hidden>
+				<span>You have an unpublished draft: <b id="rs-draft-title"></b></span>
+				<span class="rs-banner-actions">
+					<button type="button" class="rs-btn rs-btn-small rs-btn-primary" id="rs-draft-continue">Continue</button>
+					<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" id="rs-draft-discard">Discard</button>
+				</span>
+			</div>
+			<p class="rs-status" id="rs-lib-status"></p>
+			<ul class="rs-lib-list" id="rs-lib-list"></ul>
+		</section>
+
+		<!-- ===== New recipe / import ===== -->
+		<section class="rs-view" id="view-new" hidden>
+			<div class="rs-view-head">
+				<div>
+					<h1>New recipe</h1>
+					<p class="rs-sub">Import from a link, paste the text, or start from scratch.</p>
+				</div>
+			</div>
+			<div class="rs-card rs-import">
+				<label for="rs-import-url" class="rs-label">Recipe link</label>
+				<form class="rs-import-row" id="rs-import-form">
+					<input type="url" id="rs-import-url" class="rs-input rs-input-lg" placeholder="https://… or a cooked.wiki link" autocomplete="off">
+					<button type="submit" class="rs-btn rs-btn-primary rs-btn-lg" id="rs-import-btn">Import</button>
+				</form>
+				<p class="rs-hint">Works with most recipe sites, and with Cooked.wiki links (it imports from the original recipe).</p>
+				<p class="rs-status" id="rs-import-status" role="status"></p>
+			</div>
+			<div class="rs-or"><span>or</span></div>
+			<div class="rs-start-grid">
+				<details class="rs-card rs-paste" id="rs-paste">
+					<summary><b>Paste recipe text</b><span>For sites that block importing</span></summary>
+					<textarea id="rs-paste-text" class="rs-input rs-textarea" rows="10" placeholder="Title&#10;&#10;Ingredients&#10;2 cups flour&#10;1 tsp salt&#10;&#10;Instructions&#10;Mix everything…"></textarea>
+					<p class="rs-hint">Include lines that say "Ingredients" and "Instructions" (or "Directions"/"Method").</p>
+					<button type="button" class="rs-btn rs-btn-primary" id="rs-paste-go">Use this text</button>
+					<p class="rs-status" id="rs-paste-status" role="status"></p>
+				</details>
+				<button type="button" class="rs-card rs-blank" id="rs-start-blank">
+					<b>Start from scratch</b><span>A blank recipe in your usual layout</span>
+				</button>
+			</div>
+		</section>
+
+		<!-- ===== Editor ===== -->
+		<section class="rs-view" id="view-editor" hidden>
+			<div class="rs-editor-bar">
+				<button type="button" class="rs-btn rs-btn-ghost" data-go="library">&larr; Recipes</button>
+				<div class="rs-tabs" role="tablist">
+					<button type="button" role="tab" class="rs-tab" data-tab="edit" aria-selected="true">Edit</button>
+					<button type="button" role="tab" class="rs-tab rs-tab-preview" data-tab="preview" aria-selected="false">Preview</button>
+					<button type="button" role="tab" class="rs-tab" data-tab="markdown" aria-selected="false">Markdown</button>
+				</div>
+				<div class="rs-editor-actions">
+					<span class="rs-save-state" id="rs-save-state"></span>
+					<button type="button" class="rs-btn rs-btn-danger-ghost" id="rs-delete" hidden>Delete</button>
+					<button type="button" class="rs-btn rs-btn-primary" id="rs-publish">Publish</button>
+				</div>
+			</div>
+			<div class="rs-banner rs-banner-ok" id="rs-publish-banner" hidden></div>
+			<div class="rs-banner" id="rs-md-banner" hidden>
+				<span>You edited the Markdown directly, so publishing will save that text exactly.</span>
+				<span class="rs-banner-actions">
+					<button type="button" class="rs-btn rs-btn-small rs-btn-primary" id="rs-md-apply">Load into editor</button>
+					<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" id="rs-md-discard">Undo Markdown edits</button>
+				</span>
+			</div>
+
+			<div class="rs-workspace" data-tab="edit">
+				<div class="rs-pane rs-pane-edit">
+					<input type="text" id="rs-title" class="rs-title-input" placeholder="Recipe title" aria-label="Recipe title">
+
+					<div class="rs-meta-grid">
+						<label class="rs-field"><span>Prep time</span><input type="text" class="rs-input" data-meta="prep" placeholder="15 minutes"></label>
+						<label class="rs-field"><span>Cook time</span><input type="text" class="rs-input" data-meta="cook" placeholder="40 minutes"></label>
+						<label class="rs-field"><span>Total time</span><input type="text" class="rs-input" data-meta="time" placeholder="optional"></label>
+						<label class="rs-field"><span>Serves</span><input type="text" class="rs-input" data-meta="serves" placeholder="4"></label>
+					</div>
+
+					<div class="rs-field rs-difficulty-field">
+						<span>Difficulty</span>
+						<div class="rs-avocados" id="rs-avocados" role="radiogroup" aria-label="Difficulty out of 5"></div>
+					</div>
+
+					<div class="rs-meta-grid rs-source-grid">
+						<label class="rs-field"><span>Adapted from (name)</span><input type="text" class="rs-input" data-meta="sourceName" placeholder="Sally's Baking Addiction"></label>
+						<label class="rs-field"><span>Original link</span><input type="url" class="rs-input" data-meta="sourceUrl" placeholder="https://…"></label>
+					</div>
+
+					<div class="rs-section">
+						<h2>Ingredients</h2>
+						<ol class="rs-items" id="rs-ingredients" data-list="ingredients"></ol>
+						<div class="rs-add-row">
+							<button type="button" class="rs-btn rs-btn-small rs-btn-soft" data-add="ingredients:item">+ Ingredient</button>
+							<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" data-add="ingredients:heading">+ Section</button>
+							<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" data-add="ingredients:note">+ Note</button>
+						</div>
+					</div>
+
+					<div class="rs-section">
+						<h2>Instructions</h2>
+						<ol class="rs-items rs-steps" id="rs-instructions" data-list="instructions"></ol>
+						<div class="rs-add-row">
+							<button type="button" class="rs-btn rs-btn-small rs-btn-soft" data-add="instructions:item">+ Step</button>
+							<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" data-add="instructions:heading">+ Section</button>
+							<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" data-add="instructions:note">+ Note</button>
+						</div>
+					</div>
+
+					<div class="rs-section">
+						<h2>Notes &amp; extras</h2>
+						<p class="rs-hint">Anything after the instructions: tips, variations, nutrition notes, photos. Written in Markdown.</p>
+						<textarea id="rs-after" class="rs-input rs-textarea" rows="6" placeholder="---&#10;&#10;### Notes&#10;Tips, variations…"></textarea>
+					</div>
+
+					<details class="rs-section rs-advanced">
+						<summary>Page settings</summary>
+						<div class="rs-meta-grid">
+							<label class="rs-field"><span>Page address</span><input type="text" class="rs-input" id="rs-permalink" placeholder="/banana-bread/"></label>
+							<label class="rs-field"><span>Date</span><input type="text" class="rs-input" id="rs-date" placeholder="2026-11-08 12:00:00 -0500"></label>
+						</div>
+						<p class="rs-hint" id="rs-path-hint"></p>
+					</details>
+				</div>
+
+				<div class="rs-pane rs-pane-preview" aria-label="Preview">
+					<div class="rs-preview-label">Preview</div>
+					<div class="rs-preview" id="rs-preview"></div>
+				</div>
+
+				<div class="rs-pane rs-pane-markdown">
+					<p class="rs-hint">This is the exact file that gets saved to your site. You can edit it directly.</p>
+					<textarea id="rs-markdown" class="rs-input rs-textarea rs-code" spellcheck="false"></textarea>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- ===== Settings ===== -->
+	<dialog class="rs-dialog" id="rs-settings">
+		<form method="dialog" class="rs-dialog-body" id="rs-settings-form">
+			<h2>Settings</h2>
+			<section>
+				<h3>Publishing to GitHub</h3>
+				<p class="rs-hint">Publishing saves recipes to your website's GitHub repository. It needs a personal access token, which is stored only in this browser.</p>
+				<ol class="rs-steps-help">
+					<li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub &rarr; New fine-grained token</a>.</li>
+					<li>Name it "Recipe Studio" and pick an expiration.</li>
+					<li>Under <b>Repository access</b>, choose <b>Only select repositories</b> &rarr; <code>allisonchen23.github.io</code>.</li>
+					<li>Under <b>Permissions &rarr; Repository permissions</b>, set <b>Contents</b> to <b>Read and write</b>.</li>
+					<li>Generate the token and paste it below.</li>
+				</ol>
+				<label class="rs-field"><span>Personal access token</span>
+					<input type="password" class="rs-input" id="rs-token" autocomplete="off" placeholder="github_pat_…">
+				</label>
+				<div class="rs-add-row">
+					<button type="button" class="rs-btn rs-btn-small rs-btn-soft" id="rs-test-token">Test connection</button>
+					<button type="button" class="rs-btn rs-btn-small rs-btn-ghost" id="rs-forget-token">Forget token</button>
+				</div>
+				<p class="rs-status" id="rs-token-status" role="status"></p>
+			</section>
+			<section>
+				<h3>Advanced</h3>
+				<label class="rs-field"><span>Branch to publish to</span>
+					<input type="text" class="rs-input" id="rs-branch" placeholder="master">
+				</label>
+				<p class="rs-hint"><code>master</code> is your live site. Use another branch to try things without publishing.</p>
+				<label class="rs-field"><span>Import service (optional)</span>
+					<input type="text" class="rs-input" id="rs-proxy" placeholder="Automatic">
+				</label>
+				<p class="rs-hint">Leave blank to use free public services. To use your own, enter its address with <code>{url}</code> where the recipe link goes.</p>
+			</section>
+			<div class="rs-dialog-actions">
+				<button type="submit" class="rs-btn rs-btn-primary" value="save">Save</button>
+				<button type="submit" class="rs-btn rs-btn-ghost" value="cancel" formnovalidate>Cancel</button>
+			</div>
+		</form>
+	</dialog>
+
+	<!-- ===== Confirm ===== -->
+	<dialog class="rs-dialog rs-dialog-small" id="rs-confirm">
+		<form method="dialog" class="rs-dialog-body">
+			<h2 id="rs-confirm-title">Are you sure?</h2>
+			<p id="rs-confirm-text"></p>
+			<div class="rs-dialog-actions">
+				<button type="submit" class="rs-btn rs-btn-danger" value="yes" id="rs-confirm-yes">Delete</button>
+				<button type="submit" class="rs-btn rs-btn-ghost" value="no">Cancel</button>
+			</div>
+		</form>
+	</dialog>
+
+	<script src="{{ '/assets/js/vendor/marked.min.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/vendor/purify.min.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/recipe-studio-core.js' | relative_url }}"></script>
+	<script src="{{ '/assets/js/recipe-studio.js' | relative_url }}"></script>
+</body>
+</html>

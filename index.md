@@ -12,13 +12,13 @@ nav_category: home
 			<h4>Princeton University</h4>
 			<p>allisonchen *at* princeton *dot* edu</p>
 			{% include contact_me.html %}
+			<p class="job-market">I'm on the industry and postdoc job market looking for roles regarding 1) researching societal impacts of AI, especially on cognition and in the workforce, and/or 2) better understanding the black box of AI systems. I would also be interested in opportunities to teach and mentor!</p>
 		</div>
 		<div class="column_2">
 				<img src="assets/images/index/headshot.jpeg" id="profile-image" alt="LinkedIn Headshot" width="80%" >
 		</div>
 	</div>
 	<div>
-		<p>I'm on the industry and postdoc job market looking for roles regarding 1) researching societal impacts of AI, especially on cognition and in the workforce, and/or 2) better understanding the black box of AI systems. I would also be interested in opportunities to teach and mentor!</p>
 		<h4>Currently</h4>
 		<p>I'm a fifth year PhD student at Princeton University studying computer science. I am part of the <a href="https://visualai.princeton.edu/">VisualAI Lab</a>, advised by <a href="https://www.cs.princeton.edu/~olgarus/">Dr. Olga Russakovsky</a>, and am supported by the <a href="https://www.nsfgrfp.org/">NSF Graduate Research Fellowship</a>. This year I am visiting with MIT HCI working with Dr. Mitchell Gordon and Dr. Zana Buçinca. </p>
 		<p>My research interests lie in the intersection of computer science, psychology, and human-computer interaction. I enjoy working on projects towards developing more responsible human-AI interactions, where people are aware of the capabilities and limitations of the systems and encouraged to use them appropriately. Some of this work includes analyzing technical tools and systems while others require understanding people and how they think about and use technlogy. </p>

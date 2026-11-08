@@ -1,0 +1,8 @@
+{
+  "name": "recipe-import",
+  "private": true,
+  "description": "Server-side page fetcher for Recipe Studio imports (deployed on Vercel).",
+  "engines": {
+    "node": "22.x"
+  }
+}

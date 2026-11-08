@@ -114,3 +114,51 @@
   	transform: translateY(-50%);
 	margin: 0px;
 }
+
+/*-----------Garden theme: publications page---------*/
+/* publications read as a simple list separated by hairlines */
+body:has(#projects_list) #notNavigation > p
+{
+	padding: 14px 0;
+	margin: 0;
+	border-bottom: 1px dashed var(--hairline);
+	font-size: 15.5px;
+	line-height: 1.65;
+	color: var(--muted);
+}
+body:has(#projects_list) #notNavigation > h4 + p
+{
+	padding-top: 4px;
+}
+body:has(#projects_list) #notNavigation > p:has(+ h4),
+body:has(#projects_list) #notNavigation > p:last-of-type
+{
+	border-bottom: 0;
+}
+body:has(#projects_list) #notNavigation > p > em
+{
+	color: var(--ink);
+}
+body:has(#projects_list) #notNavigation > p a
+{
+	font-size: 14px;
+}
+.project
+{
+	color: var(--ink);
+}
+.proj_img
+{
+	border-radius: 20px;
+	box-shadow: 0 6px 18px rgba(95,113,97,0.15);
+}
+.proj_title_text
+{
+	font-family: var(--header_font);
+	font-weight: 600;
+	color: var(--ink);
+}
+.proj_row_div i
+{
+	color: var(--primary_accent);
+}
