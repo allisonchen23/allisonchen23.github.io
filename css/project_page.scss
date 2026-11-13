@@ -1,0 +1,206 @@
+---
+---
+/* Styles for paper project pages (layout: project_page).
+   Colors, fonts and the card come from main.scss; this only adds what the layout needs. */
+
+body.project-page #notNavigation
+{
+	max-width: 1100px;
+}
+body.project-page #Navigation_UL
+{
+	max-width: 1100px;
+}
+
+/*---------- header ----------*/
+.pp-hero
+{
+	text-align: center;
+	padding-bottom: 8px;
+}
+.pp-venue
+{
+	display: inline-block;
+	background: var(--sage_light);
+	color: var(--primary_accent);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	padding: 4px 14px;
+	border-radius: 999px;
+}
+.pp-hero h1
+{
+	font-size: 2.3em;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+	margin: 0.5em 0;
+}
+.pp-authors
+{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 6px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2px 22px;
+}
+.pp-authors li
+{
+	margin: 0;
+}
+.pp-authors .pp-me
+{
+	color: var(--primary_accent);
+	font-weight: 700;
+}
+.pp-affil
+{
+	color: var(--muted);
+	font-size: 14.5px;
+	text-align: center;
+	margin: 6px 0 22px;
+}
+.pp-buttons
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+.pp-btn,
+.pp-btn:hover
+{
+	display: inline-block;
+	padding: 9px 22px;
+	border-radius: 999px;
+	background: var(--primary_accent);
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+.pp-btn:hover
+{
+	transform: translateY(-2px);
+	background: var(--ink);
+}
+
+/*---------- TL;DR ----------*/
+.pp-tldr
+{
+	background: var(--rose);
+	border-radius: 18px;
+	padding: 16px 22px;
+	margin-top: 26px;
+}
+.pp-tldr b
+{
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--primary_accent);
+	margin-right: 8px;
+}
+.pp-placeholder
+{
+	color: var(--muted);
+	font-style: italic;
+}
+
+/*---------- body sections (## headings in the markdown) ----------*/
+.pp-body h2
+{
+	font-size: 1.5em;
+	margin: 2em 0 0.6em;
+}
+.pp-body hr
+{
+	margin: 2.4em 0 0;
+}
+
+/*---------- takeaways: wrap a list in <div class="takeaways" markdown="1"> ----------*/
+.takeaways ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 12px;
+}
+.takeaways li
+{
+	margin: 0;
+	min-height: 52px;
+	background: var(--background_color);
+	border-radius: 14px;
+	padding: 14px 18px 14px 40px;
+	position: relative;
+}
+.takeaways li::before
+{
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 24px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: var(--primary_accent);
+}
+
+/*---------- citation: wrap a ```bibtex block in <div class="bib" markdown="1"> ----------*/
+.bib
+{
+	position: relative;
+}
+.bib .copy
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+	border: 0;
+	cursor: pointer;
+	font: 500 13px var(--body_font);
+	padding: 6px 14px;
+	border-radius: 999px;
+	background: var(--card_color);
+	color: var(--primary_accent);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.bib .copy:hover
+{
+	background: var(--primary_accent);
+	color: #fff;
+}
+.bib pre
+{
+	margin: 0;
+	background: var(--background_color);
+	border: 1px solid var(--hairline);
+	border-radius: 16px;
+	padding: 18px 20px;
+	overflow-x: auto;
+	font: 13.5px/1.6 ui-monospace, Menlo, Consolas, monospace;
+	color: var(--ink);
+}
+.bib pre code,
+.bib pre code span
+{
+	color: inherit;
+	font: inherit;
+	background: none;
+}
+
+@media screen and (max-width: 700px)
+{
+	.pp-hero h1
+	{
+		font-size: 1.7em;
+	}
+}

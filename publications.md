@@ -5,7 +5,8 @@ nav_category: publications
 ---
 
 #### Selected Publications
-<span style="color:#5F7161">*Allison Chen*</span>, William Yang, Salma Abdel Magid, Jonathan Williams, Olga Russakovsky, Esin Tureci. "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models". *NeurIPS 2026* Evaluations & Datasets Track. \[pre-print coming soon\]
+<span style="color:#5F7161">*Allison Chen*</span>, William Yang, Salma Abdel Magid, Jonathan Williams, Olga Russakovsky, Esin Tureci. "Robustness of Internal Signals for Hallucination Detection in Vision-Language Models". *NeurIPS 2026* Evaluations & Datasets Track. \[[paper](https://arxiv.org/pdf/2610.27041)]
+<!-- \[[project page](project_pages/hallucination-detection-robustness.html)] -->
 
 <span style="color:#5F7161">*Allison Chen*</span>, Isabella Pu. "Learning How Large Language Models Work Through Games". *CHI 2026* Workshop on Data Literacy. (non-archival) \[[paper](https://arxiv.org/pdf/2603.28374)\]
 

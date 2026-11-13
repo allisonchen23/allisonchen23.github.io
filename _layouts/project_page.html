@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }}</title>
+		<link href="{{ '/css/main.css' | relative_url }}" rel="stylesheet" type="text/css">
+		<link href="{{ '/css/project_page.css' | relative_url }}" rel="stylesheet" type="text/css">
+		<script src="https://use.fontawesome.com/a8517c4d4c.js"></script>
+	</head>
+
+	<body class="project-page">
+		{% include navigation.html %}
+		<div id="notNavigation">
+
+			<!-- Header: everything here comes from the front matter of the page -->
+			<div class="pp-hero">
+				{% if page.venue %}<span class="pp-venue">{{ page.venue }}</span>{% endif %}
+				<h1>{{ page.title }}</h1>
+				<ul class="pp-authors">
+					{% for author in page.authors %}
+						<li{% if forloop.first %} class="pp-me"{% endif %}>{% if author.url %}<a href="{{ author.url }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</li>
+					{% endfor %}
+				</ul>
+				{% if page.affiliation %}<p class="pp-affil">{{ page.affiliation }}</p>{% endif %}
+				<div class="pp-buttons">
+					{% for link in page.links %}
+						{% if link.url and link.url != "" %}
+						<a class="pp-btn" href="{{ link.url }}">{{ link.label }}</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="pp-tldr" id="tldr">
+				<b>TL;DR</b>
+				{% if page.tldr and page.tldr != "" %}{{ page.tldr }}{% else %}<span class="pp-placeholder">Placeholder: add the TL;DR in the front matter of this page.</span>{% endif %}
+			</div>
+
+			<!-- Body: the markdown of the page -->
+			<div class="pp-body">
+				{{ content }}
+			</div>
+
+		</div>
+		{% include footer.html %}
+
+		<script>
+			function copyBibtex(btn)
+			{
+				var pre = btn.parentElement.querySelector("pre");
+				navigator.clipboard.writeText(pre.innerText.trim());
+				btn.textContent = "Copied!";
+				setTimeout(function () { btn.textContent = "Copy BibTeX"; }, 1500);
+			}
+		</script>
+	</body>
+</html>
