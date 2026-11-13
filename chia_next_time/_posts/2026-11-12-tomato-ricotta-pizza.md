@@ -36,3 +36,5 @@ Serves: 4
 5. Scoop generous dollops of ricotta spread out throughout the pizza.
 6. Bake in the oven for approximately 10-12 minutes, until cheese is bubbly and crust is slightly golden. If the top is a bit watery, just take a paper towel to dab it.
 7. Top with basil!
+
+Note: if you want a more meat-y version, you can put cooked sausage instead of ricotta! Also delicious.
