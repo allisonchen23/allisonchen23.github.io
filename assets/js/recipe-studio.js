@@ -8,7 +8,7 @@
   var AVOCADO = '/assets/images/avocado.png';
   // Your own import helper on Vercel (code in _tools/recipe-import). Tried first;
   // leave empty to skip it. Example: 'https://recipe-import-xyz.vercel.app/api/fetch?url={url}'
-  var IMPORT_SERVICE = '';
+  var IMPORT_SERVICE = 'https://allisonchen23githubio-recipe-import.vercel.app/api/fetch?url={url}';
   // Free public fallbacks, tried in order if your own helper is missing or fails.
   // Each returns a URL, or { url, headers } when the service needs a request header.
   // (corsproxy.io now answers 401 to real websites, and codetabs / thingproxy
