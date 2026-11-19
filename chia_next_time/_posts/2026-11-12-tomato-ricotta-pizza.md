@@ -1,5 +1,5 @@
 ---
-title: "Ricotta tomato pizza"
+title: "Ricotta Tomato Pizza"
 date: 2026-11-12 20:51:50 -0500
 categories: "recipe"
 permalink: "/ricotta-tomato-pizza/"
