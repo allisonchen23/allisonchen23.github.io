@@ -9,10 +9,13 @@
   // Your own import helper on Vercel (code in _tools/recipe-import). Tried first;
   // leave empty to skip it. Example: 'https://recipe-import-xyz.vercel.app/api/fetch?url={url}'
   var IMPORT_SERVICE = '';
-  // Free public fallbacks, used if your own helper is missing or fails.
+  // Free public fallbacks, tried in order if your own helper is missing or fails.
+  // Each returns a URL, or { url, headers } when the service needs a request header.
+  // (corsproxy.io now answers 401 to real websites, and codetabs / thingproxy
+  // don't send CORS headers, so they were removed.)
   var PROXIES = [
-    function (u) { return 'https://corsproxy.io/?url=' + encodeURIComponent(u); },
-    function (u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); }
+    function (u) { return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); },
+    function (u) { return { url: 'https://r.jina.ai/' + u, headers: { 'X-Return-Format': 'html' } }; }
   ];
 
   // ---------- tiny utilities ----------
@@ -530,8 +533,10 @@
       promise.then(function (v) { clearTimeout(t); resolve(v); }, function (e) { clearTimeout(t); reject(e); });
     });
   }
-  function fetchText(url) {
-    return withTimeout(fetch(url, { credentials: 'omit' }), 15000).then(function (res) {
+  function fetchText(url, headers) {
+    var opts = { credentials: 'omit' };
+    if (headers) opts.headers = headers;
+    return withTimeout(fetch(url, opts), 15000).then(function (res) {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.text();
     }).then(function (t) {
@@ -539,18 +544,26 @@
       return t;
     });
   }
-  function fetchPage(url) {
+  // accept(html) is optional: when it returns false the page counts as a failed
+  // attempt, so a proxy that answers 200 with an error or bot-check page falls
+  // through to the next source instead of ending the import.
+  function fetchPage(url, accept) {
     var custom = settings().proxy;
     var attempts = custom
       ? [function () { return fetchText(custom.indexOf('{url}') >= 0 ? custom.replace('{url}', encodeURIComponent(url)) : custom + encodeURIComponent(url)); }]
       : (IMPORT_SERVICE ? [function () { return fetchText(IMPORT_SERVICE.replace('{url}', encodeURIComponent(url))); }] : [])
           .concat([function () { return fetchText(url); }])
-          .concat(PROXIES.map(function (p) { return function () { return fetchText(p(url)); }; }));
+          .concat(PROXIES.map(function (p) {
+            return function () { var r = p(url); return typeof r === 'string' ? fetchText(r) : fetchText(r.url, r.headers); };
+          }));
     var i = 0;
     function next(lastErr) {
       if (i >= attempts.length) return Promise.reject(lastErr || new Error('could not load the page'));
       var attempt = attempts[i++];
-      return attempt().catch(next);
+      return attempt().then(function (html) {
+        if (accept && !accept(html)) throw new Error('no recipe on that page');
+        return html;
+      }).catch(next);
     }
     return next();
   }
@@ -562,7 +575,8 @@
     var parser = new DOMParser();
     setStatus(status, target.viaCooked && !target.cookedPage ? 'Found the original recipe behind your Cooked link. Importing…' : 'Importing…');
     btn.disabled = true;
-    return fetchPage(target.url).then(function (html) {
+    var hasRecipe = function (html) { return !!C.recipeFromHtml(html, target.url, parser); };
+    return fetchPage(target.url, target.cookedPage ? null : hasRecipe).then(function (html) {
       var recipe = C.recipeFromHtml(html, target.url, parser);
       if (recipe || !target.cookedPage) return recipe;
       // A cooked.wiki page without the original address in its link: look for one on the page.
