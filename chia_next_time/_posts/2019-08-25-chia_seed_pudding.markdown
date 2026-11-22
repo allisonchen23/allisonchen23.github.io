@@ -5,9 +5,11 @@ categories: "recipe"
 permalink: "/chia_seed_pudding/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [breakfast, dessert]
+total_time: "<5 mins"
 ---
 
-Time: <5 minutes
+Time: <5 mins
 
 Serves: 2-4
 

@@ -5,11 +5,14 @@ categories: "recipe"
 permalink: "/banana_bread/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [breakfast, dessert]
+prep_time: "15 mins"
+cook_time: "40-55 mins"
 ---
 
-Prep Time: 15 minutes
+Prep Time: 15 mins
 
-Cook Time: 40 minutes - 55 minutes
+Cook Time: 40-55 mins
 
 Serves: 1 loaf
 

@@ -5,11 +5,14 @@ categories: "recipe"
 permalink: "/mushroom-pizza/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [dinner]
+prep_time: "20 mins"
+cook_time: "15 mins"
 ---
 
-Prep Time: 20
+Prep Time: 20 mins
 
-Cook Time: 15
+Cook Time: 15 mins
 
 Serves: 4
 

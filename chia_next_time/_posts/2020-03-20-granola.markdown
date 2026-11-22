@@ -5,11 +5,15 @@ categories: "recipe"
 permalink: "/granola/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [breakfast, iconic]
+image: "granola/header_photo.jpg"
+prep_time: "5 mins"
+cook_time: "20 mins"
 ---
 
-Prep Time: 5 minutes
+Prep Time: 5 mins
 
-Cook Time: 20 minutes
+Cook Time: 20 mins
 
 Serves: about 2 cups of granola (which lasts in my house around 3 days!)
 

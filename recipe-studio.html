@@ -110,8 +110,8 @@ sitemap: false
 					<input type="text" id="rs-title" class="rs-title-input" placeholder="Recipe title" aria-label="Recipe title">
 
 					<div class="rs-meta-grid">
-						<label class="rs-field"><span>Prep time</span><input type="text" class="rs-input" data-meta="prep" placeholder="15 minutes"></label>
-						<label class="rs-field"><span>Cook time</span><input type="text" class="rs-input" data-meta="cook" placeholder="40 minutes"></label>
+						<label class="rs-field"><span>Prep time</span><input type="text" class="rs-input" data-meta="prep" placeholder="15 mins"></label>
+						<label class="rs-field"><span>Cook time</span><input type="text" class="rs-input" data-meta="cook" placeholder="1 hr 10 mins"></label>
 						<label class="rs-field"><span>Total time</span><input type="text" class="rs-input" data-meta="time" placeholder="optional"></label>
 						<label class="rs-field"><span>Serves</span><input type="text" class="rs-input" data-meta="serves" placeholder="4"></label>
 					</div>
@@ -119,6 +119,12 @@ sitemap: false
 					<div class="rs-field rs-difficulty-field">
 						<span>Difficulty</span>
 						<div class="rs-avocados" id="rs-avocados" role="radiogroup" aria-label="Difficulty out of 5"></div>
+					</div>
+
+					<div class="rs-field rs-tags-field">
+						<span>Categories</span>
+						<div class="rs-chips" id="rs-tags" role="group" aria-label="Categories this recipe belongs to"></div>
+						<div class="rs-tag-add"><input type="text" class="rs-input" id="rs-tag-new" placeholder="Add a new category" aria-label="New category"><button type="button" class="rs-btn rs-btn-small rs-btn-soft" id="rs-tag-add-btn">Add</button></div>
 					</div>
 
 					<div class="rs-meta-grid rs-source-grid">

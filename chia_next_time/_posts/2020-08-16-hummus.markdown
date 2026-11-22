@@ -5,11 +5,12 @@ categories: "recipe"
 permalink: "/hummus/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [sides, iconic]
+image: "hummus/IMG-0104.jpg"
+prep_time: "15 mins"
 ---
 
-Prep Time: 15 minutes (+ at least 4 hours if using dried chickpeas)
-
-Cook Time: 0!
+Prep Time: 15 mins (+ at least 4 hrs if using dried chickpeas)
 
 Serves: 3-4
 

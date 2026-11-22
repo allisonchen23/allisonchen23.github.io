@@ -161,7 +161,8 @@
             path: f.path, sha: r.json.sha, text: text,
             title: C.fmGet(fm.lines, 'title') || f.name,
             permalink: C.fmGet(fm.lines, 'permalink'),
-            date: C.fmGet(fm.lines, 'date')
+            date: C.fmGet(fm.lines, 'date'),
+            tags: C.parseTags(C.fmGet(fm.lines, 'tags'))
           };
         });
       }));
@@ -261,7 +262,9 @@
     $('#rs-after').value = r.after || '';
     $('#rs-permalink').value = r.permalink || '';
     $('#rs-date').value = r.date || '';
+    r.tags = r.tags || [];
     renderAvocados();
+    renderTags();
     renderList('ingredients');
     renderList('instructions');
     $('#rs-delete').hidden = !r.path;
@@ -315,6 +318,39 @@
   }
 
   // difficulty
+  var DEFAULT_TAGS = ['breakfast', 'lunch', 'dinner', 'sides', 'dessert', 'iconic'];
+  function knownTags() {
+    var all = DEFAULT_TAGS.slice();
+    state.library.concat([state.recipe]).forEach(function (x) {
+      (x && x.tags || []).forEach(function (t) { if (all.indexOf(t) < 0) all.push(t); });
+    });
+    return all;
+  }
+  function renderTags() {
+    var wrap = $('#rs-tags');
+    var r = state.recipe;
+    wrap.innerHTML = '';
+    knownTags().forEach(function (tag) {
+      var on = r.tags.indexOf(tag) > -1;
+      var b = el('button', { type: 'button', class: 'rs-chip' + (on ? ' rs-chip-on' : ''), 'aria-pressed': on ? 'true' : 'false' }, tag);
+      b.disabled = !r.structured;
+      b.addEventListener('click', function () {
+        var i = r.tags.indexOf(tag);
+        if (i > -1) r.tags.splice(i, 1); else r.tags.push(tag);
+        renderTags(); changed();
+      });
+      wrap.appendChild(b);
+    });
+  }
+  function addNewTag() {
+    var inp = $('#rs-tag-new');
+    var tag = C.cleanTag(inp.value);
+    if (!tag) return;
+    if (state.recipe.tags.indexOf(tag) < 0) state.recipe.tags.push(tag);
+    inp.value = '';
+    renderTags(); changed();
+  }
+
   function renderAvocados() {
     var wrap = $('#rs-avocados');
     wrap.textContent = '';
@@ -802,6 +838,8 @@
       inp.addEventListener('input', function () { state.recipe.meta[inp.getAttribute('data-meta')] = inp.value; changed(); });
     });
     $('#rs-after').addEventListener('input', function (e) { state.recipe.after = e.target.value; changed(); });
+    $('#rs-tag-add-btn').addEventListener('click', addNewTag);
+    $('#rs-tag-new').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); addNewTag(); } });
     $('#rs-permalink').addEventListener('input', function (e) { state.permalinkTouched = true; state.recipe.permalink = e.target.value.trim(); updatePathHint(); changed(); });
     $('#rs-permalink').addEventListener('change', function (e) {
       if (!e.target.value.trim()) return;

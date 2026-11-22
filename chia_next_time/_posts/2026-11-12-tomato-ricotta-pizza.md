@@ -5,11 +5,14 @@ categories: "recipe"
 permalink: "/ricotta-tomato-pizza/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [dinner]
+prep_time: "15 mins"
+cook_time: "15 mins"
 ---
 
-Prep Time: 15
+Prep Time: 15 mins
 
-Cook Time: 15
+Cook Time: 15 mins
 
 Serves: 4
 

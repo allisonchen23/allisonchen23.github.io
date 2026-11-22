@@ -5,11 +5,14 @@ categories: "recipe"
 permalink: "/roasted_asparagus/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [sides, dinner]
+prep_time: "10 mins"
+cook_time: "25 mins"
 ---
 
-Prep Time: 10 minutes
+Prep Time: 10 mins
 
-Cook Time: 25 minutes
+Cook Time: 25 mins
 
 Serves: 3-4
 
