@@ -5,11 +5,14 @@ categories: "recipe"
 permalink: "/carrotcake/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [dessert, iconic]
+prep_time: "45 mins"
+cook_time: "35 mins"
 ---
 
-Prep Time: 45 minutes + cooling time
+Prep Time: 45 mins (+ cooling time)
 
-Cook Time: 35-35 minutes
+Cook Time: 35 mins
 
 Serves: 10-12
 

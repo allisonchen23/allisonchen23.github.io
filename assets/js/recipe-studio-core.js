@@ -73,6 +73,33 @@
     return lines;
   }
 
+  function fmDelete(lines, key) {
+    var re = new RegExp('^' + key + '\\s*:');
+    for (var i = lines.length - 1; i >= 0; i--) if (re.test(lines[i])) lines.splice(i, 1);
+    return lines;
+  }
+
+  // ---------- tags (front matter: tags: [dessert, breakfast]) ----------
+  function cleanTag(s) {
+    return String(s || '').toLowerCase().replace(/[^a-z0-9 -]+/g, '').replace(/\s+/g, ' ').trim();
+  }
+  function parseTags(v) {
+    v = String(v || '').trim().replace(/^\[/, '').replace(/\]$/, '');
+    var out = [];
+    v.split(',').forEach(function (s) {
+      s = cleanTag(yamlUnquote(s));
+      if (s && out.indexOf(s) < 0) out.push(s);
+    });
+    return out;
+  }
+  function renderTags(tags) { return '[' + (tags || []).join(', ') + ']'; }
+
+  /* The short time shown on a home-page tile: the text before any caveat,
+   * e.g. "15 mins (+ 4 hrs if using dried chickpeas)" -> "15 mins". */
+  function tileTime(s) {
+    return String(s || '').split(/\s+[(+]/)[0].trim();
+  }
+
   // ---------- body: ingredients / instructions blocks ----------
   function parseItems(lines) {
     var items = [];
@@ -230,7 +257,7 @@
     return {
       path: null, sha: null,
       fmLines: null,
-      title: '', date: '', permalink: '',
+      title: '', date: '', permalink: '', tags: [],
       meta: { prep: '', cook: '', time: '', serves: '', difficulty: null, sourceName: '', sourceUrl: '' },
       headerTokens: defaultHeaderTokens(),
       ingHeading: '### Ingredients', instHeading: '### Instructions',
@@ -249,6 +276,7 @@
     r.title = fmGet(fm.lines, 'title');
     r.date = fmGet(fm.lines, 'date');
     r.permalink = fmGet(fm.lines, 'permalink');
+    r.tags = parseTags(fmGet(fm.lines, 'tags'));
     r.rawBody = fm.body;
 
     var lines = fm.body.split('\n');
@@ -298,6 +326,17 @@
     if (fmGet(lines, 'title') !== title) fmSet(lines, 'title', yamlString(title));
     if (r.date && fmGet(lines, 'date') !== r.date) fmSet(lines, 'date', r.date);
     if (r.permalink && fmGet(lines, 'permalink') !== r.permalink) fmSet(lines, 'permalink', yamlString(r.permalink));
+    var tags = (r.tags || []).map(cleanTag).filter(Boolean);
+    var tagText = renderTags(tags);
+    if (tags.length) { if (fmGet(lines, 'tags') !== tagText) fmSet(lines, 'tags', tagText); }
+    else if (fmGet(lines, 'tags')) fmDelete(lines, 'tags');
+    if (r.structured) { // keep the tile times in step with the Prep / Cook / Time lines
+      [['prep_time', r.meta.prep], ['cook_time', r.meta.cook], ['total_time', r.meta.time]].forEach(function (kv) {
+        var v = tileTime(kv[1]);
+        if (v) { if (fmGet(lines, kv[0]) !== v) fmSet(lines, kv[0], yamlString(v)); }
+        else if (fmGet(lines, kv[0])) fmDelete(lines, kv[0]);
+      });
+    }
     return '---\n' + lines.join('\n') + '\n---\n\n' + renderBody(r);
   }
 
@@ -322,8 +361,8 @@
     hrs += days * 24;
     hrs += Math.floor(mins / 60); mins = mins % 60;
     var parts = [];
-    if (hrs) parts.push(hrs + (hrs === 1 ? ' hour' : ' hours'));
-    if (mins) parts.push(mins + (mins === 1 ? ' minute' : ' minutes'));
+    if (hrs) parts.push(hrs + (hrs === 1 ? ' hr' : ' hrs'));
+    if (mins) parts.push(mins + (mins === 1 ? ' min' : ' mins'));
     return parts.join(' ');
   }
 
@@ -525,7 +564,7 @@
 
   var api = {
     slugify: slugify, yamlString: yamlString, deLiquid: deLiquid,
-    splitFrontMatter: splitFrontMatter, fmGet: fmGet,
+    splitFrontMatter: splitFrontMatter, fmGet: fmGet, parseTags: parseTags, cleanTag: cleanTag, tileTime: tileTime,
     parsePost: parsePost, renderPost: renderPost, renderBody: renderBody, normalize: normalize,
     emptyRecipe: emptyRecipe, parseItems: parseItems, renderItems: renderItems,
     isoDuration: isoDuration, recipeFromHtml: recipeFromHtml, recipeFromText: recipeFromText,

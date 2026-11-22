@@ -5,11 +5,15 @@ categories: "recipe"
 permalink: "/roasted_everything/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [sides, dinner]
+image: "roasted_everything/1-Roasted_pecans.jpg"
+prep_time: "5 mins"
+cook_time: "8-25 mins"
 ---
 
-Prep Time: 5 minutes
+Prep Time: 5 mins
 
-Cook Time: 8 to 25, depending on what we're roasting
+Cook Time: 8-25 mins (depending on what you're roasting)
 
 Serves: 3-4
 

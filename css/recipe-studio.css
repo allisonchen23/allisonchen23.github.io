@@ -455,3 +455,10 @@ body.rs
 	.rs-title-input { font-size: 30px; }
 	.rs-handle { display: none; }
 }
+
+.rs-tags-field { margin-top: 18px; }
+.rs-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.rs-chip { border: 1px solid var(--hairline, #ddd6c6); background: transparent; color: inherit; border-radius: 999px; padding: 5px 14px; font: inherit; font-size: 14px; cursor: pointer; text-transform: capitalize; }
+.rs-chip:hover { background: #dfe6dc; }
+.rs-chip-on, .rs-chip-on:hover { background: #5f7161; border-color: #5f7161; color: #fff; }
+.rs-tag-add { display: flex; gap: 8px; max-width: 320px; }

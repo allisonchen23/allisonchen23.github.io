@@ -5,11 +5,12 @@ categories: "recipe"
 permalink: "/breakfast_wrap/"
 layout: post_layout
 nav_category: chia_next_time
+tags: [breakfast, lunch]
+image: "breakfast_wrap/header_photo.jpg"
+prep_time: "5 mins"
 ---
 
-Prep Time: 5 minutes
-
-Cook Time: None
+Prep Time: 5 mins
 
 Serves: 1
 
