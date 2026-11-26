@@ -1,5 +1,5 @@
 ---
-title: "MOM'S TURKEY STUFFING"
+title: "Mom's Turkey Stuffing"
 date: 2026-11-26 15:51:45 -0500
 categories: "recipe"
 permalink: "/mom-s-turkey-stuffing/"
